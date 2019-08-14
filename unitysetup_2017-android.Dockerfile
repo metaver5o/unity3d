@@ -58,6 +58,7 @@ RUN echo "America/New_York" > /etc/timezone && \
     libpq5 \
     xvfb \
     wget \
+    ffmpeg \
     locales \
     software-properties-common \
     unzip \

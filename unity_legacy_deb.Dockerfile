@@ -55,6 +55,7 @@ RUN echo "America/New_York" > /etc/timezone && \
     libpq5 \
     xvfb \
     wget \
+    ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
