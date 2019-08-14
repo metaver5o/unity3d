@@ -107,13 +107,9 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     fi && \
     # make executable
     chmod +x UnitySetup && \
-    # 2017 difference: must have /tmp/ and /opt/unity/ folders before installation
-    mkdir -p /tmp/unity && \
-    mkdir -p /opt/Unity && \
     # agree with license
     echo y | \
     # install unity with required components
-    xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
     ./UnitySetup \
     --unattended \
     --install-location=/opt/Unity \
@@ -131,4 +127,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
 
-ADD CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD conf/asound.conf /etc/
