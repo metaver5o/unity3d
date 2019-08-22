@@ -72,342 +72,172 @@ before_script:
   except:
     - master
 
-# main build for 2018.4.6f1
-.unity_2018_4_6f1: &unity_2018_4_6f1
+# main build for 2019.2.2f1
+.unity_2019_2_2f1: &unity_2019_2_2f1
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1
+    TAG: 2019.2.2f1
     COMPONENTS: Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1:
-  <<: *unity_2018_4_6f1
+build unity_2019_2_2f1:
+  <<: *unity_2019_2_2f1
   <<: *build
 
-build-master unity_2018_4_6f1:
-  <<: *unity_2018_4_6f1
+build-master unity_2019_2_2f1:
+  <<: *unity_2019_2_2f1
   <<: *build-master
 
-# platform specific for 2018.4.6f1: unity
-.unity_2018_4_6f1-unity: &unity_2018_4_6f1-unity
+# platform specific for 2019.2.2f1: unity
+.unity_2019_2_2f1-unity: &unity_2019_2_2f1-unity
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-unity
+    TAG: 2019.2.2f1-unity
     COMPONENTS: Unity
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-unity:
-  <<: *unity_2018_4_6f1-unity
+build unity_2019_2_2f1-unity:
+  <<: *unity_2019_2_2f1-unity
   <<: *build
 
-build-master unity_2018_4_6f1-unity:
-  <<: *unity_2018_4_6f1-unity
+build-master unity_2019_2_2f1-unity:
+  <<: *unity_2019_2_2f1-unity
   <<: *build-master
 
-# platform specific for 2018.4.6f1: windows
-.unity_2018_4_6f1-windows: &unity_2018_4_6f1-windows
+# platform specific for 2019.2.2f1: windows
+.unity_2019_2_2f1-windows: &unity_2019_2_2f1-windows
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-windows
+    TAG: 2019.2.2f1-windows
     COMPONENTS: Unity,Windows,Windows-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-windows:
-  <<: *unity_2018_4_6f1-windows
+build unity_2019_2_2f1-windows:
+  <<: *unity_2019_2_2f1-windows
   <<: *build
 
-build-master unity_2018_4_6f1-windows:
-  <<: *unity_2018_4_6f1-windows
+build-master unity_2019_2_2f1-windows:
+  <<: *unity_2019_2_2f1-windows
   <<: *build-master
 
-# platform specific for 2018.4.6f1: mac
-.unity_2018_4_6f1-mac: &unity_2018_4_6f1-mac
+# platform specific for 2019.2.2f1: mac
+.unity_2019_2_2f1-mac: &unity_2019_2_2f1-mac
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-mac
+    TAG: 2019.2.2f1-mac
     COMPONENTS: Unity,Mac,Mac-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-mac:
-  <<: *unity_2018_4_6f1-mac
+build unity_2019_2_2f1-mac:
+  <<: *unity_2019_2_2f1-mac
   <<: *build
 
-build-master unity_2018_4_6f1-mac:
-  <<: *unity_2018_4_6f1-mac
+build-master unity_2019_2_2f1-mac:
+  <<: *unity_2019_2_2f1-mac
   <<: *build-master
 
-# platform specific for 2018.4.6f1: ios
-.unity_2018_4_6f1-ios: &unity_2018_4_6f1-ios
+# platform specific for 2019.2.2f1: ios
+.unity_2019_2_2f1-ios: &unity_2019_2_2f1-ios
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-ios
+    TAG: 2019.2.2f1-ios
     COMPONENTS: Unity,iOS
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-ios:
-  <<: *unity_2018_4_6f1-ios
+build unity_2019_2_2f1-ios:
+  <<: *unity_2019_2_2f1-ios
   <<: *build
 
-build-master unity_2018_4_6f1-ios:
-  <<: *unity_2018_4_6f1-ios
+build-master unity_2019_2_2f1-ios:
+  <<: *unity_2019_2_2f1-ios
   <<: *build-master
 
-# platform specific for 2018.4.6f1: android
-.unity_2018_4_6f1-android: &unity_2018_4_6f1-android
+# platform specific for 2019.2.2f1: android
+.unity_2019_2_2f1-android: &unity_2019_2_2f1-android
   variables:
     DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-android
+    TAG: 2019.2.2f1-android
     COMPONENTS: Unity,Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-android:
-  <<: *unity_2018_4_6f1-android
+build unity_2019_2_2f1-android:
+  <<: *unity_2019_2_2f1-android
   <<: *build
 
-build-master unity_2018_4_6f1-android:
-  <<: *unity_2018_4_6f1-android
+build-master unity_2019_2_2f1-android:
+  <<: *unity_2019_2_2f1-android
   <<: *build-master
 
-# platform specific for 2018.4.6f1: webgl
-.unity_2018_4_6f1-webgl: &unity_2018_4_6f1-webgl
+# platform specific for 2019.2.2f1: webgl
+.unity_2019_2_2f1-webgl: &unity_2019_2_2f1-webgl
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-webgl
+    TAG: 2019.2.2f1-webgl
     COMPONENTS: Unity,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-webgl:
-  <<: *unity_2018_4_6f1-webgl
+build unity_2019_2_2f1-webgl:
+  <<: *unity_2019_2_2f1-webgl
   <<: *build
 
-build-master unity_2018_4_6f1-webgl:
-  <<: *unity_2018_4_6f1-webgl
+build-master unity_2019_2_2f1-webgl:
+  <<: *unity_2019_2_2f1-webgl
   <<: *build-master
 
-# platform specific for 2018.4.6f1: facebook
-.unity_2018_4_6f1-facebook: &unity_2018_4_6f1-facebook
+# platform specific for 2019.2.2f1: facebook
+.unity_2019_2_2f1-facebook: &unity_2019_2_2f1-facebook
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.4.6
+    VERSION: 2019.2.2
     BUILD: f1
-    TAG: 2018.4.6f1-facebook
+    TAG: 2019.2.2f1-facebook
     COMPONENTS: Unity,Facebook-Games
-    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
-    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6f1
-    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
 
-build unity_2018_4_6f1-facebook:
-  <<: *unity_2018_4_6f1-facebook
+build unity_2019_2_2f1-facebook:
+  <<: *unity_2019_2_2f1-facebook
   <<: *build
 
-build-master unity_2018_4_6f1-facebook:
-  <<: *unity_2018_4_6f1-facebook
-  <<: *build-master
-
-
-
-# main build for 2019.1.14f1
-.unity_2019_1_14f1: &unity_2019_1_14f1
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1
-    COMPONENTS: Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1:
-  <<: *unity_2019_1_14f1
-  <<: *build
-
-build-master unity_2019_1_14f1:
-  <<: *unity_2019_1_14f1
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: unity
-.unity_2019_1_14f1-unity: &unity_2019_1_14f1-unity
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-unity
-    COMPONENTS: Unity
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-unity:
-  <<: *unity_2019_1_14f1-unity
-  <<: *build
-
-build-master unity_2019_1_14f1-unity:
-  <<: *unity_2019_1_14f1-unity
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: windows
-.unity_2019_1_14f1-windows: &unity_2019_1_14f1-windows
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-windows
-    COMPONENTS: Unity,Windows,Windows-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-windows:
-  <<: *unity_2019_1_14f1-windows
-  <<: *build
-
-build-master unity_2019_1_14f1-windows:
-  <<: *unity_2019_1_14f1-windows
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: mac
-.unity_2019_1_14f1-mac: &unity_2019_1_14f1-mac
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-mac
-    COMPONENTS: Unity,Mac,Mac-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-mac:
-  <<: *unity_2019_1_14f1-mac
-  <<: *build
-
-build-master unity_2019_1_14f1-mac:
-  <<: *unity_2019_1_14f1-mac
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: ios
-.unity_2019_1_14f1-ios: &unity_2019_1_14f1-ios
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-ios
-    COMPONENTS: Unity,iOS
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-ios:
-  <<: *unity_2019_1_14f1-ios
-  <<: *build
-
-build-master unity_2019_1_14f1-ios:
-  <<: *unity_2019_1_14f1-ios
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: android
-.unity_2019_1_14f1-android: &unity_2019_1_14f1-android
-  variables:
-    DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-android
-    COMPONENTS: Unity,Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-android:
-  <<: *unity_2019_1_14f1-android
-  <<: *build
-
-build-master unity_2019_1_14f1-android:
-  <<: *unity_2019_1_14f1-android
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: webgl
-.unity_2019_1_14f1-webgl: &unity_2019_1_14f1-webgl
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-webgl
-    COMPONENTS: Unity,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-webgl:
-  <<: *unity_2019_1_14f1-webgl
-  <<: *build
-
-build-master unity_2019_1_14f1-webgl:
-  <<: *unity_2019_1_14f1-webgl
-  <<: *build-master
-
-# platform specific for 2019.1.14f1: facebook
-.unity_2019_1_14f1-facebook: &unity_2019_1_14f1-facebook
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2019.1.14
-    BUILD: f1
-    TAG: 2019.1.14f1-facebook
-    COMPONENTS: Unity,Facebook-Games
-    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14f1
-    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
-
-build unity_2019_1_14f1-facebook:
-  <<: *unity_2019_1_14f1-facebook
-  <<: *build
-
-build-master unity_2019_1_14f1-facebook:
-  <<: *unity_2019_1_14f1-facebook
+build-master unity_2019_2_2f1-facebook:
+  <<: *unity_2019_2_2f1-facebook
   <<: *build-master
 
 
