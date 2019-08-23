@@ -1,9 +1,5 @@
 FROM ubuntu:18.04
 
-ARG DOWNLOAD_URL
-ARG SHA1
-ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
@@ -96,6 +92,10 @@ RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS}
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 
 RUN gradle -v
+
+ARG DOWNLOAD_URL
+ARG SHA1
+ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
