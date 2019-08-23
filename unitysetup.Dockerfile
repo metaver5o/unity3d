@@ -1,9 +1,5 @@
 FROM ubuntu:18.04
 
-ARG DOWNLOAD_URL
-ARG SHA1
-ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
@@ -60,6 +56,10 @@ RUN echo "America/New_York" > /etc/timezone && \
     wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+ARG DOWNLOAD_URL
+ARG SHA1
+ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
