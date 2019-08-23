@@ -1,8 +1,5 @@
 FROM ubuntu:18.04
 
-ARG DOWNLOAD_URL
-ARG SHA1
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
@@ -57,6 +54,9 @@ RUN echo "America/New_York" > /etc/timezone && \
     wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+ARG DOWNLOAD_URL
+ARG SHA1
 
 RUN wget -nv ${DOWNLOAD_URL} -O unity.deb && \
     # compare sha1 if given
