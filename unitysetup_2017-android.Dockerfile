@@ -68,7 +68,8 @@ RUN echo "America/New_York" > /etc/timezone && \
 
 # Setup Android SDK/JDK Environment Variables
 ENV ANDROID_SDK_VERSION ${ANDROID_SDK_VERSION:-28}
-ENV ANDROID_SDK_COMPONENTS platforms;android-$ANDROID_SDK_VERSION
+ENV ANDROID_SDK_TOOLS_VERSION ${ANDROID_SDK_TOOLS_VERSION:-28.0.3}
+ENV ANDROID_SDK_COMPONENTS build-tools;$ANDROID_SDK_TOOLS_VERSION platform-tools platforms;android-$ANDROID_SDK_VERSION
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre/
 ENV PATH ${PATH}:/usr/lib/jvm/java-8-openjdk-amd64/jre/bin
 ENV ANDROID_HOME /opt/android-sdk-linux
@@ -86,7 +87,7 @@ RUN cd /opt && \
 RUN chmod -R 755 .${ANDROID_HOME}/tools/*
 
 # Install Android SDK
-RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS}
+RUN echo y | ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS} >/dev/null
 
 # accept license
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
