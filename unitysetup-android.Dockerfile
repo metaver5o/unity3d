@@ -86,11 +86,11 @@ RUN cd /opt && \
 
 RUN chmod -R 755 .${ANDROID_HOME}/tools/*
 
-# Install Android SDK
-RUN echo y | ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS} >/dev/null
-
 # accept license
-RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
+RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses > /dev/null
+
+# Install Android SDK
+RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS}
 
 RUN gradle -v
 
