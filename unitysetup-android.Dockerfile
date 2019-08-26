@@ -90,7 +90,8 @@ RUN chmod -R 755 .${ANDROID_HOME}/tools/*
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 
 # Install Android SDK
-RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS} > /dev/null
+RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS} > /dev/null && \
+  ${ANDROID_HOME}/tools/bin/sdkmanager --list
 
 RUN gradle -v
 
