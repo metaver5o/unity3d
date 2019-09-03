@@ -54,6 +54,10 @@ RUN echo "America/New_York" > /etc/timezone && \
     libpq5 \
     xvfb \
     wget \
+    ffmpeg \
+    libglu1-mesa-dev \
+    freeglut3-dev \
+    mesa-common-dev \
     locales \
     software-properties-common \
     unzip \
@@ -128,4 +132,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm -rf /tmp/* && \
     rm -rf /var/tmp/*
 
-ADD CACerts.pem /root/.local/share/unity3d/Certificates/
+Add conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+Add conf/asound.conf /etc/

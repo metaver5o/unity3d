@@ -62,13 +62,13 @@ class GitlabCiGenerator(object):
 
     def get_dockerfile_name_to_use(self, platform, version):
         script_dirname = os.path.dirname(os.path.realpath(__file__))
-        base_folder = os.path.join(script_dirname, '../../')
+        dockerfiles_location = os.path.join(script_dirname, '../../docker/')
         dockerfile_name = version.get('dockerfile_name', self.default_dockerfile_name)
         base_dockerfile = f'{dockerfile_name}'
 
         platform_dockerfile_name = f'{dockerfile_name}-{platform}'
         platform_dockerfile = f'{platform_dockerfile_name}.Dockerfile'
-        platform_dockerfile_path = os.path.join(base_folder, platform_dockerfile)
+        platform_dockerfile_path = os.path.join(dockerfiles_location, platform_dockerfile)
 
         if os.path.isfile(platform_dockerfile_path):
             return platform_dockerfile_name

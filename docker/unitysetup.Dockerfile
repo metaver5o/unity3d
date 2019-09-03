@@ -54,6 +54,10 @@ RUN echo "America/New_York" > /etc/timezone && \
     libpq5 \
     xvfb \
     wget \
+    ffmpeg \
+    libglu1-mesa-dev \
+    freeglut3-dev \
+    mesa-common-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -70,13 +74,9 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     fi && \
     # make executable
     chmod +x UnitySetup && \
-    # 2017 difference: must have /tmp/ and /opt/unity/ folders before installation
-    mkdir -p /tmp/unity && \
-    mkdir -p /opt/Unity && \
     # agree with license
     echo y | \
     # install unity with required components
-    xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
     ./UnitySetup \
     --unattended \
     --install-location=/opt/Unity \
@@ -88,4 +88,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
-ADD CACerts.pem /root/.local/share/unity3d/Certificates/
+Add conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+Add conf/asound.conf /etc/
