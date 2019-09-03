@@ -965,9 +965,9 @@ build-master unity_2018_3_14f1-facebook:
 # main build for 2018.4.8f1
 .unity_2018_4_8f1: &unity_2018_4_8f1
   variables:
-    DOCKERFILE_NAME: 
+    DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1
     COMPONENTS: Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -988,7 +988,7 @@ build-master unity_2018_4_8f1:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-unity
     COMPONENTS: Unity
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1009,7 +1009,7 @@ build-master unity_2018_4_8f1-unity:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-windows
     COMPONENTS: Unity,Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1030,7 +1030,7 @@ build-master unity_2018_4_8f1-windows:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-mac
     COMPONENTS: Unity,Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1051,7 +1051,7 @@ build-master unity_2018_4_8f1-mac:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-ios
     COMPONENTS: Unity,iOS
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1072,7 +1072,7 @@ build-master unity_2018_4_8f1-ios:
   variables:
     DOCKERFILE_NAME: unitysetup-android
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-android
     COMPONENTS: Unity,Android
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1093,7 +1093,7 @@ build-master unity_2018_4_8f1-android:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-webgl
     COMPONENTS: Unity,WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
@@ -1114,7 +1114,7 @@ build-master unity_2018_4_8f1-webgl:
   variables:
     DOCKERFILE_NAME: unitysetup
     VERSION: 2018.4.8
-    BUILD: 
+    BUILD: f1
     TAG: 2018.4.8f1-facebook
     COMPONENTS: Unity,Facebook-Games
     DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
