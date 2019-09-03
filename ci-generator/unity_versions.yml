@@ -20,15 +20,15 @@
   release_notes: https://unity3d.com/unity/whatsnew/unity-2017.2.1
   release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3386889
 
-2017.3.1f1:
+2017.3.0f1:
   dockerfile_name: unitysetup_2017
-  version: 2017.3.1
+  version: 2017.3.0
   build: f1
-  underscore: 2017_3_1f1
-  download_url: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-  sha1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-  release_notes: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-  release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+  underscore: 2017_3_0f1
+  download_url: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+  sha1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+  release_notes: https://unity3d.com/unity/beta/unity2017.3.0f1
+  release_url: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
 2017.4.27f1:
   platforms:
