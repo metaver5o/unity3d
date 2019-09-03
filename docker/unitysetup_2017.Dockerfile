@@ -92,5 +92,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
-ADD conf/CACerts.pem /root/.local/share/unity3d/Certificates/
-ADD conf/asound.conf /etc/
+ADD docker/conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD docker/conf/asound.conf /etc/
