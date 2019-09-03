@@ -52,6 +52,10 @@ RUN echo "America/New_York" > /etc/timezone && \
     libpq5 \
     xvfb \
     wget \
+    ffmpeg \
+    libglu1-mesa-dev \
+    freeglut3-dev \
+    mesa-common-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
