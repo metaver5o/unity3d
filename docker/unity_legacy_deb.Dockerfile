@@ -10,7 +10,6 @@ RUN echo "America/New_York" > /etc/timezone && \
     lib32gcc1 \
     lib32stdc++6 \
     libasound2 \
-    libarchive13 \
     libc6 \
     libc6-i386 \
     libcairo2 \
@@ -27,12 +26,11 @@ RUN echo "America/New_York" > /etc/timezone && \
     libglib2.0-0 \
     libglu1-mesa \
     libgtk2.0-0 \
-    libgtk3.0 \
+    libgtk3.0\
     libnotify4 \
     libnspr4 \
     libnss3 \
     libpango1.0-0 \
-    libsoup2.4-1 \
     libstdc++6 \
     libx11-6 \
     libxcomposite1 \
@@ -63,34 +61,20 @@ RUN echo "America/New_York" > /etc/timezone && \
 
 ARG DOWNLOAD_URL
 ARG SHA1
-ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
 
-RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
+RUN wget -nv ${DOWNLOAD_URL} -O unity.deb && \
     # compare sha1 if given
     if [ -n "${SHA1}" -a "${SHA1}" != "" ]; then \
-      echo "${SHA1}  UnitySetup" | sha1sum --check -; \
+      echo "${SHA1}  unity.deb" | sha1sum --check -; \
     else \
       echo "no sha1 given, skipping checksum"; \
     fi && \
-    # make executable
-    chmod +x UnitySetup && \
-    # 2017 difference: must have /tmp/ and /opt/unity/ folders before installation
-    mkdir -p /tmp/unity && \
-    mkdir -p /opt/Unity && \
-    # agree with license
-    echo y | \
-    # install unity with required components
-    xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
-    ./UnitySetup \
-    --unattended \
-    --install-location=/opt/Unity \
-    --verbose \
-    --download-location=/tmp/unity \
-    --components=$COMPONENTS && \
+    # install unity
+    dpkg -i unity.deb && \
     # remove setup & temp files
-    rm UnitySetup && \
+    rm unity.deb \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
-ADD docker/CACerts.pem /root/.local/share/unity3d/Certificates/
-ADD docker/etc/asound.conf /etc/asound.conf
+ADD conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD conf/asound.conf /etc/
