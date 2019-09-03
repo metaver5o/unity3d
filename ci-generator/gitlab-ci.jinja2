@@ -51,7 +51,7 @@ before_script:
 
 .build-master: &build-master
   script:
-    - docker build -f docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" .
+    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" ./docker/
     - docker push "$CI_REGISTRY_IMAGE:$TAG"
     - |
       if [ -n "$LATEST" ]; then
@@ -65,7 +65,7 @@ before_script:
 
 .build: &build
   script:
-    - docker build -f docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG" .
+    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG" ./docker/
     - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
   retry: 2
   except:
