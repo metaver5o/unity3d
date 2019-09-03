@@ -112,172 +112,172 @@ build-master unity_2017_2_1f1:
   <<: *unity_2017_2_1f1
   <<: *build-master
 
-# main build for 2017.3.1f1
-.unity_2017_3_1f1: &unity_2017_3_1f1
+# main build for 2017.3.0f1
+.unity_2017_3_0f1: &unity_2017_3_0f1
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1
+    TAG: 2017.3.0f1
     COMPONENTS: Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1:
-  <<: *unity_2017_3_1f1
+build unity_2017_3_0f1:
+  <<: *unity_2017_3_0f1
   <<: *build
 
-build-master unity_2017_3_1f1:
-  <<: *unity_2017_3_1f1
+build-master unity_2017_3_0f1:
+  <<: *unity_2017_3_0f1
   <<: *build-master
 
-# platform specific for 2017.3.1f1: unity
-.unity_2017_3_1f1-unity: &unity_2017_3_1f1-unity
+# platform specific for 2017.3.0f1: unity
+.unity_2017_3_0f1-unity: &unity_2017_3_0f1-unity
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-unity
+    TAG: 2017.3.0f1-unity
     COMPONENTS: Unity
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-unity:
-  <<: *unity_2017_3_1f1-unity
+build unity_2017_3_0f1-unity:
+  <<: *unity_2017_3_0f1-unity
   <<: *build
 
-build-master unity_2017_3_1f1-unity:
-  <<: *unity_2017_3_1f1-unity
+build-master unity_2017_3_0f1-unity:
+  <<: *unity_2017_3_0f1-unity
   <<: *build-master
 
-# platform specific for 2017.3.1f1: windows
-.unity_2017_3_1f1-windows: &unity_2017_3_1f1-windows
+# platform specific for 2017.3.0f1: windows
+.unity_2017_3_0f1-windows: &unity_2017_3_0f1-windows
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-windows
+    TAG: 2017.3.0f1-windows
     COMPONENTS: Unity,Windows,Windows-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-windows:
-  <<: *unity_2017_3_1f1-windows
+build unity_2017_3_0f1-windows:
+  <<: *unity_2017_3_0f1-windows
   <<: *build
 
-build-master unity_2017_3_1f1-windows:
-  <<: *unity_2017_3_1f1-windows
+build-master unity_2017_3_0f1-windows:
+  <<: *unity_2017_3_0f1-windows
   <<: *build-master
 
-# platform specific for 2017.3.1f1: mac
-.unity_2017_3_1f1-mac: &unity_2017_3_1f1-mac
+# platform specific for 2017.3.0f1: mac
+.unity_2017_3_0f1-mac: &unity_2017_3_0f1-mac
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-mac
+    TAG: 2017.3.0f1-mac
     COMPONENTS: Unity,Mac,Mac-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-mac:
-  <<: *unity_2017_3_1f1-mac
+build unity_2017_3_0f1-mac:
+  <<: *unity_2017_3_0f1-mac
   <<: *build
 
-build-master unity_2017_3_1f1-mac:
-  <<: *unity_2017_3_1f1-mac
+build-master unity_2017_3_0f1-mac:
+  <<: *unity_2017_3_0f1-mac
   <<: *build-master
 
-# platform specific for 2017.3.1f1: ios
-.unity_2017_3_1f1-ios: &unity_2017_3_1f1-ios
+# platform specific for 2017.3.0f1: ios
+.unity_2017_3_0f1-ios: &unity_2017_3_0f1-ios
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-ios
+    TAG: 2017.3.0f1-ios
     COMPONENTS: Unity,iOS
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-ios:
-  <<: *unity_2017_3_1f1-ios
+build unity_2017_3_0f1-ios:
+  <<: *unity_2017_3_0f1-ios
   <<: *build
 
-build-master unity_2017_3_1f1-ios:
-  <<: *unity_2017_3_1f1-ios
+build-master unity_2017_3_0f1-ios:
+  <<: *unity_2017_3_0f1-ios
   <<: *build-master
 
-# platform specific for 2017.3.1f1: android
-.unity_2017_3_1f1-android: &unity_2017_3_1f1-android
+# platform specific for 2017.3.0f1: android
+.unity_2017_3_0f1-android: &unity_2017_3_0f1-android
   variables:
     DOCKERFILE_NAME: unitysetup_2017-android
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-android
+    TAG: 2017.3.0f1-android
     COMPONENTS: Unity,Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-android:
-  <<: *unity_2017_3_1f1-android
+build unity_2017_3_0f1-android:
+  <<: *unity_2017_3_0f1-android
   <<: *build
 
-build-master unity_2017_3_1f1-android:
-  <<: *unity_2017_3_1f1-android
+build-master unity_2017_3_0f1-android:
+  <<: *unity_2017_3_0f1-android
   <<: *build-master
 
-# platform specific for 2017.3.1f1: webgl
-.unity_2017_3_1f1-webgl: &unity_2017_3_1f1-webgl
+# platform specific for 2017.3.0f1: webgl
+.unity_2017_3_0f1-webgl: &unity_2017_3_0f1-webgl
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-webgl
+    TAG: 2017.3.0f1-webgl
     COMPONENTS: Unity,WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-webgl:
-  <<: *unity_2017_3_1f1-webgl
+build unity_2017_3_0f1-webgl:
+  <<: *unity_2017_3_0f1-webgl
   <<: *build
 
-build-master unity_2017_3_1f1-webgl:
-  <<: *unity_2017_3_1f1-webgl
+build-master unity_2017_3_0f1-webgl:
+  <<: *unity_2017_3_0f1-webgl
   <<: *build-master
 
-# platform specific for 2017.3.1f1: facebook
-.unity_2017_3_1f1-facebook: &unity_2017_3_1f1-facebook
+# platform specific for 2017.3.0f1: facebook
+.unity_2017_3_0f1-facebook: &unity_2017_3_0f1-facebook
   variables:
     DOCKERFILE_NAME: unitysetup_2017
-    VERSION: 2017.3.1
+    VERSION: 2017.3.0
     BUILD: f1
-    TAG: 2017.3.1f1-facebook
+    TAG: 2017.3.0f1-facebook
     COMPONENTS: Unity,Facebook-Games
-    DOWNLOAD_URL: https://beta.unity3d.com/download/aea5ecb8f9fd/UnitySetup-2017.3.1f1
-    SHA1: 065c7c75980dd57dc9b7113b2cd089e2ba2b9931
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.3.1
-    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3393668
+    DOWNLOAD_URL: http://beta.unity3d.com/download/3c89f8d277f5/UnitySetup-2017.3.0f1
+    SHA1: 864eec744e5ca360c41e6121ddbd4cbb48659fe4
+    RELEASE_NOTES: https://unity3d.com/unity/beta/unity2017.3.0f1
+    RELEASE_URL: https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-3313793
 
-build unity_2017_3_1f1-facebook:
-  <<: *unity_2017_3_1f1-facebook
+build unity_2017_3_0f1-facebook:
+  <<: *unity_2017_3_0f1-facebook
   <<: *build
 
-build-master unity_2017_3_1f1-facebook:
-  <<: *unity_2017_3_1f1-facebook
+build-master unity_2017_3_0f1-facebook:
+  <<: *unity_2017_3_0f1-facebook
   <<: *build-master
 
 
