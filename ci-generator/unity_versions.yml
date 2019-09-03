@@ -76,6 +76,8 @@
   release_url: https://beta.unity3d.com/download/d0e9f15437b1/public_download.html
 
 2018.4.8f1:
+  build: f1
+  dockerfile_name: unitysetup
   download_url: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
   release_notes: https://unity3d.com/unity/whats-new/2018.4.8f1
   release_url: https://beta.unity3d.com/download/9bc9d983d803/public_download.html
