@@ -76,4 +76,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O unity.deb && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
-ADD CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD docker/CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD docker/etc/asound.conf /etc/asound.conf
