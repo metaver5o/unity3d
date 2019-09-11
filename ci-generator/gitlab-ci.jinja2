@@ -94,8 +94,13 @@ prepare_{{version.underscore}}:
     SHA1: {{version.sha1}}
     {%- endif %}
   script:
-    - docker build -f ./docker/ubuntu_prepare.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$VERSION$BUILD" ./docker/
-    - docker push "$CI_REGISTRY_IMAGE:$VERSION$BUILD"
+    - export REGISTRY=$CI_REGISTRY_IMAGE:$VERSION$BUILD
+    - docker build -f ./docker/ubuntu_prepare.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
+    - docker push "$REGISTRY"
+    - docker run "$REGISTRY" cat Unity_v$VERSION$BUILD.alf >> licence_request.alf
+  artifacts:
+    paths:
+      - licence_request.alf
 
 {%- if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}

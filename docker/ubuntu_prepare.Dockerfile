@@ -88,5 +88,9 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
+RUN mkdir -p /root/.local/share/unity3d/Certificates/ && \
+    mkdir -p /root/.local/share/unity3d/Unity/ && \
+    /opt/Unity/Editor/Unity -batchmode -quit -nographics -createManualActivationFile -logfile /dev/stdout || :
+
 ADD conf/CACerts.pem /root/.local/share/unity3d/Certificates/
 ADD conf/asound.conf /etc/
