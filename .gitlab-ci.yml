@@ -76,8 +76,113 @@ before_script:
       fi
   retry: 2
 
-nothing_to_build:
-  stage: build
+# prepare image 2019.2.4f1
+prepare_2019_2_4f1:
+  stage: prepare
+  variables:
+    VERSION: 2019.2.4
+    BUILD: f1
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
   script:
-    echo 'All versions are already built, skipping'
+    - export REGISTRY=$CI_REGISTRY_IMAGE:$VERSION$BUILD
+    - docker build -f ./docker/ubuntu_prepare.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
+    - docker push "$REGISTRY"
+    - docker run "$REGISTRY" cat Unity_v$VERSION$BUILD.alf >> licence_request.alf
+  artifacts:
+    paths:
+      - licence_request.alf
+
+# platform specific for 2019.2.4f1: windows
+unity_2019_2_4f1-windows:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-windows
+    COMPONENTS: Windows,Windows-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+# platform specific for 2019.2.4f1: mac
+unity_2019_2_4f1-mac:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-mac
+    COMPONENTS: Mac,Mac-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+# platform specific for 2019.2.4f1: ios
+unity_2019_2_4f1-ios:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-ios
+    COMPONENTS: iOS
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+# platform specific for 2019.2.4f1: android
+unity_2019_2_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+# platform specific for 2019.2.4f1: webgl
+unity_2019_2_4f1-webgl:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-webgl
+    COMPONENTS: WebGL
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+# platform specific for 2019.2.4f1: facebook
+unity_2019_2_4f1-facebook:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-facebook
+    COMPONENTS: Facebook-Games
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+
+
+
+
 
