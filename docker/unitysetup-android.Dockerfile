@@ -4,6 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 RUN echo "America/New_York" > /etc/timezone && \
+    add-apt-repository ppa:openjdk-r/ppa \
+    && add-apt-repository ppa:cwchien/gradle \
     apt-get update -qq; \
     apt-get install -qq -y \
     gconf-service \
@@ -61,11 +63,9 @@ RUN echo "America/New_York" > /etc/timezone && \
     locales \
     software-properties-common \
     unzip \
-    && add-apt-repository ppa:openjdk-r/ppa \
-    && add-apt-repository ppa:cwchien/gradle \
-    && apt-get install -qq -y \
     gradle \
     openjdk-8-jdk \
+    git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
