@@ -1,4 +1,5 @@
 test-ci-generator:
+  stage: test
   image: python:3.7-alpine
   variables:
     PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
@@ -42,78 +43,70 @@ variables:
     --build-arg DOWNLOAD_URL=$DOWNLOAD_URL
     --build-arg COMPONENTS=$COMPONENTS
     --build-arg SHA1=$SHA1
+    --build-arg BASE_IMAGE=$CI_REGISTRY_IMAGE:$VERSION$BUILD
 
 services:
   - docker:dind
 
+stages:
+  - test
+  - prepare
+  - build
+
 before_script:
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
-.build-master: &build-master
+.build: &build
+  stage : build
   script:
-    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG" ./docker/
-    - docker push "$CI_REGISTRY_IMAGE:$TAG"
+    - if [ "$CI_COMMIT_REF_NAME" = "master" ]
+      ; then
+        export REGISTRY=$CI_REGISTRY_IMAGE:$TAG
+      ; else
+        export REGISTRY=$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG
+      ; fi
+    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
+    - docker push "$REGISTRY"
     - |
-      if [ -n "$LATEST" ]; then
-        echo "Marking $CI_REGISTRY_IMAGE:$TAG as latest image"
-        docker tag "$CI_REGISTRY_IMAGE:$TAG" "$CI_REGISTRY_IMAGE:latest"
+      if [ "$CI_COMMIT_REF_NAME" = "master" ] && [ -n "$LATEST" ]; then
+        echo "Marking $REGISTRY as latest image"
+        docker tag "$REGISTRY" "$CI_REGISTRY_IMAGE:latest"
         docker push "$CI_REGISTRY_IMAGE:latest"
       fi
   retry: 2
-  only:
-    - master
-
-.build: &build
-  script:
-    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG" ./docker/
-    - docker push "$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG"
-  retry: 2
-  except:
-    - master
 
 {%- if not versions.items() %}
 
 nothing_to_build:
+  stage: build
   script:
     echo 'All versions are already built, skipping'
 {% else %}
 {% for version_key, version in versions.items() %}
-# main build for {{version_key}}
-.unity_{{version.underscore}}: &unity_{{version.underscore}}
+# prepare image {{version_key}}
+prepare_{{version.underscore}}:
+  stage: prepare
   variables:
-    DOCKERFILE_NAME: {{version.dockerfile_name}}
     VERSION: {{version.version}}
     BUILD: {{version.build}}
-    TAG: {{version_key}}
-    {%- if not version.legacy %}
-    COMPONENTS: {{version.base_components}}
-    {%- endif %}
     DOWNLOAD_URL: {{version.download_url}}
     {%- if version.sha1 %}
     SHA1: {{version.sha1}}
     {%- endif %}
-    {%- if version.release_notes %}
-    RELEASE_NOTES: {{version.release_notes}}
-    {%- endif %}
-    {%- if version.release_url %}
-    RELEASE_URL: {{version.release_url}}
-    {%- endif %}
-    {%- if version.latest %}
-    LATEST: 1
-    {%- endif %}
-
-build unity_{{version.underscore}}:
-  <<: *unity_{{version.underscore}}
-  <<: *build
-
-build-master unity_{{version.underscore}}:
-  <<: *unity_{{version.underscore}}
-  <<: *build-master
+  script:
+    - export REGISTRY=$CI_REGISTRY_IMAGE:$VERSION$BUILD
+    - docker build -f ./docker/ubuntu_prepare.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
+    - docker push "$REGISTRY"
+    - docker run "$REGISTRY" cat Unity_v$VERSION$BUILD.alf >> licence_request.alf
+  artifacts:
+    paths:
+      - licence_request.alf
 
 {%- if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}
 # platform specific for {{version_key}}: {{platform_key}}
-.unity_{{version.underscore}}-{{platform_key}}: &unity_{{version.underscore}}-{{platform_key}}
+unity_{{version.underscore}}-{{platform_key}}:
+  <<: *build
   variables:
     DOCKERFILE_NAME: {{version.platforms[platform_key].dockerfile_name}}
     VERSION: {{version.version}}
@@ -134,13 +127,6 @@ build-master unity_{{version.underscore}}:
     ANDROID_SDK_VERSION: {{version.android_sdk_version}}
     {%- endif %}
 
-build unity_{{version.underscore}}-{{platform_key}}:
-  <<: *unity_{{version.underscore}}-{{platform_key}}
-  <<: *build
-
-build-master unity_{{version.underscore}}-{{platform_key}}:
-  <<: *unity_{{version.underscore}}-{{platform_key}}
-  <<: *build-master
 {% endfor %}
 {% endif %}
 {% endfor %}
