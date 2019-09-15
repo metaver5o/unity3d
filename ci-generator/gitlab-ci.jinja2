@@ -44,9 +44,11 @@ variables:
     --build-arg COMPONENTS=$COMPONENTS
     --build-arg SHA1=$SHA1
     --build-arg BASE_IMAGE=$CI_REGISTRY_IMAGE:$VERSION$BUILD
-
+  # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
 services:
-  - docker:dind
+  - docker:19.03.0-dind
 
 stages:
   - test
@@ -54,6 +56,7 @@ stages:
   - build
 
 before_script:
+  - docker info
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
 .build: &build
