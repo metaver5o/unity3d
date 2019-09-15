@@ -9,6 +9,7 @@ ARG SHA1
 RUN echo "America/New_York" > /etc/timezone && \
     apt-get update -qq; \
     apt-get install -qq -y \
+    git \
     gconf-service \
     lib32gcc1 \
     lib32stdc++6 \
