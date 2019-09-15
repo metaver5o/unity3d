@@ -58,6 +58,7 @@ RUN echo "America/New_York" > /etc/timezone && \
     libglu1-mesa-dev \
     freeglut3-dev \
     mesa-common-dev \
+    git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

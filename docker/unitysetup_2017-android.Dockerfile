@@ -61,6 +61,7 @@ RUN echo "America/New_York" > /etc/timezone && \
     locales \
     software-properties-common \
     unzip \
+    git \
     && add-apt-repository ppa:openjdk-r/ppa \
     && add-apt-repository ppa:cwchien/gradle \
     && apt-get install -qq -y \
