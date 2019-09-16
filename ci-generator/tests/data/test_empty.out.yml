@@ -27,13 +27,14 @@ test-ci-generator:
 variables:
   # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
   # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_TLS_VERIFY: 1
   DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
 
-image: docker:18.09
+image: docker:19.03.2
 
 services:
-  - docker:18.09-dind
+  - docker:19.03.2-dind
 
 stages:
   - test
