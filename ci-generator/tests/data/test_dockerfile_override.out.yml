@@ -24,8 +24,6 @@ test-ci-generator:
     paths:
       - ci-generator/htmlcov
 
-image: docker:latest
-
 variables:
   IMAGE_LABELS: >
     --label vcs-url=$CI_PROJECT_URL
@@ -45,9 +43,14 @@ variables:
     --build-arg COMPONENTS=$COMPONENTS
     --build-arg SHA1=$SHA1
     --build-arg BASE_IMAGE=$REGISTRY
+  # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
+
+image: docker:19.03.0
 
 services:
-  - docker:dind
+  - docker:19.03.0-dind
 
 stages:
   - test
