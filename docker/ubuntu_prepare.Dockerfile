@@ -3,13 +3,18 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
+ARG DOWNLOAD_URL
+ARG SHA1
+
 RUN echo "America/New_York" > /etc/timezone && \
     apt-get update -qq; \
     apt-get install -qq -y \
+    git \
     gconf-service \
     lib32gcc1 \
     lib32stdc++6 \
     libasound2 \
+    libarchive13 \
     libc6 \
     libc6-i386 \
     libcairo2 \
@@ -26,11 +31,12 @@ RUN echo "America/New_York" > /etc/timezone && \
     libglib2.0-0 \
     libglu1-mesa \
     libgtk2.0-0 \
-    libgtk3.0\
+    libgtk3.0 \
     libnotify4 \
     libnspr4 \
     libnss3 \
     libpango1.0-0 \
+    libsoup2.4-1 \
     libstdc++6 \
     libx11-6 \
     libxcomposite1 \
@@ -56,26 +62,36 @@ RUN echo "America/New_York" > /etc/timezone && \
     libglu1-mesa-dev \
     freeglut3-dev \
     mesa-common-dev \
-    git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-ARG DOWNLOAD_URL
-ARG SHA1
-
-RUN wget -nv ${DOWNLOAD_URL} -O unity.deb && \
+RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
     if [ -n "${SHA1}" -a "${SHA1}" != "" ]; then \
-      echo "${SHA1}  unity.deb" | sha1sum --check -; \
+      echo "${SHA1}  UnitySetup" | sha1sum --check -; \
     else \
       echo "no sha1 given, skipping checksum"; \
     fi && \
-    # install unity
-    dpkg -i unity.deb && \
+    # make executable
+    chmod +x UnitySetup && \
+    # agree with license
+    echo y | \
+    # install unity with required components
+    xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
+    ./UnitySetup \
+    --unattended \
+    --install-location=/opt/Unity \
+    --verbose \
+    --download-location=/tmp/unity \
+    --components=Unity && \
     # remove setup & temp files
-    rm unity.deb \
+    rm UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
 
-Add conf/CACerts.pem /root/.local/share/unity3d/Certificates/
-Add conf/asound.conf /etc/
+RUN mkdir -p /root/.local/share/unity3d/Certificates/ && \
+    mkdir -p /root/.local/share/unity3d/Unity/ && \
+    /opt/Unity/Editor/Unity -batchmode -quit -nographics -createManualActivationFile -logfile /dev/stdout || :
+
+ADD conf/CACerts.pem /root/.local/share/unity3d/Certificates/
+ADD conf/asound.conf /etc/

@@ -82,13 +82,12 @@ class GitlabCiGenerator(object):
     @staticmethod
     def get_unity_platforms():
         return {
-            "unity": {"components": "Unity"},
-            "windows": {"components": "Unity,Windows,Windows-Mono"},
-            "mac": {"components": "Unity,Mac,Mac-Mono"},
-            "ios": {"components": "Unity,iOS"},
-            "android": {"components": "Unity,Android"},
-            "webgl": {"components": "Unity,WebGL"},
-            "facebook": {"components": "Unity,Facebook-Games"},
+            "windows": {"components": "Windows,Windows-Mono"},
+            "mac": {"components": "Mac,Mac-Mono"},
+            "ios": {"components": "iOS"},
+            "android": {"components": "Android"},
+            "webgl": {"components": "WebGL"},
+            "facebook": {"components": "Facebook-Games"},
         }
 
     @staticmethod
