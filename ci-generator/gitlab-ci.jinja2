@@ -26,13 +26,14 @@ test-ci-generator:
 variables:
   # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
   # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_TLS_VERIFY: 1
   DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
 
-image: docker:18.09
+image: docker:19.03.2
 
 services:
-  - docker:18.09-dind
+  - docker:19.03.2-dind
 
 stages:
   - test
@@ -60,12 +61,18 @@ nothing_to_build:
 prepare_{{version.underscore}}:
   stage: prepare
   variables:
+
     VERSION: {{version.version}}
     BUILD: {{version.build}}
     DOWNLOAD_URL: {{version.download_url}}
     {%- if version.sha1 %}
     SHA1: {{version.sha1}}
     {%- endif %}
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
   script:
     - ci/prepare.sh
   artifacts:
@@ -97,6 +104,11 @@ unity_{{version.underscore}}-{{platform_key}}:
     {%- if platform_key == 'android' and version.android_sdk_version %}
     ANDROID_SDK_VERSION: {{version.android_sdk_version}}
     {%- endif %}
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 {% endfor %}
 {% endif %}
