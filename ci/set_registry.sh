@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 set -ex
 if [ "$CI_COMMIT_REF_NAME" = "master" ]; then
