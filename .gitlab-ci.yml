@@ -53,7 +53,6 @@ before_script:
 prepare_2019_2_4f1:
   stage: prepare
   variables:
-
     VERSION: 2019.2.4
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
