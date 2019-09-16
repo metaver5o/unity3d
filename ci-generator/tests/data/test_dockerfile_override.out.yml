@@ -27,7 +27,6 @@ test-ci-generator:
 variables:
   # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
   # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-  DOCKER_TLS_VERIFY: 1
   DOCKER_DRIVER: overlay2
   DOCKER_TLS_CERTDIR: "/certs"
 
@@ -61,7 +60,6 @@ prepare_2019_1_3f1:
     SHA1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
   script:
@@ -86,7 +84,6 @@ unity_2019_1_3f1-windows:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
@@ -106,7 +103,6 @@ unity_2019_1_3f1-mac:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
@@ -126,7 +122,6 @@ unity_2019_1_3f1-ios:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
@@ -146,7 +141,6 @@ unity_2019_1_3f1-android:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
@@ -166,7 +160,6 @@ unity_2019_1_3f1-webgl:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
@@ -186,6 +179,5 @@ unity_2019_1_3f1-facebook:
     RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_TLS_VERIFY: 1
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
