@@ -27,13 +27,14 @@ test-ci-generator:
 variables:
   # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
   # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_TLS_VERIFY: 1
   DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
 
-image: docker:18.09
+image: docker:19.03.2
 
 services:
-  - docker:18.09-dind
+  - docker:19.03.2-dind
 
 stages:
   - test
@@ -53,10 +54,16 @@ before_script:
 prepare_2019_2_4f1:
   stage: prepare
   variables:
+
     VERSION: 2019.2.4
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
   script:
     - ci/prepare.sh
   artifacts:
@@ -77,6 +84,11 @@ unity_2019_2_4f1-windows:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 # platform specific for 2019.2.4f1: mac
@@ -92,6 +104,11 @@ unity_2019_2_4f1-mac:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 # platform specific for 2019.2.4f1: ios
@@ -107,6 +124,11 @@ unity_2019_2_4f1-ios:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 # platform specific for 2019.2.4f1: android
@@ -122,6 +144,11 @@ unity_2019_2_4f1-android:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 # platform specific for 2019.2.4f1: webgl
@@ -137,6 +164,11 @@ unity_2019_2_4f1-webgl:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 # platform specific for 2019.2.4f1: facebook
@@ -152,6 +184,11 @@ unity_2019_2_4f1-facebook:
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4f1
     RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
 
 
 
