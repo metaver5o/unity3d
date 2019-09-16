@@ -79,6 +79,7 @@ prepare_2017_4_27f1:
   artifacts:
     paths:
       - licence_request.alf
+  retry: 2
 
 # platform specific for 2017.4.27f1: windows
 unity_2017_4_27f1-windows:

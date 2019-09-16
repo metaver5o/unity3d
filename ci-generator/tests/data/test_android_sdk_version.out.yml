@@ -79,6 +79,7 @@ prepare_2019_1_3f1:
   artifacts:
     paths:
       - licence_request.alf
+  retry: 2
 
 # platform specific for 2019.1.3f1: windows
 unity_2019_1_3f1-windows:

@@ -79,3 +79,4 @@ prepare_2017_2_1f1:
   artifacts:
     paths:
       - licence_request.alf
+  retry: 2
