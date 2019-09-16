@@ -44,12 +44,10 @@ variables:
     --build-arg DOWNLOAD_URL=$DOWNLOAD_URL
     --build-arg COMPONENTS=$COMPONENTS
     --build-arg SHA1=$SHA1
-    --build-arg BASE_IMAGE=$CI_REGISTRY_IMAGE:$VERSION$BUILD
-  # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-  DOCKER_DRIVER: overlay2
-  DOCKER_TLS_CERTDIR: "/certs"
+    --build-arg BASE_IMAGE=$REGISTRY
+
 services:
-  - docker:19.03.0-dind
+  - docker:dind
 
 stages:
   - test
@@ -57,26 +55,12 @@ stages:
   - build
 
 before_script:
-  - docker info
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
 .build: &build
   stage : build
   script:
-    - if [ "$CI_COMMIT_REF_NAME" = "master" ]
-      ; then
-        export REGISTRY=$CI_REGISTRY_IMAGE:$TAG
-      ; else
-        export REGISTRY=$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG
-      ; fi
-    - docker build -f ./docker/${DOCKERFILE_NAME}.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
-    - docker push "$REGISTRY"
-    - |
-      if [ "$CI_COMMIT_REF_NAME" = "master" ] && [ -n "$LATEST" ]; then
-        echo "Marking $REGISTRY as latest image"
-        docker tag "$REGISTRY" "$CI_REGISTRY_IMAGE:latest"
-        docker push "$CI_REGISTRY_IMAGE:latest"
-      fi
+    - ci/build.sh
   retry: 2
 
 # prepare image 2019.2.4f1
@@ -88,10 +72,7 @@ prepare_2019_2_4f1:
     DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
     SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
   script:
-    - export REGISTRY=$CI_REGISTRY_IMAGE:$VERSION$BUILD
-    - docker build -f ./docker/ubuntu_prepare.Dockerfile $IMAGE_LABELS --label build-date=`date -Iseconds` $IMAGE_ARGUMENTS --pull -t "$REGISTRY" ./docker/
-    - docker push "$REGISTRY"
-    - docker run "$REGISTRY" cat Unity_v$VERSION$BUILD.alf >> licence_request.alf
+    - ci/prepare.sh
   artifacts:
     paths:
       - licence_request.alf
