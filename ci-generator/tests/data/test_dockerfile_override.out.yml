@@ -27,6 +27,7 @@ test-ci-generator:
 variables:
   # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
   DOCKER_DRIVER: overlay2
+  DOCKER_TLS_VERIFY: 1
   DOCKER_TLS_CERTDIR: "/certs"
 
 image: docker:19.03.2
