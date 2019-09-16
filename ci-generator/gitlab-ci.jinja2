@@ -88,6 +88,7 @@ prepare_{{version.underscore}}:
   artifacts:
     paths:
       - licence_request.alf
+  retry: 2
 
 {%- if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}
