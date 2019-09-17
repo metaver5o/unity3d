@@ -57,6 +57,7 @@ prepare_2019_1_3f1:
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
     SHA1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
+    TAG: 2019.1.3f1
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
