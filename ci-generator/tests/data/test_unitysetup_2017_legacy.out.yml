@@ -57,6 +57,7 @@ prepare_2017_2_1f1:
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/ce9f6a0436e1+/unity-editor_amd64-2017.2.1f1.deb
     SHA1: af4301f17ec256095d133091f6a37a3cc74ce7da
+    TAG: 2017.2.1f1
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
