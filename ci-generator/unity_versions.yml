@@ -1,1 +1,10 @@
+2019.2.12f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/UnitySetup-2019.2.12f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.12f1
+  release_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/public_download.html
+  sha1: 140d6807f44058b2de4d76a3293a24d38b081523
+  underscore: 2019_2_12f1
+  version: 2019.2.12
 
