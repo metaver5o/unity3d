@@ -2,14 +2,14 @@
 
 This is a python script that will generate the `.gitlab-ci.yml` to make it easier to build desired unity versions. For easier usage, use `docker-compose`.
 
-## 1. Move existing versions from `unity_versions.py` to unity_versions.old.yml`
+## 1. Move existing versions from `unity_versions.yml` to unity_versions.old.yml`
 
 ```bash
 # move existing versions to old versions
-cat unity_versions.py >> unity_versions.old.yml
+cat unity_versions.yml >> unity_versions.old.yml
 
 # empty unity_versions.py
-echo '' > unity_versions.py
+echo '' > unity_versions.yml
 
 # grab latest versions from unity
 docker-compose run --rm update
