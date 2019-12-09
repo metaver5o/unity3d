@@ -113,6 +113,6 @@ class CheckNewVersion(object):
 
 
 if __name__ == '__main__':
-    #CheckNewVersion().output(release_key='beta')
+    CheckNewVersion().output(release_key='beta')
     CheckNewVersion().output()
 
