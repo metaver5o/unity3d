@@ -7,15 +7,6 @@
   underscore: 2019_3_0f1
   version: 2019.3.0
 
-2020.1.0a15:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-  release_notes: https://unity3d.com/unity/whats-new/2020.1.0a15
-  release_url: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
-  underscore: 2020_1_0a15
-  version: 2020.1.0a15
-
 2019.2.15f1:
   build: f1
   dockerfile_name: unitysetup
