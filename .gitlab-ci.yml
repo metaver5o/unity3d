@@ -56,7 +56,6 @@ prepare_2019_3_0f1:
     VERSION: 2019.3.0
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     TAG: 2019.3.0f1
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
@@ -79,7 +78,6 @@ unity_2019_3_0f1-windows:
     TAG: 2019.3.0f1-windows
     COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -98,7 +96,6 @@ unity_2019_3_0f1-mac:
     TAG: 2019.3.0f1-mac
     COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -117,7 +114,6 @@ unity_2019_3_0f1-ios:
     TAG: 2019.3.0f1-ios
     COMPONENTS: iOS
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -136,7 +132,6 @@ unity_2019_3_0f1-android:
     TAG: 2019.3.0f1-android
     COMPONENTS: Android
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -155,7 +150,6 @@ unity_2019_3_0f1-webgl:
     TAG: 2019.3.0f1-webgl
     COMPONENTS: WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -174,7 +168,6 @@ unity_2019_3_0f1-facebook:
     TAG: 2019.3.0f1-facebook
     COMPONENTS: Facebook-Games
     DOWNLOAD_URL: https://beta.unity3d.com/download/ffacea4b84e7/UnitySetup-2019.3.0f1
-    SHA1: f4a533fc281e39930509f159e3a87fd2651f83d6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -192,7 +185,6 @@ prepare_2020_1_0a15:
     VERSION: 2020.1.0a15
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     TAG: 2020.1.0a15
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
@@ -215,7 +207,6 @@ unity_2020_1_0a15-windows:
     TAG: 2020.1.0a15-windows
     COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -234,7 +225,6 @@ unity_2020_1_0a15-mac:
     TAG: 2020.1.0a15-mac
     COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -253,7 +243,6 @@ unity_2020_1_0a15-ios:
     TAG: 2020.1.0a15-ios
     COMPONENTS: iOS
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -272,7 +261,6 @@ unity_2020_1_0a15-android:
     TAG: 2020.1.0a15-android
     COMPONENTS: Android
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -291,7 +279,6 @@ unity_2020_1_0a15-webgl:
     TAG: 2020.1.0a15-webgl
     COMPONENTS: WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -310,7 +297,6 @@ unity_2020_1_0a15-facebook:
     TAG: 2020.1.0a15-facebook
     COMPONENTS: Facebook-Games
     DOWNLOAD_URL: https://beta.unity3d.com/download/c34b21e125d7/UnitySetup-2020.1.0a15
-    SHA1: ac7bde64e5c2f3735724d388a6daf11c7146f0e6
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a15
     RELEASE_URL: https://beta.unity3d.com/download/c34b21e125d7/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
