@@ -37,11 +37,15 @@ class TestGitlabCiGenerator(TestCase):
         self.assertEqual(result, ['test'])
 
     @requests_mock.mock()
-    def test_get_latest_unity_official_releases_versions(self, mocked_request):
+    def test_get_latest_unity_releases(self, mocked_request):
         check_new_version = CheckNewVersion()
         self.mock_releases_json_get(mocked_request)
-        result = check_new_version.get_latest_unity_official_releases_versions()
-        self.assertEqual(result, ['2017.4.27f1', '2018.2.21f1', '2018.3.14f1', '2018.4.1f1', '2019.1.4f1'])
+        with self.subTest("get_latest_unity_releases returns stable releases by default"):
+            result = check_new_version.get_latest_unity_releases()
+            self.assertEqual(result, ['2017.4.27f1', '2018.2.21f1', '2018.3.14f1', '2018.4.1f1', '2019.1.4f1'])
+        with self.subTest("get_latest_unity_releases returns 'beta' releases when passing 'beta' argument"):
+            result = check_new_version.get_latest_unity_releases('beta')
+            self.assertEqual(result, ['2019.2.0b4', '2019.3.0a3'])
 
     @requests_mock.mock()
     def test_get_releases(self, mocked_request):
