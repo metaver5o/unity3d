@@ -4,6 +4,7 @@ import os
 import yaml
 from requests import get
 
+DEFAULT_RELEASE_KEY='official'
 
 class CheckNewVersion(object):
     release_url = 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-linux.json'
@@ -30,12 +31,12 @@ class CheckNewVersion(object):
             }.keys()
         )
 
-    def get_latest_unity_official_releases_versions(self):
+    def get_latest_unity_releases(self, release_key=DEFAULT_RELEASE_KEY):
         releases = self.get_releases()
-        official_releases = []
-        for official_release in releases['official']:
-            official_releases.append(official_release['version'])
-        return official_releases
+        filtered_releases = []
+        for release in releases[release_key]:
+            filtered_releases.append(release['version'])
+        return filtered_releases
 
     def get_releases(self):
         return get(self.release_url).json()
@@ -90,16 +91,16 @@ class CheckNewVersion(object):
                 buf = afile.read(block_size)
         return hashing_algorithm.hexdigest()
 
-    def output(self):
-        official_releases = self.get_latest_unity_official_releases_versions()
+    def output(self, release_key=DEFAULT_RELEASE_KEY):
+        latest_releases = self.get_latest_unity_releases(release_key)
         current_versions = self.get_all_unity_versions()
-        missing_versions = [version for version in official_releases if version not in current_versions]
+        missing_versions = [version for version in latest_releases if version not in current_versions]
 
         releases = self.get_releases()
 
         missing_versions_details = []
         for missing_version in missing_versions:
-            for release in releases['official']:
+            for release in releases[release_key]:
                 if release['version'] == missing_version:
                     missing_versions_details.append(release)
 
@@ -112,4 +113,6 @@ class CheckNewVersion(object):
 
 
 if __name__ == '__main__':
+    CheckNewVersion().output(release_key='beta')
     CheckNewVersion().output()
+
