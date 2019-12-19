@@ -1,20 +1,10 @@
-2018.4.14f1:
+2019.2.9f1:
   build: f1
   dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/05119b33d0b7/UnitySetup-2018.4.14f1
-  release_notes: https://unity3d.com/unity/whats-new/2018.4.14f1
-  release_url: https://beta.unity3d.com/download/05119b33d0b7/public_download.html
-  sha1: c107d695be5e898d35c61ce90dc46a300245736e
-  underscore: 2018_4_14f1
-  version: 2018.4.14
-
-2019.2.16f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/b9898e2d04a4/UnitySetup-2019.2.16f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.16f1
-  release_url: https://beta.unity3d.com/download/b9898e2d04a4/public_download.html
-  sha1: b736c0b253393c3ac08aa2c35b68f6d7710f84db
-  underscore: 2019_2_16f1
-  version: 2019.2.16
+  download_url: https://beta.unity3d.com/download/ebce4d76e6e8/UnitySetup-2019.2.9f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.9f1
+  release_url: https://beta.unity3d.com/download/ebce4d76e6e8/public_download.html
+  sha1: b595a65a7977994bdeb162ed6984aed55df7d208
+  underscore: 2019_2_9f1
+  version: 2019.2.9
 
