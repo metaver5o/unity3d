@@ -1524,3 +1524,14 @@
   underscore: 2019_2_17f1
   version: 2019.2.17
 
+
+2018.4.15f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/13f5a1bf9ca1/UnitySetup-2018.4.15f1
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.15f1
+  release_url: https://beta.unity3d.com/download/13f5a1bf9ca1/public_download.html
+  sha1: 08bd749d9a9c4f0d5d162b41b5ed6fa8c7335c2a
+  underscore: 2018_4_15f1
+  version: 2018.4.15
+
