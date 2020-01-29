@@ -1502,7 +1502,6 @@
   underscore: 2019_2_16f1
   version: 2019.2.16
 
-
 2019.2.9f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1512,7 +1511,6 @@
   sha1: b595a65a7977994bdeb162ed6984aed55df7d208
   underscore: 2019_2_9f1
   version: 2019.2.9
-
 
 2019.2.17f1:
   build: f1
@@ -1524,7 +1522,6 @@
   underscore: 2019_2_17f1
   version: 2019.2.17
 
-
 2018.4.15f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1534,4 +1531,15 @@
   sha1: 08bd749d9a9c4f0d5d162b41b5ed6fa8c7335c2a
   underscore: 2018_4_15f1
   version: 2018.4.15
+
+# 2017 versions skipped due to https://gitlab.com/gableroux/unity3d/issues/40
+2017.4.36f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c663def8414c/UnitySetup-2017.4.36f1
+  release_notes: https://unity3d.com/unity/whats-new/2017.4.36f1
+  release_url: https://beta.unity3d.com/download/c663def8414c/public_download.html
+  sha1: 9b79b5cfaf0823dad78e004c180f9cb6bee0583d
+  underscore: 2017_4_36f1
+  version: 2017.4.36
 
