@@ -49,8 +49,276 @@ before_script:
     - ci/build.sh
   retry: 2
 
-nothing_to_build:
-  stage: build
+# prepare image 2020.1.0a21
+prepare_2020_1_0a21:
+  stage: prepare
+  variables:
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    TAG: 2020.1.0a21
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
   script:
-    echo 'All versions are already built, skipping'
+    - ci/prepare.sh
+  artifacts:
+    paths:
+      - licence_request.alf
+  retry: 2
+
+# platform specific for 2020.1.0a21: windows
+unity_2020_1_0a21-windows:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-windows
+    COMPONENTS: Windows,Windows-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2020.1.0a21: mac
+unity_2020_1_0a21-mac:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-mac
+    COMPONENTS: Mac,Mac-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2020.1.0a21: ios
+unity_2020_1_0a21-ios:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-ios
+    COMPONENTS: iOS
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2020.1.0a21: android
+unity_2020_1_0a21-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2020.1.0a21: webgl
+unity_2020_1_0a21-webgl:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-webgl
+    COMPONENTS: WebGL
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2020.1.0a21: facebook
+unity_2020_1_0a21-facebook:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2020.1.0a21
+    BUILD: f1
+    TAG: 2020.1.0a21-facebook
+    COMPONENTS: Facebook-Games
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ea9a24ebde1/UnitySetup-2020.1.0a21
+    SHA1: cc0acb5224ada00aa659cb40ebd68899e379e2e1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0a21
+    RELEASE_URL: https://beta.unity3d.com/download/4ea9a24ebde1/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+# prepare image 2019.3.0f6
+prepare_2019_3_0f6:
+  stage: prepare
+  variables:
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    TAG: 2019.3.0f6
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+  script:
+    - ci/prepare.sh
+  artifacts:
+    paths:
+      - licence_request.alf
+  retry: 2
+
+# platform specific for 2019.3.0f6: windows
+unity_2019_3_0f6-windows:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-windows
+    COMPONENTS: Windows,Windows-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2019.3.0f6: mac
+unity_2019_3_0f6-mac:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-mac
+    COMPONENTS: Mac,Mac-Mono
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2019.3.0f6: ios
+unity_2019_3_0f6-ios:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-ios
+    COMPONENTS: iOS
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2019.3.0f6: android
+unity_2019_3_0f6-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2019.3.0f6: webgl
+unity_2019_3_0f6-webgl:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-webgl
+    COMPONENTS: WebGL
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+# platform specific for 2019.3.0f6: facebook
+unity_2019_3_0f6-facebook:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup
+    VERSION: 2019.3.0f6
+    BUILD: f1
+    TAG: 2019.3.0f6-facebook
+    COMPONENTS: Facebook-Games
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
 
