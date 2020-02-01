@@ -48,7 +48,7 @@ class CheckNewVersion(object):
         version = version_key.replace(build, '')
         underscore = version_key.replace('.', '_')
         download_url_hash = original_download_url. \
-            replace('https://download.unity3d.com/download_unity/', '').split('/')[0]
+            replace('https://beta.unity3d.com/download/', '').split('/')[0]
         download_url = f'https://beta.unity3d.com/download/{download_url_hash}/UnitySetup-{version_key}'
         sha1 = self.get_sha1_from_download_url(download_url)
         release_notes = f'https://unity3d.com/unity/whats-new/{version_key}'
