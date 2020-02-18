@@ -53,8 +53,8 @@ before_script:
 prepare_2020_1_0a23:
   stage: prepare
   variables:
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
     SHA1: 03376c0669c4e48e13ab3ae9d54a0e0e07294906
     TAG: 2020.1.0a23
@@ -74,8 +74,8 @@ unity_2020_1_0a23-windows:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-windows
     COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
@@ -93,8 +93,8 @@ unity_2020_1_0a23-mac:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-mac
     COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
@@ -112,8 +112,8 @@ unity_2020_1_0a23-ios:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-ios
     COMPONENTS: iOS
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
@@ -131,8 +131,8 @@ unity_2020_1_0a23-android:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-android
     COMPONENTS: Android
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
@@ -150,8 +150,8 @@ unity_2020_1_0a23-webgl:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-webgl
     COMPONENTS: WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
@@ -169,8 +169,8 @@ unity_2020_1_0a23-facebook:
   <<: *build
   variables:
     DOCKERFILE_NAME: unitysetup
-    VERSION: 2020.1.0a23
-    BUILD: f1
+    VERSION: 2020.1.0
+    BUILD: a23
     TAG: 2020.1.0a23-facebook
     COMPONENTS: Facebook-Games
     DOWNLOAD_URL: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
