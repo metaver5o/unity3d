@@ -1,12 +1,12 @@
 2020.1.0a23:
-  build: f1
+  build: a23
   dockerfile_name: unitysetup
   download_url: https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23
   release_notes: https://unity3d.com/unity/whats-new/2020.1.0a23
   release_url: https://beta.unity3d.com/download/607f55d6e9ce/public_download.html
   sha1: 03376c0669c4e48e13ab3ae9d54a0e0e07294906
   underscore: 2020_1_0a23
-  version: 2020.1.0a23
+  version: 2020.1.0
 
 2018.4.17f1:
   build: f1
