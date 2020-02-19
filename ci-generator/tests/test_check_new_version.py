@@ -151,7 +151,7 @@ class TestGitlabCiGenerator(TestCase):
         self.assertEqual(expected_sha1, sha1)
 
     def test_sha1(self):
-        file_name = utils.full_path_from_relative_path('data/releases-linux.json')
+        file_name = utils.full_path_from_relative_path('data/releases-linux-2019-05-30.json')
         sha1 = CheckNewVersion.sha1(file_name)
         expected_sha1 = 'efc51a5c7db46ec664b3671ce3f918297179c254'
         self.assertEqual(expected_sha1, sha1)
