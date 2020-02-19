@@ -87,7 +87,6 @@ class GitlabCiGenerator(object):
             "ios": {"components": "iOS"},
             "android": {"components": "Android"},
             "webgl": {"components": "WebGL"},
-            "facebook": {"components": "Facebook-Games"},
         }
 
     @staticmethod
