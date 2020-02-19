@@ -1,10 +1,12 @@
 import hashlib
 import os
+import re
 
 import yaml
 from requests import get
 
-DEFAULT_RELEASE_KEY='official'
+DEFAULT_RELEASE_KEY = 'official'
+
 
 class CheckNewVersion(object):
     release_url = 'https://public-cdn.cloud.unity3d.com/hub/prod/releases-linux.json'
@@ -44,11 +46,13 @@ class CheckNewVersion(object):
     def generate_unity_version_block(self, detailed_missing_version):
         original_download_url = detailed_missing_version['downloadUrl']
         version_key = detailed_missing_version['version']
-        build = 'f1'
-        version = version_key.replace(build, '')
+        # https://regex101.com/r/2Yzsen/1
+        unity_version_regex = re.compile("(\d*\.\d*\.\d*)([a-z]*\d*)")
+        match = unity_version_regex.match(version_key)
+        version = match.group(1)
+        build = match.group(2)
         underscore = version_key.replace('.', '_')
-        download_url_hash = original_download_url. \
-            replace('https://beta.unity3d.com/download/', '').split('/')[0]
+        download_url_hash = self.get_hash_from_download_url(original_download_url)
         download_url = f'https://beta.unity3d.com/download/{download_url_hash}/UnitySetup-{version_key}'
         sha1 = self.get_sha1_from_download_url(download_url)
         release_notes = f'https://unity3d.com/unity/whats-new/{version_key}'
@@ -66,6 +70,13 @@ class CheckNewVersion(object):
                 'release_url': release_url
             }
         }
+
+    @staticmethod
+    def get_hash_from_download_url(original_download_url):
+        # https://regex101.com/r/GvPqiH/2
+        hash_pattern = re.compile("(https?://(beta|download)\.unity3d\.com\/(download|download_unity)\/)(\S{12})\/.*")
+        match = hash_pattern.match(original_download_url)
+        return match.group(4)
 
     @staticmethod
     def download_file(url, file_name):
@@ -115,4 +126,3 @@ class CheckNewVersion(object):
 if __name__ == '__main__':
     CheckNewVersion().output(release_key='beta')
     CheckNewVersion().output()
-
