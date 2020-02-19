@@ -21,20 +21,24 @@ class TestGitlabCiGenerator(TestCase):
     def test_get_versions_dict(self):
         with self.subTest('test_empty.yml'):
             result = CheckNewVersion.get_versions_dict(utils.full_path_from_relative_path('data/test_empty.yml'))
-            self.assertEqual(result, {})
+            expected_result = {}
+            self.assertEqual(expected_result, result)
 
         with self.subTest('test_unitysetup_2019.yml'):
             result = CheckNewVersion.get_versions_dict(
                 utils.full_path_from_relative_path('data/test_unitysetup_2019.yml')
             )
-            self.assertEqual(list(result.keys()), ['2019.1.3f1'])
+            list_of_keys = list(result.keys())
+            expected_list_of_keys = ['2019.1.3f1']
+            self.assertEqual(expected_list_of_keys, list_of_keys)
 
     def test_get_all_unity_versions(self):
         check_new_version = CheckNewVersion()
         with mock.patch('src.check_new_version.CheckNewVersion.get_versions_dict') as mocked_get_versions_dict:
             mocked_get_versions_dict.return_value = {'test': 'value'}
             result = check_new_version.get_all_unity_versions()
-        self.assertEqual(result, ['test'])
+        expected_result = ['test']
+        self.assertEqual(expected_result, result)
 
     @requests_mock.mock()
     def test_get_latest_unity_releases(self, mocked_request):
@@ -42,17 +46,20 @@ class TestGitlabCiGenerator(TestCase):
         self.mock_releases_json_get(mocked_request, 'data/releases-linux-2019-05-30.json')
         with self.subTest("get_latest_unity_releases returns stable releases by default"):
             result = check_new_version.get_latest_unity_releases()
-            self.assertEqual(result, ['2017.4.27f1', '2018.2.21f1', '2018.3.14f1', '2018.4.1f1', '2019.1.4f1'])
+            expected_result = ['2017.4.27f1', '2018.2.21f1', '2018.3.14f1', '2018.4.1f1', '2019.1.4f1']
+            self.assertEqual(expected_result, result)
         with self.subTest("get_latest_unity_releases returns 'beta' releases when passing 'beta' argument"):
             result = check_new_version.get_latest_unity_releases('beta')
-            self.assertEqual(result, ['2019.2.0b4', '2019.3.0a3'])
+            expected_result = ['2019.2.0b4', '2019.3.0a3']
+            self.assertEqual(expected_result, result)
 
     @requests_mock.mock()
     def test_get_releases(self, mocked_request):
         check_new_version = CheckNewVersion()
         json_text = self.mock_releases_json_get(mocked_request, 'data/releases-linux-2019-05-30.json')
         response = check_new_version.get_releases()
-        self.assertEqual(response, json.loads(json_text))
+        expected_response = json.loads(json_text)
+        self.assertEqual(expected_response, response)
 
     def test_generate_unity_version_block(self):
         self.maxDiff = None
@@ -113,14 +120,13 @@ class TestGitlabCiGenerator(TestCase):
             self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
                                                       expected_release_result)
 
-    def do_test_generate_unity_version_block(self, releases_source, release_key, release_index,
-                                             expected_release_result):
+    def do_test_generate_unity_version_block(self, releases_source, release_key, release_index, expected_release):
         check_new_version = CheckNewVersion()
         with open(utils.full_path_from_relative_path(releases_source)) as f:
             json_text = f.read()
         official_release = json.loads(json_text)[release_key][release_index]
         version_block = check_new_version.generate_unity_version_block(official_release)
-        self.assertEqual(version_block, expected_release_result)
+        self.assertEqual(expected_release, version_block)
 
     @requests_mock.mock()
     def test_download_file(self, mocked_request):
@@ -139,14 +145,16 @@ class TestGitlabCiGenerator(TestCase):
         download_url = 'https://example.com'
         mocked_request.get(download_url, text='example')
         sha1 = check_new_version.get_sha1_from_download_url(download_url)
-        self.assertFalse(os.path.exists('UnitySetup'),
-                         msg='Downloaded file should be removed after verifying the sha1 to keep repository clean')
-        self.assertEqual(sha1, 'c3499c2729730a7f807efb8676a92dcb6f8a3f8f')
+        msg = 'Downloaded UnitySetup should be removed after verifying the sha1 to keep repository clean'
+        self.assertFalse(os.path.exists('UnitySetup'), msg=msg)
+        expected_sha1 = 'c3499c2729730a7f807efb8676a92dcb6f8a3f8f'
+        self.assertEqual(expected_sha1, sha1)
 
     def test_sha1(self):
         file_name = utils.full_path_from_relative_path('data/releases-linux.json')
-        result = CheckNewVersion.sha1(file_name)
-        self.assertEqual(result, 'efc51a5c7db46ec664b3671ce3f918297179c254')
+        sha1 = CheckNewVersion.sha1(file_name)
+        expected_sha1 = 'efc51a5c7db46ec664b3671ce3f918297179c254'
+        self.assertEqual(expected_sha1, sha1)
 
     def test_output(self):
         # TODO: complete this test using similar snapshot testing pattern from gitlab_ci_generator.py
