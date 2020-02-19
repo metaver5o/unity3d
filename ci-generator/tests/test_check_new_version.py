@@ -12,8 +12,8 @@ class TestGitlabCiGenerator(TestCase):
     class_path = 'src.check_new_version.CheckNewVersion'
 
     @staticmethod
-    def mock_releases_json_get(mocked_request):
-        with open(utils.full_path_from_relative_path('data/releases-linux.json'), 'r') as f:
+    def mock_releases_json_get(mocked_request, release_file):
+        with open(utils.full_path_from_relative_path(release_file), 'r') as f:
             json_text = f.read()
         mocked_request.get('https://public-cdn.cloud.unity3d.com/hub/prod/releases-linux.json', text=json_text)
         return json_text
@@ -39,7 +39,7 @@ class TestGitlabCiGenerator(TestCase):
     @requests_mock.mock()
     def test_get_latest_unity_releases(self, mocked_request):
         check_new_version = CheckNewVersion()
-        self.mock_releases_json_get(mocked_request)
+        self.mock_releases_json_get(mocked_request, 'data/releases-linux-2019-05-30.json')
         with self.subTest("get_latest_unity_releases returns stable releases by default"):
             result = check_new_version.get_latest_unity_releases()
             self.assertEqual(result, ['2017.4.27f1', '2018.2.21f1', '2018.3.14f1', '2018.4.1f1', '2019.1.4f1'])
@@ -50,28 +50,77 @@ class TestGitlabCiGenerator(TestCase):
     @requests_mock.mock()
     def test_get_releases(self, mocked_request):
         check_new_version = CheckNewVersion()
-        json_text = self.mock_releases_json_get(mocked_request)
+        json_text = self.mock_releases_json_get(mocked_request, 'data/releases-linux-2019-05-30.json')
         response = check_new_version.get_releases()
         self.assertEqual(response, json.loads(json_text))
 
     def test_generate_unity_version_block(self):
-        check_new_version = CheckNewVersion()
-        with open(utils.full_path_from_relative_path('data/releases-linux.json')) as f:
-            json_text = f.read()
-        official_release = json.loads(json_text)['official'][0]
-        version_block = check_new_version.generate_unity_version_block(official_release)
-        self.assertEqual(version_block, {
-            '2017.4.27f1': {
-                'build': 'f1',
-                'dockerfile_name': 'unitysetup',
-                'download_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/UnitySetup-2017.4.27f1',
-                'release_notes': 'https://unity3d.com/unity/whats-new/2017.4.27f1',
-                'release_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/public_download.html',
-                'sha1': '8dae4dd18df383a598830c6e2489cdecdcb19273',
-                'underscore': '2017_4_27f1',
-                'version': '2017.4.27'
+        self.maxDiff = None
+        release_key = 'official'
+        releases_source = 'data/releases-linux-2019-05-30.json'
+        release_index = 0
+        with self.subTest(f'{releases_source} {release_key}[{release_index}]'):
+            expected_release_result = {
+                '2017.4.27f1': {
+                    'build': 'f1',
+                    'dockerfile_name': 'unitysetup',
+                    'download_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/UnitySetup-2017.4.27f1',
+                    'release_notes': 'https://unity3d.com/unity/whats-new/2017.4.27f1',
+                    'release_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/public_download.html',
+                    'sha1': '8dae4dd18df383a598830c6e2489cdecdcb19273',
+                    'underscore': '2017_4_27f1',
+                    'version': '2017.4.27'
+                }
             }
-        })
+            self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
+                                                      expected_release_result)
+
+        release_key = 'beta'
+        releases_source = 'data/releases-linux-2020-02-18.json'
+        release_index = 0
+        with self.subTest(f'{releases_source} {release_key}[{release_index}]'):
+            expected_release_result = {
+                '2020.1.0a23': {
+                    'build': 'a23',
+                    'dockerfile_name': 'unitysetup',
+                    'download_url': 'https://beta.unity3d.com/download/607f55d6e9ce/UnitySetup-2020.1.0a23',
+                    'release_notes': 'https://unity3d.com/unity/whats-new/2020.1.0a23',
+                    'release_url': 'https://beta.unity3d.com/download/607f55d6e9ce/public_download.html',
+                    'sha1': '03376c0669c4e48e13ab3ae9d54a0e0e07294906',
+                    'underscore': '2020_1_0a23',
+                    'version': '2020_1_0'
+                }
+            }
+            self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
+                                                      expected_release_result)
+
+        release_key = 'official'
+        releases_source = 'data/releases-linux-2020-02-18.json'
+        release_index = 2
+        with self.subTest(f'{releases_source} {release_key}[{release_index}]'):
+            expected_release_result = {
+                '2019.2.21f1': {
+                    'build': 'f1',
+                    'dockerfile_name': 'unitysetup',
+                    'download_url': 'https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1',
+                    'release_notes': 'https://unity3d.com/unity/whats-new/2019.2.21f1',
+                    'release_url': 'https://beta.unity3d.com/download/9d528d026557/public_download.html',
+                    'sha1': 'e1bf0167dda7897385adf7bb53a14195ffaa98e2',
+                    'underscore': '2019_2_21f1',
+                    'version': '2019_2_21'
+                }
+            }
+            self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
+                                                      expected_release_result)
+
+    def do_test_generate_unity_version_block(self, releases_source, release_key, release_index,
+                                             expected_release_result):
+        check_new_version = CheckNewVersion()
+        with open(utils.full_path_from_relative_path(releases_source)) as f:
+            json_text = f.read()
+        official_release = json.loads(json_text)[release_key][release_index]
+        version_block = check_new_version.generate_unity_version_block(official_release)
+        self.assertEqual(version_block, expected_release_result)
 
     @requests_mock.mock()
     def test_download_file(self, mocked_request):
