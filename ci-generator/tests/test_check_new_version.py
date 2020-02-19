@@ -95,7 +95,7 @@ class TestGitlabCiGenerator(TestCase):
                     'release_url': 'https://beta.unity3d.com/download/607f55d6e9ce/public_download.html',
                     'sha1': '03376c0669c4e48e13ab3ae9d54a0e0e07294906',
                     'underscore': '2020_1_0a23',
-                    'version': '2020_1_0'
+                    'version': '2020.1.0'
                 }
             }
             self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
@@ -114,7 +114,7 @@ class TestGitlabCiGenerator(TestCase):
                     'release_url': 'https://beta.unity3d.com/download/9d528d026557/public_download.html',
                     'sha1': 'e1bf0167dda7897385adf7bb53a14195ffaa98e2',
                     'underscore': '2019_2_21f1',
-                    'version': '2019_2_21'
+                    'version': '2019.2.21'
                 }
             }
             self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
