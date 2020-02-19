@@ -1,5 +1,6 @@
 import hashlib
 import os
+import re
 
 import yaml
 from requests import get
@@ -44,8 +45,11 @@ class CheckNewVersion(object):
     def generate_unity_version_block(self, detailed_missing_version):
         original_download_url = detailed_missing_version['downloadUrl']
         version_key = detailed_missing_version['version']
-        build = 'f1'
-        version = version_key.replace(build, '')
+        # https://regex101.com/r/2Yzsen/1
+        unity_version_regex = re.compile("(\d*\.\d*\.\d*)([a-z]*\d*)")
+        match = unity_version_regex.match(version_key)
+        version = match.group(1)
+        build = match.group(2)
         underscore = version_key.replace('.', '_')
         download_url_hash = original_download_url. \
             replace('https://beta.unity3d.com/download/', '').split('/')[0]
