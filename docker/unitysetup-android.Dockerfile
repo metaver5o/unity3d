@@ -1,62 +1,10 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBCONF_NONINTERACTIVE_SEEN true
-
-RUN apt-get update -qq; \
-    apt-get install -qq -y \
-    locales \
-    software-properties-common \
-    unzip \
-    && add-apt-repository ppa:openjdk-r/ppa \
-    && add-apt-repository ppa:cwchien/gradle \
-    && apt-get install -qq -y \
-    gradle \
-    openjdk-8-jdk \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-
-# Setup Android SDK/JDK Environment Variables
-ENV ANDROID_NDK_VERSION 16b
-ENV ANDROID_NDK_HOME /opt/android-ndk-r${ANDROID_NDK_VERSION}
-ENV ANDROID_SDK_VERSION ${ANDROID_SDK_VERSION:-28}
-ENV ANDROID_SDK_TOOLS_VERSION ${ANDROID_SDK_TOOLS_VERSION:-28.0.3}
-ENV ANDROID_SDK_COMPONENTS build-tools;$ANDROID_SDK_TOOLS_VERSION platform-tools platforms;android-$ANDROID_SDK_VERSION
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre/
-ENV PATH ${PATH}:/usr/lib/jvm/java-8-openjdk-amd64/jre/bin
-ENV ANDROID_HOME /opt/android-sdk-linux
-
-ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:/opt/android-ndk-r${ANDROID_NDK_VERSION}
-ENV LANG en_US.UTF-8
-
-# Install Android SDK Installer...
-RUN cd /opt && \
-    wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk.zip && \
-    unzip -q android-sdk.zip -d android-sdk-linux && \
-    rm -f android-sdk.zip && \
-    ls -ahl android-sdk-linux
-
-RUN chmod -R 755 .${ANDROID_HOME}/tools/*
-
-# accept license
-RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
-
-# Install Android SDK
-RUN ${ANDROID_HOME}/tools/bin/sdkmanager ${ANDROID_SDK_COMPONENTS} > /dev/null && \
-  ${ANDROID_HOME}/tools/bin/sdkmanager --list
-  
-# Install NDK
-RUN cd /opt && \
-    wget --quiet --output-document=android-ndk.zip http://dl.google.com/android/repository/android-ndk-r${ANDROID_NDK_VERSION}-linux-x86_64.zip && \
-    unzip -q android-ndk.zip
-
-RUN gradle -v
-
 ARG DOWNLOAD_URL
 ARG SHA1
 ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
+ENV UNITY_INSTALL_LOCATION /opt/Unity
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
@@ -72,7 +20,7 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # install unity with required components
     ./UnitySetup \
     --unattended \
-    --install-location=/opt/Unity \
+    --install-location=$UNITY_INSTALL_LOCATION \
     --verbose \
     --download-location=/tmp/unity \
     --components=$COMPONENTS && \
@@ -81,8 +29,59 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # remove setup & temp files
     rm UnitySetup && \
     rm -rf /tmp/unity && \
-    rm -rf /root/.local/share/Trash/* && \
-    # android specific paths
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/* && \
-    rm -rf /var/tmp/*
+    rm -rf /root/.local/share/Trash/*
+
+# Setup Android SDK/JDK Environment Variables
+ARG ANDROID_NDK
+ARG ANDROID_JDK
+ARG ANDROID_SDK_BUILDTOOLS
+ARG ANDROID_SDK_SDKTOOLS
+ARG ANDROID_SDK_PLATFORMTOOLS
+ARG ANDROID_SDK_PLATFORM
+
+ENV ANDROID_INSTALL_LOCATION ${UNITY_INSTALL_LOCATION}/Editor/Data/PlaybackEngines/AndroidPlayer
+
+RUN if [ -d ${ANDROID_INSTALL_LOCATION} ] \
+    ; then \
+        echo "Android Install" \
+    # JDK
+        && if [ -n "${ANDROID_JDK}" ] \
+        ; then \
+            wget -q ${ANDROID_JDK} -O /tmp/jdk.zip \
+            && unzip -q /tmp/jdk.zip -d ${ANDROID_INSTALL_LOCATION}/OpenJDK \
+        ; else \
+            apt-get update -qq \
+            && add-apt-repository ppa:openjdk-r/ppa \
+            && apt-get install -qq -y --no-install-recommends \
+                openjdk-8-jdk \
+        ; fi \
+    # Android SDK Tool
+        && wget -q ${ANDROID_SDK_SDKTOOLS} -O /tmp/sdk-tools-linux.zip \
+        && unzip -q /tmp/sdk-tools-linux.zip -d ${ANDROID_INSTALL_LOCATION}/SDK \
+    # Android SDK Platform Tools
+        && wget -q ${ANDROID_SDK_PLATFORMTOOLS} -O /tmp/platform-tools.zip \
+        && unzip -q /tmp/platform-tools.zip -d ${ANDROID_INSTALL_LOCATION}/SDK \
+    # Android SDK Build Tools
+        && wget -q ${ANDROID_SDK_BUILDTOOLS} -O /tmp/build-tools.zip \
+        && unzip -q /tmp/build-tools.zip -d ${ANDROID_INSTALL_LOCATION}/SDK/build-tools \
+        && mv ${ANDROID_INSTALL_LOCATION}/SDK/build-tools/android-9 ${ANDROID_INSTALL_LOCATION}/SDK/build-tools/28.0.3 \
+    # Android SDK Platforms
+        && wget -q ${ANDROID_SDK_PLATFORM} -O /tmp/platform.zip \
+        && unzip -q /tmp/platform.zip -d ${ANDROID_INSTALL_LOCATION}/SDK/platforms \
+        && mv ${ANDROID_INSTALL_LOCATION}/SDK/platforms/android-9 ${ANDROID_INSTALL_LOCATION}/SDK/platforms/android-28 \
+    # Android NDK
+        && wget -q ${ANDROID_NDK} -O /tmp/android-ndk.zip \
+        && unzip -q /tmp/android-ndk.zip -d ${ANDROID_INSTALL_LOCATION}/NDK \
+        && mv ${ANDROID_INSTALL_LOCATION}/NDK/*/* ${ANDROID_INSTALL_LOCATION}/NDK \
+    # Accept license
+        && yes | ${ANDROID_INSTALL_LOCATION}/SDK/tools/bin/sdkmanager --licenses \
+    # Set rights
+        # && chmod -R 777 ${ANDROID_INSTALL_LOCATION} \
+        # && ls -ahl ${ANDROID_INSTALL_LOCATION}/SDK \
+    # Clean
+        && apt-get autoremove \
+        && apt-get clean \
+        && rm -rf /var/lib/apt/lists/* \
+        && rm -rf /tmp/* \
+        && rm -rf /var/tmp/* \
+    ; fi

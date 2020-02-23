@@ -2,68 +2,73 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
+ENV LANG en_US.UTF-8
 
 ARG DOWNLOAD_URL
 ARG SHA1
 
 RUN echo "America/New_York" > /etc/timezone && \
-    apt-get update -qq; \
-    apt-get install -qq -y \
-    git \
-    gconf-service \
-    lib32gcc1 \
-    lib32stdc++6 \
-    libasound2 \
-    libarchive13 \
-    libc6 \
-    libc6-i386 \
-    libcairo2 \
-    libcap2 \
-    libcups2 \
-    libdbus-1-3 \
-    libexpat1 \
-    libfontconfig1 \
-    libfreetype6 \
-    libgcc1 \
-    libgconf-2-4 \
-    libgdk-pixbuf2.0-0 \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    libglu1-mesa \
-    libgtk2.0-0 \
-    libgtk3.0 \
-    libnotify4 \
-    libnspr4 \
-    libnss3 \
-    libpango1.0-0 \
-    libsoup2.4-1 \
-    libstdc++6 \
-    libx11-6 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrandr2 \
-    libxrender1 \
-    libxtst6 \
-    libunwind-dev \
-    zlib1g \
-    pulseaudio \
-    debconf \
-    npm \
-    xdg-utils \
-    lsb-release \
-    libpq5 \
-    xvfb \
-    wget \
-    ffmpeg \
-    libglu1-mesa-dev \
-    freeglut3-dev \
-    mesa-common-dev \
+    apt-get update -qq \
+    && apt-get install -qq -y --no-install-recommends \
+        git \
+        gconf-service \
+        lib32gcc1 \
+        lib32stdc++6 \
+        libasound2 \
+        libarchive13 \
+        libc6 \
+        libc6-i386 \
+        libcairo2 \
+        libcap2 \
+        libcups2 \
+        libdbus-1-3 \
+        libexpat1 \
+        libfontconfig1 \
+        libfreetype6 \
+        libgcc1 \
+        libgconf-2-4 \
+        libgdk-pixbuf2.0-0 \
+        libgl1-mesa-glx \
+        libglib2.0-0 \
+        libglu1-mesa \
+        libgtk2.0-0 \
+        libgtk3.0 \
+        libnotify4 \
+        libnspr4 \
+        libnss3 \
+        libpango1.0-0 \
+        libsoup2.4-1 \
+        libstdc++6 \
+        libx11-6 \
+        libxcomposite1 \
+        libxcursor1 \
+        libxdamage1 \
+        libxext6 \
+        libxfixes3 \
+        libxi6 \
+        libxrandr2 \
+        libxrender1 \
+        libxtst6 \
+        libunwind-dev \
+        zlib1g \
+        pulseaudio \
+        debconf \
+        npm \
+        xdg-utils \
+        lsb-release \
+        libpq5 \
+        xvfb \
+        wget \
+        libglu1-mesa-dev \
+        freeglut3-dev \
+        mesa-common-dev \
+        locales \
+        software-properties-common \
+        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
