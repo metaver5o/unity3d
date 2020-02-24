@@ -61,6 +61,74 @@ docker run -it --rm \
   /opt/Unity/Editor/Unity -projectPath /root/project
 ```
 
+## CI
+
+### Environment variables
+
+#### Docker
+
+If you would like to push image to your docker profile, you need to set the following variables:  
+`CI_REGISTRY_USER`  
+`CI_REGISTRY_PASSWORD`  
+`CI_REGISTRY`  
+Mark those variables as Masked.
+
+If you don't set it, the image will be present on the gitlab Packages -> Container registry
+
+#### Android
+
+`ANDROID_JDK` (Optional) : url to download Android jdk (OpenJDK)  
+`ANDROID_NDK` : url to download ndk  
+`ANDROID_SDK_BUILDTOOLS` : url to download buildtools  
+`ANDROID_SDK_PLATFORM` : url to download platform  
+`ANDROID_SDK_PLATFORMTOOLS` : url to download plateformtools  
+`ANDROID_SDK_SDKTOOLS` : url to download sdktools
+
+To get the available urls to fill env var, download the [repository file](http://dl.google.com/android/repository/repository-11.xml)  
+The url will alway start with `http://dl.google.com/android/repository/` and end with `sdk:url` value.  
+For example, if you want use buildtools 28, the value of `ANDROID_SDK_BUILDTOOLS` will be `https://dl.google.com/android/repository/build-tools_r28-linux.zip`.  
+
+Be attentive of the requirement made by Unity for android build.  
+
+For example, for the version 2018.3.6f1, I used those following versions :  
+NDK : android-ndk-r16b-linux-x86_64.zip  
+SDK BUILDTOOLS : build-tools_r28-linux.zip  
+SDK PLATFORM : platform-28_r06.zip  
+SDK PLATFORMTOOLS : platform-tools_r28.0.3-linux.zip  
+SDK SDKTOOLS : sdk-tools-linux-4333796.zip
+
+### Personal gitlab-runner
+
+You need to install [Docker](https://www.docker.com/get-started).  
+You need to set 4Go for memory. [Source](https://stackoverflow.com/a/47027943)  
+Docker -> preference -> Resources -> Memory -> 4.00GB.  
+
+After adding your [gitlab-runner](https://docs.gitlab.com/runner/).  
+In the config.toml, you need to set privileged to true and add "/certs/client" to the volumes array.  
+[Source privileged](https://gitlab.com/gitlab-org/gitlab-runner/issues/1544#note_13439656) - [Source volumes](https://gitlab.com/gitlab-org/gitlab-runner/issues/4501)
+See below:
+
+```yaml
+[[runners]]
+  name = "xxxxxxxxxxxxxxxxxxxxx"
+  url = "https://gitlab.com/"
+  token = "xxxxxxxxxxxxxxxxxxxxx"
+  executor = "docker"
+  [runners.custom_build_dir]
+  [runners.docker]
+    tls_verify = false
+    image = "xxxxxxxxxxxxxxxxxxxxx"
+    privileged = true    #<-------- here
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    volumes = ["/certs/client", "/cache"] #<-------- here
+    shm_size = 0
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+```
+
 ## FAQ
 
 ### How it all started?
