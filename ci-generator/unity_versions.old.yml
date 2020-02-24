@@ -1646,3 +1646,14 @@
   underscore: 2019_3_1f1
   version: 2019.3.1
 
+# 2017 versions skipped due to https://gitlab.com/gableroux/unity3d/issues/40
+2017.4.37f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/78b69503ebc4/UnitySetup-2017.4.37f1
+  release_notes: https://unity3d.com/unity/whats-new/2017.4.37f1
+  release_url: https://beta.unity3d.com/download/78b69503ebc4/public_download.html
+  sha1: 780bf38c0d7791bb2263443d0a4ccb3041cf524b
+  underscore: 2017_4_37f1
+  version: 2017.4.37
+
