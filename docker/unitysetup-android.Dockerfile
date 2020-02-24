@@ -40,6 +40,8 @@ ARG ANDROID_SDK_PLATFORMTOOLS
 ARG ANDROID_SDK_PLATFORM
 
 ENV ANDROID_INSTALL_LOCATION ${UNITY_INSTALL_LOCATION}/Editor/Data/PlaybackEngines/AndroidPlayer
+ENV ANDROID_HOME ${ANDROID_INSTALL_LOCATION}/SDK
+ENV ANDROID_NDK_HOME ${ANDROID_INSTALL_LOCATION}/NDK
 
 RUN if [ -d ${ANDROID_INSTALL_LOCATION} ] \
     ; then \
@@ -57,27 +59,27 @@ RUN if [ -d ${ANDROID_INSTALL_LOCATION} ] \
         ; fi \
     # Android SDK Tool
         && wget -q ${ANDROID_SDK_SDKTOOLS} -O /tmp/sdk-tools-linux.zip \
-        && unzip -q /tmp/sdk-tools-linux.zip -d ${ANDROID_INSTALL_LOCATION}/SDK \
+        && unzip -q /tmp/sdk-tools-linux.zip -d ${ANDROID_HOME} \
     # Android SDK Platform Tools
         && wget -q ${ANDROID_SDK_PLATFORMTOOLS} -O /tmp/platform-tools.zip \
-        && unzip -q /tmp/platform-tools.zip -d ${ANDROID_INSTALL_LOCATION}/SDK \
+        && unzip -q /tmp/platform-tools.zip -d ${ANDROID_HOME} \
     # Android SDK Build Tools
         && wget -q ${ANDROID_SDK_BUILDTOOLS} -O /tmp/build-tools.zip \
-        && unzip -q /tmp/build-tools.zip -d ${ANDROID_INSTALL_LOCATION}/SDK/build-tools \
-        && mv ${ANDROID_INSTALL_LOCATION}/SDK/build-tools/android-9 ${ANDROID_INSTALL_LOCATION}/SDK/build-tools/28.0.3 \
+        && unzip -q /tmp/build-tools.zip -d ${ANDROID_HOME}/build-tools \
+        && mv ${ANDROID_HOME}/build-tools/android-9 ${ANDROID_HOME}/build-tools/28.0.3 \
     # Android SDK Platforms
         && wget -q ${ANDROID_SDK_PLATFORM} -O /tmp/platform.zip \
-        && unzip -q /tmp/platform.zip -d ${ANDROID_INSTALL_LOCATION}/SDK/platforms \
-        && mv ${ANDROID_INSTALL_LOCATION}/SDK/platforms/android-9 ${ANDROID_INSTALL_LOCATION}/SDK/platforms/android-28 \
+        && unzip -q /tmp/platform.zip -d ${ANDROID_HOME}/platforms \
+        && mv ${ANDROID_HOME}/platforms/android-9 ${ANDROID_HOME}/platforms/android-28 \
     # Android NDK
         && wget -q ${ANDROID_NDK} -O /tmp/android-ndk.zip \
-        && unzip -q /tmp/android-ndk.zip -d ${ANDROID_INSTALL_LOCATION}/NDK \
-        && mv ${ANDROID_INSTALL_LOCATION}/NDK/*/* ${ANDROID_INSTALL_LOCATION}/NDK \
+        && unzip -q /tmp/android-ndk.zip -d ${ANDROID_NDK_HOME} \
+        && mv ${ANDROID_NDK_HOME}/*/* ${ANDROID_NDK_HOME} \
     # Accept license
-        && yes | ${ANDROID_INSTALL_LOCATION}/SDK/tools/bin/sdkmanager --licenses \
+        && yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses \
     # Set rights
         # && chmod -R 777 ${ANDROID_INSTALL_LOCATION} \
-        # && ls -ahl ${ANDROID_INSTALL_LOCATION}/SDK \
+        # && ls -ahl ${ANDROID_HOME} \
     # Clean
         && apt-get autoremove \
         && apt-get clean \
