@@ -49,6 +49,7 @@ RUN echo "America/New_York" > /etc/timezone && \
         libxrender1 \
         libxtst6 \
         libunwind-dev \
+        openssh-server \
         zlib1g \
         pulseaudio \
         debconf \
