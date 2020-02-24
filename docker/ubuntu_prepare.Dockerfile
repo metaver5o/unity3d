@@ -2,10 +2,6 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-ENV LC_CTYPE en_US.UTF-8
 
 ARG DOWNLOAD_URL
 ARG SHA1
@@ -71,7 +67,12 @@ RUN echo "America/New_York" > /etc/timezone && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+RUN locale-gen en_US.UTF-8
+
+# To avoid annoying "perl: warning: Setting locale failed." errors,
+# do not allow the client to pass custom locals, see:
+# http://stackoverflow.com/a/2510548/15677
+RUN sed -i 's/^AcceptEnv LANG LC_\*$//g' /etc/ssh/sshd_config
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
