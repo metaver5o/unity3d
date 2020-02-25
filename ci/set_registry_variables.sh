@@ -24,15 +24,24 @@ export IMAGE_LABELS=$(echo\
   --label com.gableroux.unity3d.release_url=$RELEASE_URL
 )
 
-export IMAGE_ARGUMENTS=$(echo\
-  --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
-  --build-arg COMPONENTS=$COMPONENTS \
-  --build-arg SHA1=$SHA1 \
-  --build-arg BASE_IMAGE=$BASE_IMAGE \
-  --build-arg ANDROID_NDK=$ANDROID_NDK \
-  --build-arg ANDROID_JDK=$ANDROID_JDK \
-  --build-arg ANDROID_SDK_BUILDTOOLS=$ANDROID_SDK_BUILDTOOLS \
-  --build-arg ANDROID_SDK_SDKTOOLS=$ANDROID_SDK_SDKTOOLS \
-  --build-arg ANDROID_SDK_PLATFORMTOOLS=$ANDROID_SDK_PLATFORMTOOLS \
-  --build-arg ANDROID_SDK_PLATFORM=$ANDROID_SDK_PLATFORM
-)
+if [ "$COMPONENTS" = "Android" ]; then
+    export IMAGE_ARGUMENTS=$(echo\
+      --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
+      --build-arg COMPONENTS=$COMPONENTS \
+      --build-arg SHA1=$SHA1 \
+      --build-arg BASE_IMAGE=$BASE_IMAGE \
+      --build-arg ANDROID_NDK=$ANDROID_NDK \
+      --build-arg ANDROID_JDK=$ANDROID_JDK \
+      --build-arg ANDROID_SDK_BUILDTOOLS=$ANDROID_SDK_BUILDTOOLS \
+      --build-arg ANDROID_SDK_SDKTOOLS=$ANDROID_SDK_SDKTOOLS \
+      --build-arg ANDROID_SDK_PLATFORMTOOLS=$ANDROID_SDK_PLATFORMTOOLS \
+      --build-arg ANDROID_SDK_PLATFORM=$ANDROID_SDK_PLATFORM
+    )
+else
+    export IMAGE_ARGUMENTS=$(echo\
+      --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
+      --build-arg COMPONENTS=$COMPONENTS \
+      --build-arg SHA1=$SHA1 \
+      --build-arg BASE_IMAGE=$BASE_IMAGE
+    )
+fi
