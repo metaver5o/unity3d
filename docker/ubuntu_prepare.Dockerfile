@@ -65,6 +65,7 @@ RUN echo "America/New_York" > /etc/timezone && \
         locales \
         software-properties-common \
         unzip \
+        ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
