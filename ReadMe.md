@@ -67,7 +67,7 @@ docker run -it --rm \
 
 #### Docker
 
-If you would like to push image to your docker profile, you need to set the following variables:  
+If you would like to push the docker image to your own docker registry, you need to set the following variables:   
 `CI_REGISTRY_USER`  
 `CI_REGISTRY_PASSWORD`  
 `CI_REGISTRY`  
