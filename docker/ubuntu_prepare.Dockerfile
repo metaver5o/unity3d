@@ -63,18 +63,9 @@ RUN echo "America/New_York" > /etc/timezone && \
         freeglut3-dev \
         mesa-common-dev \
         locales \
-        software-properties-common \
-        unzip \
         ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-RUN locale-gen en_US.UTF-8
-
-# To avoid annoying "perl: warning: Setting locale failed." errors,
-# do not allow the client to pass custom locals, see:
-# http://stackoverflow.com/a/2510548/15677
-RUN sed -i 's/^AcceptEnv LANG LC_\*$//g' /etc/ssh/sshd_config
 
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
@@ -99,6 +90,13 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
+
+RUN locale-gen en_US.UTF-8
+
+# To avoid annoying "perl: warning: Setting locale failed." errors,
+# do not allow the client to pass custom locals, see:
+# http://stackoverflow.com/a/2510548/15677
+RUN sed -i 's/^AcceptEnv LANG LC_\*$//g' /etc/ssh/sshd_config
 
 RUN mkdir -p /root/.local/share/unity3d/Certificates/ && \
     mkdir -p /root/.local/share/unity3d/Unity/ && \
