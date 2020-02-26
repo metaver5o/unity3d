@@ -1,6 +1,13 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
+RUN apt-get update -qq \
+    && apt-get install -qq -y --no-install-recommends \
+        software-properties-common \
+        unzip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 ARG DOWNLOAD_URL
 ARG SHA1
 ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
