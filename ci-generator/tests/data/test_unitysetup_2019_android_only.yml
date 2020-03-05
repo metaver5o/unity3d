@@ -8,5 +8,5 @@
   underscore: 2018_3_6f1
   version: 2018.3.6
   base_image: gableroux/unity3d:2018.3.6
-  skip_prepare_stage: True
+  skip_prepare_stage: true
   build_only_these_platforms: android
