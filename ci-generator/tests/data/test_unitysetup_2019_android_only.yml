@@ -7,5 +7,6 @@
   sha1: 68d3c58e977e71cdd00bd0100fcd60c02762ec04
   underscore: 2019_3_3f1
   version: 2019.3.3
+  base_image: gableroux/unity3d:2019.3.3
   skip_prepare_stage: true
   build_only_these_platforms: android
