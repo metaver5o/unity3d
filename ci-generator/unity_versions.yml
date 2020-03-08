@@ -1,10 +1,1 @@
-2019.3.4f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/4f139db2fdbd/UnitySetup-2019.3.4f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.3.4f1
-  release_url: https://beta.unity3d.com/download/4f139db2fdbd/public_download.html
-  sha1: 0c078a50831b5c1582d44d27b34ba0e387fdbdc3
-  underscore: 2019_3_4f1
-  version: 2019.3.4
 
