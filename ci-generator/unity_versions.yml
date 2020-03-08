@@ -28,15 +28,17 @@
   underscore: 2019_2_10f1
   version: 2019.2.10
 
-2019.2.7f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.7f1
-  release_url: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
-  sha1: 13769d85682e0445c2cc2e34b26f3dca01a31a90
-  underscore: 2019_2_7f1
-  version: 2019.2.7
+
+# ERROR 403: Forbidden
+#2019.2.7f1:
+#  build: f1
+#  dockerfile_name: unitysetup
+#  download_url: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f1
+#  release_notes: https://unity3d.com/unity/whats-new/2019.2.7f1
+#  release_url: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
+#  sha1: 13769d85682e0445c2cc2e34b26f3dca01a31a90
+#  underscore: 2019_2_7f1
+#  version: 2019.2.7
 
 2019.2.6f1:
   build: f1
