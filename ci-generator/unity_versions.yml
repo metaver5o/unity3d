@@ -1,1 +1,9 @@
-
+2018.4.11f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7098af2f11ea/UnitySetup-2018.4.11f1
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.11f1
+  release_url: https://beta.unity3d.com/download/7098af2f11ea/public_download.html
+  sha1: 29e6ac3436d8fd1c50f1ee5f12651f4566b96ed0
+  underscore: 2018_4_11f1
+  version: 2018.4.11
