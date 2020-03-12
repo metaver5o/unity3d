@@ -25,11 +25,15 @@ export IMAGE_LABELS=$(echo\
 )
 
 if [ "$COMPONENTS" = "Android" ]; then
-    if [[ -z "${ANDROID_NDK}" ]] || [[ -z "${ANDROID_SDK_BUILDTOOLS}" ]] || [[ -z "${ANDROID_SDK_SDKTOOLS}" ]] || [[ -z "${ANDROID_SDK_PLATFORMTOOLS}" ]] || [[ -z "${ANDROID_SDK_PLATFORM}" ]]; then
+    if [[ -z "${ANDROID_NDK}" ]] \
+    || [[ -z "${ANDROID_SDK_BUILDTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_SDKTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_PLATFORMTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_PLATFORM}" ]]; then
       echo "ANDROID_NDK, ANDROID_SDK_BUILDTOOLS, ANDROID_SDK_SDKTOOLS, ANDROID_SDK_PLATFORMTOOLS or ANDROID_SDK_PLATFORM environment variables are not set, please refer to instructions in the readme and add these to your environment variables."
       exit 1
     fi
-    
+
     export IMAGE_ARGUMENTS=$(echo\
       --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
       --build-arg COMPONENTS=$COMPONENTS \
