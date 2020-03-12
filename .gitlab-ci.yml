@@ -67,11 +67,11 @@ unity_2019_3_0f1-android:
     BASE_IMAGE: gableroux/unity3d:2019.3.0f1
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f1
     RELEASE_URL: https://beta.unity3d.com/download/ffacea4b84e7/public_download.html
-    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
-    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+    ANDROID_NDK_URL: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS_URL: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM_URL: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS_URL: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS_URL: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
@@ -99,11 +99,11 @@ unity_2019_3_0f6-android:
     SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0f6
     RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
-    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
-    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+    ANDROID_NDK_URL: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS_URL: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM_URL: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS_URL: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS_URL: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
@@ -131,11 +131,11 @@ unity_2019_3_1f1-android:
     SHA1: e963ddd0efc8833dac8e5fc80038d4f7787aba97
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.1f1
     RELEASE_URL: https://beta.unity3d.com/download/89d6087839c2/public_download.html
-    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
-    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+    ANDROID_NDK_URL: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS_URL: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM_URL: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS_URL: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS_URL: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
@@ -163,11 +163,11 @@ unity_2019_3_2f1-android:
     SHA1: dc99638b8b4aca3b5b7fc2d1a852b85c11deb11f
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.2f1
     RELEASE_URL: https://beta.unity3d.com/download/c46a3a38511e/public_download.html
-    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
-    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+    ANDROID_NDK_URL: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS_URL: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM_URL: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS_URL: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS_URL: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
@@ -195,11 +195,11 @@ unity_2019_3_3f1-android:
     SHA1: 68d3c58e977e71cdd00bd0100fcd60c02762ec04
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.3f1
     RELEASE_URL: https://beta.unity3d.com/download/7ceaae5f7503/public_download.html
-    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
-    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+    ANDROID_NDK_URL: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS_URL: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM_URL: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS_URL: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS_URL: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
