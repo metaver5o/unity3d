@@ -99,8 +99,28 @@ unity_{{version.underscore}}-{{platform_key}}:
     {%- if version.release_url %}
     RELEASE_URL: {{version.release_url}}
     {%- endif %}
-    {%- if platform_key == 'android' and version.android_sdk_version %}
+    {%- if platform_key == 'android' %}
+    {%- if version.android_sdk_version %}
     ANDROID_SDK_VERSION: {{version.android_sdk_version}}
+    {%- endif %}
+    {%- if version.android_jdk_url %}
+    ANDROID_JDK: {{version.android_jdk_url}}
+    {%- endif %}
+    {%- if version.android_ndk_url %}
+    ANDROID_NDK: {{version.android_ndk_url}}
+    {%- endif %}
+    {%- if version.android_sdk_buildtools_url %}
+    ANDROID_SDK_BUILDTOOLS: {{version.android_sdk_buildtools_url}}
+    {%- endif %}
+    {%- if version.android_sdk_platform_url %}
+    ANDROID_SDK_PLATFORM: {{version.android_sdk_platform_url}}
+    {%- endif %}
+    {%- if version.android_sdk_platformtools_url %}
+    ANDROID_SDK_PLATFORMTOOLS: {{version.android_sdk_platformtools_url}}
+    {%- endif %}
+    {%- if version.android_sdk_sdktools_url %}
+    ANDROID_SDK_SDKTOOLS: {{version.android_sdk_sdktools_url}}
+    {%- endif %}
     {%- endif %}
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501

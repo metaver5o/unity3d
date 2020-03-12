@@ -87,6 +87,7 @@ unity_2018_3_6f1-windows:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
+
 # platform specific for 2018.3.6f1: mac
 unity_2018_3_6f1-mac:
   <<: *build
@@ -104,6 +105,7 @@ unity_2018_3_6f1-mac:
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
+
 
 # platform specific for 2018.3.6f1: ios
 unity_2018_3_6f1-ios:
@@ -123,6 +125,7 @@ unity_2018_3_6f1-ios:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
+
 # platform specific for 2018.3.6f1: android
 unity_2018_3_6f1-android:
   <<: *build
@@ -136,10 +139,16 @@ unity_2018_3_6f1-android:
     SHA1: b95ebfc05d71193763a62e448e66a4d872d70e02
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.6
     RELEASE_URL: https://beta.unity3d.com/download/a220877bc173/public_download.html
+    ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+    ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+    ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
+    ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+    ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
+
 
 # platform specific for 2018.3.6f1: webgl
 unity_2018_3_6f1-webgl:
@@ -160,20 +169,6 @@ unity_2018_3_6f1-webgl:
     DOCKER_TLS_CERTDIR: "/certs"
 
 
-# platform specific for 2018.3.6f1: facebook
-unity_2018_3_6f1-facebook:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2018.3.6
-    BUILD: f1
-    TAG: 2018.3.6f1-facebook
-    COMPONENTS: Facebook-Games
-    DOWNLOAD_URL: https://beta.unity3d.com/download/a220877bc173/UnitySetup-2018.3.6f1
-    SHA1: b95ebfc05d71193763a62e448e66a4d872d70e02
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.6
-    RELEASE_URL: https://beta.unity3d.com/download/a220877bc173/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
