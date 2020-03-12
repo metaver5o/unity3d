@@ -9,12 +9,15 @@ ARG SHA1
 RUN echo "America/New_York" > /etc/timezone && \
     apt-get update -qq \
     && apt-get install -qq -y \
-        git \
+        debconf \
+        ffmpeg \
+        freeglut3-dev \
         gconf-service \
+        git \
         lib32gcc1 \
         lib32stdc++6 \
-        libasound2 \
         libarchive13 \
+        libasound2 \
         libc6 \
         libc6-i386 \
         libcairo2 \
@@ -30,14 +33,17 @@ RUN echo "America/New_York" > /etc/timezone && \
         libgl1-mesa-glx \
         libglib2.0-0 \
         libglu1-mesa \
+        libglu1-mesa-dev \
         libgtk2.0-0 \
         libgtk3.0 \
         libnotify4 \
         libnspr4 \
         libnss3 \
         libpango1.0-0 \
+        libpq5 \
         libsoup2.4-1 \
         libstdc++6 \
+        libunwind-dev \
         libx11-6 \
         libxcomposite1 \
         libxcursor1 \
@@ -48,22 +54,16 @@ RUN echo "America/New_York" > /etc/timezone && \
         libxrandr2 \
         libxrender1 \
         libxtst6 \
-        libunwind-dev \
-        openssh-server \
-        zlib1g \
-        pulseaudio \
-        debconf \
-        npm \
-        xdg-utils \
-        lsb-release \
-        libpq5 \
-        xvfb \
-        wget \
-        libglu1-mesa-dev \
-        freeglut3-dev \
-        mesa-common-dev \
         locales \
-        ffmpeg \
+        lsb-release \
+        mesa-common-dev \
+        npm \
+        openssh-server \
+        pulseaudio \
+        wget \
+        xdg-utils \
+        xvfb \
+        zlib1g \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -77,9 +77,9 @@ RUN sed -i 's/^AcceptEnv LANG LC_\*$//g' /etc/ssh/sshd_config
 RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # compare sha1 if given
     if [ -n "${SHA1}" -a "${SHA1}" != "" ]; then \
-      echo "${SHA1}  UnitySetup" | sha1sum --check -; \
+        echo "${SHA1}  UnitySetup" | sha1sum --check -; \
     else \
-      echo "no sha1 given, skipping checksum"; \
+        echo "no sha1 given, skipping checksum"; \
     fi && \
     # make executable
     chmod +x UnitySetup && \
@@ -88,11 +88,11 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # install unity with required components
     xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' \
     ./UnitySetup \
-    --unattended \
-    --install-location=/opt/Unity \
-    --verbose \
-    --download-location=/tmp/unity \
-    --components=Unity && \
+        --unattended \
+        --install-location=/opt/Unity \
+        --verbose \
+        --download-location=/tmp/unity \
+        --components=Unity && \
     # remove setup & temp files
     rm UnitySetup && \
     rm -rf /tmp/unity && \
