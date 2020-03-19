@@ -1,10 +1,1 @@
-2020.1.0b2:
-  build: b2
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/14d43bf8b596/UnitySetup-2020.1.0b2
-  release_notes: https://unity3d.com/unity/whats-new/2020.1.0b2
-  release_url: https://beta.unity3d.com/download/14d43bf8b596/public_download.html
-  sha1: 6997576c84045c8caf26465fb93bb47286cf419c
-  underscore: 2020_1_0b2
-  version: 2020.1.0
 
