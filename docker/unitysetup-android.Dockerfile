@@ -5,8 +5,18 @@ RUN apt-get update -qq \
     && apt-get install -qq -y --no-install-recommends \
         software-properties-common \
         unzip \
+        openssh-server \
+        locales \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Temporary additional layers since base images won't be republished for now
+RUN locale-gen en_US.UTF-8
+
+# To avoid annoying "perl: warning: Setting locale failed." errors,
+# do not allow the client to pass custom locals, see:
+# http://stackoverflow.com/a/2510548/15677
+RUN sed -i 's/^AcceptEnv LANG LC_\*$//g' /etc/ssh/sshd_config
 
 ARG DOWNLOAD_URL
 ARG SHA1
