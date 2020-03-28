@@ -77,25 +77,7 @@ If you don't set it, the image will be present on the gitlab Packages -> Contain
 
 #### Android
 
-`ANDROID_JDK` (Optional) : url to download Android jdk (OpenJDK)  
-`ANDROID_NDK` : url to download ndk  
-`ANDROID_SDK_BUILDTOOLS` : url to download buildtools  
-`ANDROID_SDK_PLATFORM` : url to download platform  
-`ANDROID_SDK_PLATFORMTOOLS` : url to download plateformtools  
-`ANDROID_SDK_SDKTOOLS` : url to download sdktools
-
-To get the available urls to fill env var, download the [repository file](http://dl.google.com/android/repository/repository-11.xml)  
-The url will alway start with `http://dl.google.com/android/repository/` and end with `sdk:url` value.  
-For example, if you want use buildtools 28, the value of `ANDROID_SDK_BUILDTOOLS` will be `https://dl.google.com/android/repository/build-tools_r28-linux.zip`.  
-
-Be attentive of the requirement made by Unity for android build.  
-
-For example, for the version 2018.3.6f1, I used those following versions :  
-NDK : android-ndk-r16b-linux-x86_64.zip  
-SDK BUILDTOOLS : build-tools_r28-linux.zip  
-SDK PLATFORM : platform-28_r06.zip  
-SDK PLATFORMTOOLS : platform-tools_r28.0.3-linux.zip  
-SDK SDKTOOLS : sdk-tools-linux-4333796.zip
+See [ci-generator/ReadMe.md](./ci-generator) about Android env var.
 
 ### Personal gitlab-runner
 
