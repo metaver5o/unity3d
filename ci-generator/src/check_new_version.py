@@ -43,16 +43,17 @@ class CheckNewVersion(object):
     def get_releases(self):
         return get(self.release_url).json()
 
-    def generate_unity_version_block(self, detailed_missing_version):
-        original_download_url = detailed_missing_version['downloadUrl']
-        version_key = detailed_missing_version['version']
+    def generate_unity_version_block(self, detailed_missing_version, download_url_hash=None):
+        original_download_url = detailed_missing_version.get('downloadUrl')
+        version_key = detailed_missing_version.get('version')
         # https://regex101.com/r/2Yzsen/1
         unity_version_regex = re.compile("(\d*\.\d*\.\d*)([a-z]*\d*)")
         match = unity_version_regex.match(version_key)
         version = match.group(1)
         build = match.group(2)
         underscore = version_key.replace('.', '_')
-        download_url_hash = self.get_hash_from_download_url(original_download_url)
+        if download_url_hash is None:
+            download_url_hash = self.get_hash_from_download_url(original_download_url)
         download_url = f'https://beta.unity3d.com/download/{download_url_hash}/UnitySetup-{version_key}'
         sha1 = self.get_sha1_from_download_url(download_url)
         release_notes = f'https://unity3d.com/unity/whats-new/{version_key}'
