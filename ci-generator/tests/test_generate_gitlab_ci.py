@@ -99,6 +99,12 @@ class TestGitlabCiGenerator(TestCase):
             version_output = 'data/test_unitysetup_2019.out.yml'
             self.do_test_snapshot(ci_generator, version_input, version_output)
 
+        with self.subTest("test_unitysetup_2019_android_only"):
+            ci_generator = GitlabCiGenerator()
+            version_input = 'data/test_unitysetup_2019_android_only.yml'
+            version_output = 'data/test_unitysetup_2019_android_only.out.yml'
+            self.do_test_snapshot(ci_generator, version_input, version_output)
+
         with self.subTest("dockerfile_override"):
             ci_generator = GitlabCiGenerator()
             version_input = 'data/test_dockerfile_override.yml'

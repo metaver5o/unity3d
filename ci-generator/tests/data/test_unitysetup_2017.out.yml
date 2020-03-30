@@ -69,6 +69,7 @@ prepare_2017_4_27f1:
       - licence_request.alf
   retry: 2
 
+
 # platform specific for 2017.4.27f1: windows
 unity_2017_4_27f1-windows:
   <<: *build
@@ -86,7 +87,6 @@ unity_2017_4_27f1-windows:
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
-
 
 # platform specific for 2017.4.27f1: mac
 unity_2017_4_27f1-mac:
@@ -106,7 +106,6 @@ unity_2017_4_27f1-mac:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
-
 # platform specific for 2017.4.27f1: ios
 unity_2017_4_27f1-ios:
   <<: *build
@@ -125,7 +124,6 @@ unity_2017_4_27f1-ios:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
-
 # platform specific for 2017.4.27f1: android
 unity_2017_4_27f1-android:
   <<: *build
@@ -143,7 +141,6 @@ unity_2017_4_27f1-android:
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
-
 
 # platform specific for 2017.4.27f1: webgl
 unity_2017_4_27f1-webgl:

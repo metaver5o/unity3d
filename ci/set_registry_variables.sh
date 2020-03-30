@@ -3,10 +3,10 @@
 set -ex
 if [ "$CI_COMMIT_REF_NAME" = "master" ]; then
   export REGISTRY=$CI_REGISTRY_IMAGE:$TAG
-  export BASE_IMAGE=$CI_REGISTRY_IMAGE:$VERSION$BUILD
+  export BASE_IMAGE=${BASE_IMAGE:-$CI_REGISTRY_IMAGE:$VERSION$BUILD}
 else
   export REGISTRY=$CI_REGISTRY_IMAGE:$TAG-$CI_COMMIT_REF_SLUG
-  export BASE_IMAGE=$CI_REGISTRY_IMAGE:$VERSION$BUILD-$CI_COMMIT_REF_SLUG
+  export BASE_IMAGE=${BASE_IMAGE:-$CI_REGISTRY_IMAGE:$VERSION$BUILD-$CI_COMMIT_REF_SLUG}
 fi
 
 export IMAGE_LABELS=$(echo\
@@ -24,9 +24,33 @@ export IMAGE_LABELS=$(echo\
   --label com.gableroux.unity3d.release_url=$RELEASE_URL
 )
 
-export IMAGE_ARGUMENTS=$(echo\
-  --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
-  --build-arg COMPONENTS=$COMPONENTS \
-  --build-arg SHA1=$SHA1 \
-  --build-arg BASE_IMAGE=$BASE_IMAGE
-)
+if [ "$COMPONENTS" = "Android" ]; then
+    if [[ -z "${ANDROID_NDK}" ]] \
+    || [[ -z "${ANDROID_SDK_BUILDTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_SDKTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_PLATFORMTOOLS}" ]] \
+    || [[ -z "${ANDROID_SDK_PLATFORM}" ]]; then
+      echo "ANDROID_NDK, ANDROID_SDK_BUILDTOOLS, ANDROID_SDK_SDKTOOLS, ANDROID_SDK_PLATFORMTOOLS or ANDROID_SDK_PLATFORM environment variables are not set, please refer to instructions in the readme and add these to your environment variables."
+      exit 1
+    fi
+
+    export IMAGE_ARGUMENTS=$(echo\
+      --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
+      --build-arg COMPONENTS=$COMPONENTS \
+      --build-arg SHA1=$SHA1 \
+      --build-arg BASE_IMAGE=$BASE_IMAGE \
+      --build-arg ANDROID_NDK=$ANDROID_NDK \
+      --build-arg ANDROID_JDK=$ANDROID_JDK \
+      --build-arg ANDROID_SDK_BUILDTOOLS=$ANDROID_SDK_BUILDTOOLS \
+      --build-arg ANDROID_SDK_SDKTOOLS=$ANDROID_SDK_SDKTOOLS \
+      --build-arg ANDROID_SDK_PLATFORMTOOLS=$ANDROID_SDK_PLATFORMTOOLS \
+      --build-arg ANDROID_SDK_PLATFORM=$ANDROID_SDK_PLATFORM
+    )
+else
+    export IMAGE_ARGUMENTS=$(echo\
+      --build-arg DOWNLOAD_URL=$DOWNLOAD_URL \
+      --build-arg COMPONENTS=$COMPONENTS \
+      --build-arg SHA1=$SHA1 \
+      --build-arg BASE_IMAGE=$BASE_IMAGE
+    )
+fi

@@ -61,6 +61,56 @@ docker run -it --rm \
   /opt/Unity/Editor/Unity -projectPath /root/project
 ```
 
+## CI
+
+### Environment variables
+
+#### Docker
+
+If you would like to push the docker image to your own docker registry, you need to set the following variables:   
+`CI_REGISTRY_USER`  
+`CI_REGISTRY_PASSWORD`  
+`CI_REGISTRY`  
+Mark those variables as Masked.
+
+If you don't set it, the image will be present on the gitlab Packages -> Container registry
+
+#### Android
+
+See [ci-generator/ReadMe.md](./ci-generator) about Android env var.
+
+### Personal gitlab-runner
+
+You need to install [Docker](https://www.docker.com/get-started).  
+You need to set 4Go for memory. [Source](https://stackoverflow.com/a/47027943)  
+Docker -> preference -> Resources -> Memory -> 4.00GB.  
+
+After adding your [gitlab-runner](https://docs.gitlab.com/runner/).  
+In the config.toml, you need to set privileged to true and add "/certs/client" to the volumes array.  
+[Source privileged](https://gitlab.com/gitlab-org/gitlab-runner/issues/1544#note_13439656) - [Source volumes](https://gitlab.com/gitlab-org/gitlab-runner/issues/4501)
+See below:
+
+```yaml
+[[runners]]
+  name = "xxxxxxxxxxxxxxxxxxxxx"
+  url = "https://gitlab.com/"
+  token = "xxxxxxxxxxxxxxxxxxxxx"
+  executor = "docker"
+  [runners.custom_build_dir]
+  [runners.docker]
+    tls_verify = false
+    image = "xxxxxxxxxxxxxxxxxxxxx"
+    privileged = true    #<-------- here
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    volumes = ["/certs/client", "/cache"] #<-------- here
+    shm_size = 0
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+```
+
 ## FAQ
 
 ### How it all started?

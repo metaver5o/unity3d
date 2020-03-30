@@ -55,7 +55,8 @@ nothing_to_build:
   script:
     echo 'All versions are already built, skipping'
 {% else %}
-{% for version_key, version in versions.items() %}
+{% for version_key, version in versions.items() -%}
+{%- if not version.skip_prepare_stage %}
 # prepare image {{version_key}}
 prepare_{{version.underscore}}:
   stage: prepare
@@ -78,8 +79,10 @@ prepare_{{version.underscore}}:
       - licence_request.alf
   retry: 2
 
-{%- if not version.legacy %}
+{%- endif %}
+{% if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}
+{%- if not version.build_only_these_platforms or platform_key in version.build_only_these_platforms %}
 # platform specific for {{version_key}}: {{platform_key}}
 unity_{{version.underscore}}-{{platform_key}}:
   <<: *build
@@ -90,6 +93,9 @@ unity_{{version.underscore}}-{{platform_key}}:
     TAG: {{version_key}}-{{platform_key}}
     COMPONENTS: {{version.platforms[platform_key].components}}
     DOWNLOAD_URL: {{version.download_url}}
+    {%- if version.base_image %}
+    BASE_IMAGE: {{version.base_image}}
+    {%-endif %}
     {%- if version.sha1 %}
     SHA1: {{version.sha1}}
     {%- endif %}
@@ -99,14 +105,15 @@ unity_{{version.underscore}}-{{platform_key}}:
     {%- if version.release_url %}
     RELEASE_URL: {{version.release_url}}
     {%- endif %}
-    {%- if platform_key == 'android' and version.android_sdk_version %}
-    ANDROID_SDK_VERSION: {{version.android_sdk_version}}
-    {%- endif %}
+    {%- for platform_variable, platform_variable_value in version.get('variables', {}).get(platform_key, {}).items() %}
+    {{ platform_variable }}: {{ platform_variable_value }}
+    {%- endfor %}
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
+{%- endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}
