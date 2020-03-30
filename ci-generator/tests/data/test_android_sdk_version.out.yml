@@ -160,3 +160,21 @@ unity_2019_1_3f1-webgl:
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
+
+# platform specific for 2019.1.3f1: linux
+unity_2019_1_3f1-linux:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-linux
+    VERSION: 2019.1.3
+    BUILD: f1
+    TAG: 2019.1.3f1-linux
+    COMPONENTS: Linux-IL2CPP
+    DOWNLOAD_URL: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
+    SHA1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.3f1
+    RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
