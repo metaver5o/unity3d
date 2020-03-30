@@ -160,24 +160,6 @@ unity_2017_4_27f1-webgl:
     DOCKER_DRIVER: overlay2
     DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2017.4.27f1: linux
-unity_2017_4_27f1-linux:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2017.4.27
-    BUILD: f1
-    TAG: 2017.4.27f1-linux
-    COMPONENTS: 
-    DOWNLOAD_URL: https://beta.unity3d.com/download/0c4b856e4c6e/UnitySetup-2017.4.27f1
-    SHA1: 8dae4dd18df383a598830c6e2489cdecdcb19273
-    RELEASE_NOTES: https://unity3d.com/unity/whatsnew/unity-2017.4.2
-    RELEASE_URL: https://download.unity3d.com/download_unity/0c4b856e4c6e/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-
 # platform specific for 2017.4.27f1: linux-il2cpp
 unity_2017_4_27f1-linux-il2cpp:
   <<: *build
