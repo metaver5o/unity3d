@@ -33,7 +33,10 @@ class TestGitlabCiGenerator(TestCase):
         self.assertEqual("unitysetup", dockerfile)
 
         dockerfile = ci_generator.get_dockerfile_name_to_use("linux", {})
-        self.assertEqual("unitysetup-linux", dockerfile)
+        self.assertEqual("unitysetup", dockerfile)
+
+        dockerfile = ci_generator.get_dockerfile_name_to_use("linux-il2cpp", {})
+        self.assertEqual("unitysetup-linux-il2cpp", dockerfile)
 
         dockerfile = ci_generator.get_dockerfile_name_to_use("mac", {})
         self.assertEqual("unitysetup", dockerfile)

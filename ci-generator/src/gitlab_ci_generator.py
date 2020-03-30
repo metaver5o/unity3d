@@ -87,7 +87,8 @@ class GitlabCiGenerator(object):
             "ios": {"components": "iOS"},
             "android": {"components": "Android"},
             "webgl": {"components": "WebGL"},
-            "linux": {"components": "Linux-IL2CPP"},
+            "linux": {"components": ""},
+            "linux-il2cpp": {"components": "Linux-IL2CPP"},
         }
 
     @staticmethod
