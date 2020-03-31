@@ -1112,36 +1112,6 @@
   release_notes: https://unity3d.com/unity/whats-new/2018.3.12
   release_url: https://beta.unity3d.com/download/8afd630d1f5b/public_download.html
 
-2019.1.0f2:
-  dockerfile_name: unitysetup
-  version: 2019.1.0
-  build: f2
-  underscore: 2019_1_0f2
-  download_url: https://beta.unity3d.com/download/292b93d75a2c/UnitySetup-2019.1.0f2
-  sha1: 56711ddafdde2554a7782c846785767e07ebdc5d
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.0
-  release_url: https://beta.unity3d.com/download/292b93d75a2c/public_download.html
-
-2019.1.1f1:
-  dockerfile_name: unitysetup
-  version: 2019.1.1
-  build: f1
-  underscore: 2019_1_1f1
-  download_url: https://beta.unity3d.com/download/fef62e97e63b/UnitySetup-2019.1.1f1
-  sha1: 0d1082e47ea0e6e127ce31e5685b4fc2f2cae6d3
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.1
-  release_url: https://beta.unity3d.com/download/fef62e97e63b/public_download.html
-
-2019.1.2f1:
-  dockerfile_name: unitysetup
-  version: 2019.1.2
-  build: f1
-  underscore: 2019_1_2f1
-  download_url: https://beta.unity3d.com/download/3e18427e571f/UnitySetup-2019.1.2f1
-  sha1: 64809d740e51a72079f270e636bfee77d38d7ea3
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.2
-  release_url: https://beta.unity3d.com/download/3e18427e571f/public_download.html
-
 2017.4.27f1:
   platforms:
     mac:
@@ -1187,17 +1157,6 @@
   release_notes: https://unity3d.com/unity/whats-new/2018.4.0f1
   release_url: https://beta.unity3d.com/download/b6ffa8986c8d/public_download.html
 
-2019.1.3f1:
-  latest: true
-  dockerfile_name: unitysetup
-  version: 2019.1.3
-  build: f1
-  underscore: 2019_1_3f1
-  download_url: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
-  sha1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.3f1
-  release_url: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
-
 2018.4.1f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1207,16 +1166,6 @@
   sha1: 08b1f19f8ec698efe4fd2ef69c76c071626f7a2d
   underscore: 2018_4_1f1
   version: 2018.4.1
-
-2019.1.4f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/UnitySetup-2019.1.4f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.4f1
-  release_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/public_download.html
-  sha1: e649ab9fc49a2e722b11acbf02729dd942646f2e
-  underscore: 2019_1_4f1
-  version: 2019.1.4
 
 2018.4.2f1:
   build: f1
@@ -1228,16 +1177,6 @@
   underscore: 2018_4_2f1
   version: 2018.4.2
 
-2019.1.7f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/f3c4928e5742/UnitySetup-2019.1.7f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.7f1
-  release_url: https://beta.unity3d.com/download/f3c4928e5742/public_download.html
-  sha1: 97432bf2227a6819ae5893d7ce77334b3b65bc41
-  underscore: 2019_1_7f1
-  version: 2019.1.7
-
 2018.4.5f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1248,16 +1187,6 @@
   underscore: 2018_4_5f1
   version: 2018.4.5
 
-2019.1.12f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/f04f5427219e/UnitySetup-2019.1.12f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.12f1
-  release_url: https://beta.unity3d.com/download/f04f5427219e/public_download.html
-  sha1: e736ade47aced9d50b5282edee507d37331d1627
-  underscore: 2019_1_12f1
-  version: 2019.1.12
-
 2018.4.6f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1267,36 +1196,6 @@
   sha1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
   underscore: 2018_4_6f1
   version: 2018.4.6
-
-2019.1.14f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.14f1
-  release_url: https://beta.unity3d.com/download/148b5891095a/public_download.html
-  sha1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
-  underscore: 2019_1_14f1
-  version: 2019.1.14
-
-2019.1.6f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/f2970305fe1c/UnitySetup-2019.1.6f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.6f1
-  release_url: https://beta.unity3d.com/download/f2970305fe1c/public_download.html
-  sha1: 1a8e3c61e3faec6dcf7a6789638b1f78bd97de3e
-  underscore: 2019_1_6f1
-  version: 2019.1.6
-
-2019.2.2f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.2
-  release_url: https://beta.unity3d.com/download/ab112815d860/public_download.html
-  sha1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
-  underscore: 2019_2_2f1
-  version: 2019.2.2
 
 # 2017 versions skipped due to https://gitlab.com/gableroux/unity3d/issues/40
 2017.4.29f1:
@@ -1351,16 +1250,6 @@
   underscore: 2018_4_8f1
   version: 2018.4.8
 
-2019.2.4f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.4f1
-  release_url: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
-  sha1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
-  underscore: 2019_2_4f1
-  version: 2019.2.4
-
 2018.4.9f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1370,16 +1259,6 @@
   sha1: 43cb74a3f108ef180a50c39b738599cb0ed64d17
   underscore: 2018_4_9f1
   version: 2018.4.9
-
-2019.2.5f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/9dace1eed4cc/UnitySetup-2019.2.5f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.5f1
-  release_url: https://beta.unity3d.com/download/9dace1eed4cc/public_download.html
-  sha1: 56e22a22e102d325220ee313f68bd4f7ffab70ec
-  underscore: 2019_2_5f1
-  version: 2019.2.5
 
 2018.4.10f1:
   build: f1
@@ -1391,15 +1270,6 @@
   underscore: 2018_4_10f1
   version: 2018.4.10
 
-2019.2.8f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/ff5b465c8d13/UnitySetup-2019.2.8f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.8f1
-  release_url: https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
-  sha1: 46289dd1a50fca79a5272d7440318143f5dd798d
-  underscore: 2019_2_8f1
-  version: 2019.2.8
 
 2018.4.12f1:
   build: f1
@@ -1411,26 +1281,6 @@
   underscore: 2018_4_12f1
   version: 2018.4.12
 
-2019.2.11f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/5f859a4cfee5/UnitySetup-2019.2.11f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.11f1
-  release_url: https://beta.unity3d.com/download/5f859a4cfee5/public_download.html
-  sha1: 1f9fa0a8aefbaef0028852d1783615a12e39657c
-  underscore: 2019_2_11f1
-  version: 2019.2.11
-
-2019.2.12f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/UnitySetup-2019.2.12f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.12f1
-  release_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/public_download.html
-  sha1: 140d6807f44058b2de4d76a3293a24d38b081523
-  underscore: 2019_2_12f1
-  version: 2019.2.12
-
 2018.4.13f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1440,16 +1290,6 @@
   sha1: 49966ebe7a120bf61d6d1409ea23ffc30f0da094
   underscore: 2018_4_13f1
   version: 2018.4.13
-
-2019.2.14f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/49dd4e9fa428/UnitySetup-2019.2.14f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.14f1
-  release_url: https://beta.unity3d.com/download/49dd4e9fa428/public_download.html
-  sha1: 63c5d25fd53c8d71f4dc5f201b308dbfb460b389
-  underscore: 2019_2_14f1
-  version: 2019.2.14
 
 # 2017 versions skipped due to https://gitlab.com/gableroux/unity3d/issues/40
 2017.4.35f1:
@@ -1462,16 +1302,6 @@
   underscore: 2017_4_35f1
   version: 2017.4.35
 
-2019.2.15f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/dcb72c2e9334/UnitySetup-2019.2.15f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.15f1
-  release_url: https://beta.unity3d.com/download/dcb72c2e9334/public_download.html
-  sha1: bdd7058114a1c8f0dd35fdf63789113e30b4c8ec
-  underscore: 2019_2_15f1
-  version: 2019.2.15
-
 2018.4.14f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1481,36 +1311,6 @@
   sha1: c107d695be5e898d35c61ce90dc46a300245736e
   underscore: 2018_4_14f1
   version: 2018.4.14
-
-2019.2.16f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/b9898e2d04a4/UnitySetup-2019.2.16f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.16f1
-  release_url: https://beta.unity3d.com/download/b9898e2d04a4/public_download.html
-  sha1: b736c0b253393c3ac08aa2c35b68f6d7710f84db
-  underscore: 2019_2_16f1
-  version: 2019.2.16
-
-2019.2.9f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/ebce4d76e6e8/UnitySetup-2019.2.9f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.9f1
-  release_url: https://beta.unity3d.com/download/ebce4d76e6e8/public_download.html
-  sha1: b595a65a7977994bdeb162ed6984aed55df7d208
-  underscore: 2019_2_9f1
-  version: 2019.2.9
-
-2019.2.17f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/8e603399ca02/UnitySetup-2019.2.17f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.17f1
-  release_url: https://beta.unity3d.com/download/8e603399ca02/public_download.html
-  sha1: b5f1f26c399a6c0e4762bf52603b220cebd28c20
-  underscore: 2019_2_17f1
-  version: 2019.2.17
 
 2018.4.15f1:
   build: f1
@@ -1543,16 +1343,6 @@
   underscore: 2018_4_16f1
   version: 2018.4.16
 
-2019.2.19f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/929ab4d01772/UnitySetup-2019.2.19f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.19f1
-  release_url: https://beta.unity3d.com/download/929ab4d01772/public_download.html
-  sha1: 88296eb8137792d8ac248b767f80c6ac6b955024
-  underscore: 2019_2_19f1
-  version: 2019.2.19
-
 2020.1.0a21:
   build: a21
   dockerfile_name: unitysetup
@@ -1573,16 +1363,6 @@
   underscore: 2020_1_0a22
   version: 2020.1.0
 
-2019.2.20f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/c67d00285037/UnitySetup-2019.2.20f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.20f1
-  release_url: https://beta.unity3d.com/download/c67d00285037/public_download.html
-  sha1: 442e07c54e75866ab63f5d75160790b202cc28f9
-  underscore: 2019_2_20f1
-  version: 2019.2.20
-
 2020.1.0a23:
   build: a23
   dockerfile_name: unitysetup
@@ -1602,16 +1382,6 @@
   sha1: 521deb7528647f87766dbbdc886bae9b41fae3cb
   underscore: 2018_4_17f1
   version: 2018.4.17
-
-2019.2.21f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.21f1
-  release_url: https://beta.unity3d.com/download/9d528d026557/public_download.html
-  sha1: e1bf0167dda7897385adf7bb53a14195ffaa98e2
-  underscore: 2019_2_21f1
-  version: 2019.2.21
 
 # 2017 versions skipped due to https://gitlab.com/gableroux/unity3d/issues/40
 2017.4.37f1:
@@ -1654,16 +1424,6 @@
   underscore: 2018_4_18f1
   version: 2018.4.18
 
-2019.3.4f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/4f139db2fdbd/UnitySetup-2019.3.4f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.3.4f1
-  release_url: https://beta.unity3d.com/download/4f139db2fdbd/public_download.html
-  sha1: 0c078a50831b5c1582d44d27b34ba0e387fdbdc3
-  underscore: 2019_3_4f1
-  version: 2019.3.4
-
 2018.4.11f1:
   build: f1
   dockerfile_name: unitysetup
@@ -1673,146 +1433,6 @@
   sha1: 29e6ac3436d8fd1c50f1ee5f12651f4566b96ed0
   underscore: 2018_4_11f1
   version: 2018.4.11
-
-2019.2.18f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/bbf64de26e34/UnitySetup-2019.2.18f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.18
-  release_url: https://beta.unity3d.com/download/bbf64de26e34/public_download.html
-  sha1: 6de71428a1f0d9c42aff1b8e284f338dcea0c0fb
-  underscore: 2019_2_18f1
-  version: 2019.2.18
-
-2019.2.13f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/e20f6c7e5017/UnitySetup-2019.2.13f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.13
-  release_url: https://beta.unity3d.com/download/e20f6c7e5017/public_download.html
-  sha1: aa5702564631a7b8680be6b054f84aa49c0f49e6
-  underscore: 2019_2_13f1
-  version: 2019.2.13
-
-2019.2.10f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/923acd2d43aa/UnitySetup-2019.2.10f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.10
-  release_url: https://beta.unity3d.com/download/923acd2d43aa/public_download.html
-  sha1: 962136a268e7048ce527973a5b7ac7feb7c96155
-  underscore: 2019_2_10f1
-  version: 2019.2.10
-
-2019.2.7f2:
-  build: f2
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f2
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.7
-  release_url: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
-  sha1: 6af62fa2e55f8ae128ff0993976bc345eb1a2c61
-  underscore: 2019_2_7f2
-  version: 2019.2.7
-
-2019.2.6f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/fe82a0e88406/UnitySetup-2019.2.6f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.6
-  release_url: https://beta.unity3d.com/download/fe82a0e88406/public_download.html
-  sha1: 1241eb303dd0601d1dd6d5b09a0b0862933d1f1a
-  underscore: 2019_2_6f1
-  version: 2019.2.6
-
-2019.2.3f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/8e55c27a4621/UnitySetup-2019.2.3f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.3
-  release_url: https://beta.unity3d.com/download/8e55c27a4621/public_download.html
-  sha1: bb22f855ea696bd5401cbc0fc1d08df8de52317a
-  underscore: 2019_2_3f1
-  version: 2019.2.3
-
-2019.2.1f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/ca4d5af0be6f/UnitySetup-2019.2.1f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.1
-  release_url: https://beta.unity3d.com/download/ca4d5af0be6f/public_download.html
-  sha1: 434a6d91c74bd8ae88a689d1005ab5863f5ba1fc
-  underscore: 2019_2_1f1
-  version: 2019.2.1
-
-2019.2.0f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/20c1667945cf/UnitySetup-2019.2.0f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.2.0
-  release_url: https://beta.unity3d.com/download/20c1667945cf/public_download.html
-  sha1: 41a5980bf5a50eee09bad350f7f77fdb738b9ae5
-  underscore: 2019_2_0f1
-  version: 2019.2.0
-
-2019.1.13f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/b5956c0a61e7/UnitySetup-2019.1.13f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.13
-  release_url: https://beta.unity3d.com/download/b5956c0a61e7/public_download.html
-  sha1: 7f898798d4c5c38d6ba90eeb8492169da23195be
-  underscore: 2019_1_13f1
-  version: 2019.1.13
-
-2019.1.11f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/9b001d489a54/UnitySetup-2019.1.11f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.11
-  release_url: https://beta.unity3d.com/download/9b001d489a54/public_download.html
-  sha1: 7d883b49a5d515c856aa40af5da765267a00b9a9
-  underscore: 2019_1_11f1
-  version: 2019.1.11
-
-2019.1.10f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/f007ed779b7a/UnitySetup-2019.1.10f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.10
-  release_url: https://beta.unity3d.com/download/f007ed779b7a/public_download.html
-  sha1: d3aa2b01637d9a1fbc3d2bda2cf8a2ad78427f81
-  underscore: 2019_1_10f1
-  version: 2019.1.10
-
-2019.1.9f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/d5f1b37da199/UnitySetup-2019.1.9f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.9
-  release_url: https://beta.unity3d.com/download/d5f1b37da199/public_download.html
-  sha1: 72969f5bc24cc0ea7d7f48171a03959df99651d2
-  underscore: 2019_1_9f1
-  version: 2019.1.9
-
-2019.1.8f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/7938dd008a75/UnitySetup-2019.1.8f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.8
-  release_url: https://beta.unity3d.com/download/7938dd008a75/public_download.html
-  sha1: 83ad002cf5b7f1ec83b99c865122a9cf15046f32
-  underscore: 2019_1_8f1
-  version: 2019.1.8
-
-2019.1.5f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/0ca0f5646614/UnitySetup-2019.1.5f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.1.5
-  release_url: https://beta.unity3d.com/download/0ca0f5646614/public_download.html
-  sha1: df84be4a4fc7f03115c406bde612da04b9e26cca
-  underscore: 2019_1_5f1
-  version: 2019.1.5
 
 2018.4.7f1:
   build: f1
@@ -1923,16 +1543,6 @@
   sha1: 305078fbd3de8147340761bf179c3858a9574f2c
   underscore: 2018_4_19f1
   version: 2018.4.19
-
-2019.3.5f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/d691e07d38ef/UnitySetup-2019.3.5f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.3.5f1
-  release_url: https://beta.unity3d.com/download/d691e07d38ef/public_download.html
-  sha1: 8bc329d54a5ec36d1786d3aee78995caafd53f1b
-  underscore: 2019_3_5f1
-  version: 2019.3.5
 
 2020.1.0b2:
   build: b2
@@ -2124,3 +1734,706 @@
       ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
       ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
       ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+
+# note: android image was published afterward
+2019.1.0f2:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f2
+  dockerfile_name: unitysetup
+  version: 2019.1.0
+  underscore: 2019_1_0f2
+  download_url: https://beta.unity3d.com/download/292b93d75a2c/UnitySetup-2019.1.0f2
+  sha1: 56711ddafdde2554a7782c846785767e07ebdc5d
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.0
+  release_url: https://beta.unity3d.com/download/292b93d75a2c/public_download.html
+
+# note: android image was published afterward
+2019.1.1f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  version: 2019.1.1
+  underscore: 2019_1_1f1
+  download_url: https://beta.unity3d.com/download/fef62e97e63b/UnitySetup-2019.1.1f1
+  sha1: 0d1082e47ea0e6e127ce31e5685b4fc2f2cae6d3
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.1
+  release_url: https://beta.unity3d.com/download/fef62e97e63b/public_download.html
+
+# note: android image was published afterward
+2019.1.2f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  version: 2019.1.2
+  underscore: 2019_1_2f1
+  download_url: https://beta.unity3d.com/download/3e18427e571f/UnitySetup-2019.1.2f1
+  sha1: 64809d740e51a72079f270e636bfee77d38d7ea3
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.2
+  release_url: https://beta.unity3d.com/download/3e18427e571f/public_download.html
+
+# note: android image was published afterward
+2019.1.3f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  latest: true
+  dockerfile_name: unitysetup
+  version: 2019.1.3
+  underscore: 2019_1_3f1
+  download_url: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
+  sha1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.3f1
+  release_url: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
+
+# note: android image was published afterward
+2019.1.4f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/UnitySetup-2019.1.4f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.4f1
+  release_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/public_download.html
+  sha1: e649ab9fc49a2e722b11acbf02729dd942646f2e
+  underscore: 2019_1_4f1
+  version: 2019.1.4
+
+# note: android image was published afterward
+2019.1.7f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f3c4928e5742/UnitySetup-2019.1.7f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.7f1
+  release_url: https://beta.unity3d.com/download/f3c4928e5742/public_download.html
+  sha1: 97432bf2227a6819ae5893d7ce77334b3b65bc41
+  underscore: 2019_1_7f1
+  version: 2019.1.7
+
+# note: android image was published afterward
+2019.1.12f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f04f5427219e/UnitySetup-2019.1.12f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.12f1
+  release_url: https://beta.unity3d.com/download/f04f5427219e/public_download.html
+  sha1: e736ade47aced9d50b5282edee507d37331d1627
+  underscore: 2019_1_12f1
+  version: 2019.1.12
+
+# note: android image was published afterward
+2019.1.14f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.14f1
+  release_url: https://beta.unity3d.com/download/148b5891095a/public_download.html
+  sha1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
+  underscore: 2019_1_14f1
+  version: 2019.1.14
+
+# note: android image was published afterward
+2019.1.6f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f2970305fe1c/UnitySetup-2019.1.6f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.6f1
+  release_url: https://beta.unity3d.com/download/f2970305fe1c/public_download.html
+  sha1: 1a8e3c61e3faec6dcf7a6789638b1f78bd97de3e
+  underscore: 2019_1_6f1
+  version: 2019.1.6
+
+# note: android image was published afterward
+2019.2.2f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.2
+  release_url: https://beta.unity3d.com/download/ab112815d860/public_download.html
+  sha1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+  underscore: 2019_2_2f1
+  version: 2019.2.2
+
+# note: android image was published afterward
+2019.2.4f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.4f1
+  release_url: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+  sha1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+  underscore: 2019_2_4f1
+  version: 2019.2.4
+
+# note: android image was published afterward
+2019.2.5f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9dace1eed4cc/UnitySetup-2019.2.5f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.5f1
+  release_url: https://beta.unity3d.com/download/9dace1eed4cc/public_download.html
+  sha1: 56e22a22e102d325220ee313f68bd4f7ffab70ec
+  underscore: 2019_2_5f1
+  version: 2019.2.5
+
+# note: android image was published afterward
+2019.2.8f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ff5b465c8d13/UnitySetup-2019.2.8f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.8f1
+  release_url: https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
+  sha1: 46289dd1a50fca79a5272d7440318143f5dd798d
+  underscore: 2019_2_8f1
+  version: 2019.2.8
+
+# note: android image was published afterward
+2019.2.11f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/5f859a4cfee5/UnitySetup-2019.2.11f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.11f1
+  release_url: https://beta.unity3d.com/download/5f859a4cfee5/public_download.html
+  sha1: 1f9fa0a8aefbaef0028852d1783615a12e39657c
+  underscore: 2019_2_11f1
+  version: 2019.2.11
+
+# note: android image was published afterward
+2019.2.12f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/UnitySetup-2019.2.12f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.12f1
+  release_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/public_download.html
+  sha1: 140d6807f44058b2de4d76a3293a24d38b081523
+  underscore: 2019_2_12f1
+  version: 2019.2.12
+
+# note: android image was published afterward
+2019.2.14f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/49dd4e9fa428/UnitySetup-2019.2.14f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.14f1
+  release_url: https://beta.unity3d.com/download/49dd4e9fa428/public_download.html
+  sha1: 63c5d25fd53c8d71f4dc5f201b308dbfb460b389
+  underscore: 2019_2_14f1
+  version: 2019.2.14
+
+# note: android image was published afterward
+2019.2.15f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/dcb72c2e9334/UnitySetup-2019.2.15f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.15f1
+  release_url: https://beta.unity3d.com/download/dcb72c2e9334/public_download.html
+  sha1: bdd7058114a1c8f0dd35fdf63789113e30b4c8ec
+  underscore: 2019_2_15f1
+  version: 2019.2.15
+
+# note: android image was published afterward
+2019.2.16f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b9898e2d04a4/UnitySetup-2019.2.16f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.16f1
+  release_url: https://beta.unity3d.com/download/b9898e2d04a4/public_download.html
+  sha1: b736c0b253393c3ac08aa2c35b68f6d7710f84db
+  underscore: 2019_2_16f1
+  version: 2019.2.16
+
+# note: android image was published afterward
+2019.2.9f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ebce4d76e6e8/UnitySetup-2019.2.9f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.9f1
+  release_url: https://beta.unity3d.com/download/ebce4d76e6e8/public_download.html
+  sha1: b595a65a7977994bdeb162ed6984aed55df7d208
+  underscore: 2019_2_9f1
+  version: 2019.2.9
+
+# note: android image was published afterward
+2019.2.17f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8e603399ca02/UnitySetup-2019.2.17f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.17f1
+  release_url: https://beta.unity3d.com/download/8e603399ca02/public_download.html
+  sha1: b5f1f26c399a6c0e4762bf52603b220cebd28c20
+  underscore: 2019_2_17f1
+  version: 2019.2.17
+
+# note: android image was published afterward
+2019.2.19f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/929ab4d01772/UnitySetup-2019.2.19f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.19f1
+  release_url: https://beta.unity3d.com/download/929ab4d01772/public_download.html
+  sha1: 88296eb8137792d8ac248b767f80c6ac6b955024
+  underscore: 2019_2_19f1
+  version: 2019.2.19
+
+# note: android image was published afterward
+2019.2.20f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c67d00285037/UnitySetup-2019.2.20f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.20f1
+  release_url: https://beta.unity3d.com/download/c67d00285037/public_download.html
+  sha1: 442e07c54e75866ab63f5d75160790b202cc28f9
+  underscore: 2019_2_20f1
+  version: 2019.2.20
+
+# note: android image was published afterward
+2019.2.21f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.21f1
+  release_url: https://beta.unity3d.com/download/9d528d026557/public_download.html
+  sha1: e1bf0167dda7897385adf7bb53a14195ffaa98e2
+  underscore: 2019_2_21f1
+  version: 2019.2.21
+
+# note: android image was published afterward
+2019.3.4f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/4f139db2fdbd/UnitySetup-2019.3.4f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.4f1
+  release_url: https://beta.unity3d.com/download/4f139db2fdbd/public_download.html
+  sha1: 0c078a50831b5c1582d44d27b34ba0e387fdbdc3
+  underscore: 2019_3_4f1
+  version: 2019.3.4
+
+# note: android image was published afterward
+2019.2.18f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/bbf64de26e34/UnitySetup-2019.2.18f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.18
+  release_url: https://beta.unity3d.com/download/bbf64de26e34/public_download.html
+  sha1: 6de71428a1f0d9c42aff1b8e284f338dcea0c0fb
+  underscore: 2019_2_18f1
+  version: 2019.2.18
+
+# note: android image was published afterward
+2019.2.13f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/e20f6c7e5017/UnitySetup-2019.2.13f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.13
+  release_url: https://beta.unity3d.com/download/e20f6c7e5017/public_download.html
+  sha1: aa5702564631a7b8680be6b054f84aa49c0f49e6
+  underscore: 2019_2_13f1
+  version: 2019.2.13
+
+# note: android image was published afterward
+2019.2.10f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/923acd2d43aa/UnitySetup-2019.2.10f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.10
+  release_url: https://beta.unity3d.com/download/923acd2d43aa/public_download.html
+  sha1: 962136a268e7048ce527973a5b7ac7feb7c96155
+  underscore: 2019_2_10f1
+  version: 2019.2.10
+
+# note: android image was published afterward
+2019.2.7f2:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f2
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f2
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.7
+  release_url: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
+  sha1: 6af62fa2e55f8ae128ff0993976bc345eb1a2c61
+  underscore: 2019_2_7f2
+  version: 2019.2.7
+
+# note: android image was published afterward
+2019.2.6f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/fe82a0e88406/UnitySetup-2019.2.6f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.6
+  release_url: https://beta.unity3d.com/download/fe82a0e88406/public_download.html
+  sha1: 1241eb303dd0601d1dd6d5b09a0b0862933d1f1a
+  underscore: 2019_2_6f1
+  version: 2019.2.6
+
+# note: android image was published afterward
+2019.2.3f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8e55c27a4621/UnitySetup-2019.2.3f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.3
+  release_url: https://beta.unity3d.com/download/8e55c27a4621/public_download.html
+  sha1: bb22f855ea696bd5401cbc0fc1d08df8de52317a
+  underscore: 2019_2_3f1
+  version: 2019.2.3
+
+# note: android image was published afterward
+2019.2.1f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ca4d5af0be6f/UnitySetup-2019.2.1f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.1
+  release_url: https://beta.unity3d.com/download/ca4d5af0be6f/public_download.html
+  sha1: 434a6d91c74bd8ae88a689d1005ab5863f5ba1fc
+  underscore: 2019_2_1f1
+  version: 2019.2.1
+
+# note: android image was published afterward
+2019.2.0f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/20c1667945cf/UnitySetup-2019.2.0f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.0
+  release_url: https://beta.unity3d.com/download/20c1667945cf/public_download.html
+  sha1: 41a5980bf5a50eee09bad350f7f77fdb738b9ae5
+  underscore: 2019_2_0f1
+  version: 2019.2.0
+
+# note: android image was published afterward
+2019.1.13f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b5956c0a61e7/UnitySetup-2019.1.13f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.13
+  release_url: https://beta.unity3d.com/download/b5956c0a61e7/public_download.html
+  sha1: 7f898798d4c5c38d6ba90eeb8492169da23195be
+  underscore: 2019_1_13f1
+  version: 2019.1.13
+
+# note: android image was published afterward
+2019.1.11f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9b001d489a54/UnitySetup-2019.1.11f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.11
+  release_url: https://beta.unity3d.com/download/9b001d489a54/public_download.html
+  sha1: 7d883b49a5d515c856aa40af5da765267a00b9a9
+  underscore: 2019_1_11f1
+  version: 2019.1.11
+
+# note: android image was published afterward
+2019.1.10f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f007ed779b7a/UnitySetup-2019.1.10f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.10
+  release_url: https://beta.unity3d.com/download/f007ed779b7a/public_download.html
+  sha1: d3aa2b01637d9a1fbc3d2bda2cf8a2ad78427f81
+  underscore: 2019_1_10f1
+  version: 2019.1.10
+
+# note: android image was published afterward
+2019.1.9f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d5f1b37da199/UnitySetup-2019.1.9f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.9
+  release_url: https://beta.unity3d.com/download/d5f1b37da199/public_download.html
+  sha1: 72969f5bc24cc0ea7d7f48171a03959df99651d2
+  underscore: 2019_1_9f1
+  version: 2019.1.9
+
+# note: android image was published afterward
+2019.1.8f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7938dd008a75/UnitySetup-2019.1.8f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.8
+  release_url: https://beta.unity3d.com/download/7938dd008a75/public_download.html
+  sha1: 83ad002cf5b7f1ec83b99c865122a9cf15046f32
+  underscore: 2019_1_8f1
+  version: 2019.1.8
+
+# note: android image was published afterward
+2019.1.5f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/0ca0f5646614/UnitySetup-2019.1.5f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.5
+  release_url: https://beta.unity3d.com/download/0ca0f5646614/public_download.html
+  sha1: df84be4a4fc7f03115c406bde612da04b9e26cca
+  underscore: 2019_1_5f1
+  version: 2019.1.5
+
+# note: android image was published afterward
+2019.3.5f1:
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d691e07d38ef/UnitySetup-2019.3.5f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.5f1
+  release_url: https://beta.unity3d.com/download/d691e07d38ef/public_download.html
+  sha1: 8bc329d54a5ec36d1786d3aee78995caafd53f1b
+  underscore: 2019_3_5f1
+  version: 2019.3.5
