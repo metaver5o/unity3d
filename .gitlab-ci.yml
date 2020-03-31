@@ -307,34 +307,6 @@ unity_2020_1_0b3-linux-il2cpp:
 
 
 
-# platform specific for 2018.4.20f1: linux-il2cpp
-unity_2018_4_20f1-linux-il2cpp:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup-linux-il2cpp
-    VERSION: 2018.4.20
-    BUILD: f1
-    TAG: 2018.4.20f1-linux-il2cpp
-    COMPONENTS: Linux-IL2CPP
-    DOWNLOAD_URL: https://beta.unity3d.com/download/008688490035/UnitySetup-2018.4.20f1
-    BASE_IMAGE: gableroux/unity3d:2018.4.20f1
-    SHA1: 2c303d964744bc75c0571da63ae417a8ed7b33a1
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.20f1
-    RELEASE_URL: https://beta.unity3d.com/download/008688490035/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-
-
-
-
-
-
-
-
-
-
 # platform specific for 2019.3.7f1: linux-il2cpp
 unity_2019_3_7f1-linux-il2cpp:
   <<: *build
