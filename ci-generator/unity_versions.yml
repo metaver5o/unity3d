@@ -124,20 +124,6 @@
   build_only_these_platforms: linux-il2cpp
 
 # note: android and linux-il2cpp image was published afterward
-2018.4.20f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/008688490035/UnitySetup-2018.4.20f1
-  release_notes: https://unity3d.com/unity/whats-new/2018.4.20f1
-  release_url: https://beta.unity3d.com/download/008688490035/public_download.html
-  sha1: 2c303d964744bc75c0571da63ae417a8ed7b33a1
-  underscore: 2018_4_20f1
-  version: 2018.4.20
-  base_image: gableroux/unity3d:2018.4.20f1
-  skip_prepare_stage: true
-  build_only_these_platforms: linux-il2cpp
-
-# note: android and linux-il2cpp image was published afterward
 2019.3.7f1:
   build: f1
   dockerfile_name: unitysetup
