@@ -7,6 +7,13 @@
   sha1: 0709371953f5eabd47b283df7544f504dded0997
   underscore: 2020_1_0b5
   version: 2020.1.0
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
 
 2018.4.21f1:
   build: f1
@@ -17,6 +24,13 @@
   sha1: 7ba4699e974e23cdd09ba0b334125d14ae459a27
   underscore: 2018_4_21f1
   version: 2018.4.21
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
 
 2019.3.9f1:
   build: f1
@@ -27,4 +41,11 @@
   sha1: 752015b6e6841ebfc28124bc86bfe5ef806ac172
   underscore: 2019_3_9f1
   version: 2019.3.9
+  variables:
+    android:
+      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
+      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
+      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
+      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
+      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
 
