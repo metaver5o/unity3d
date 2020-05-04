@@ -5,19 +5,19 @@ from jinja2 import Template
 
 
 class GitlabCiGenerator(object):
-    default_dockerfile_name = 'unitysetup'
+    default_dockerfile_name = "unitysetup"
 
     def get_rendered_ci_template(self):
         context = {
             "versions": self.get_unity_versions() or {},
-            "platforms": self.get_unity_platforms()
+            "platforms": self.get_unity_platforms(),
         }
         return self.render_template(self.get_ci_yaml_template(), context)
 
     @staticmethod
     def get_ci_yaml_template():
         # TODO: move to utils
-        base_dirname = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
+        base_dirname = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..")
         return os.path.join(base_dirname, "gitlab-ci.jinja2")
 
     def get_unity_versions(self):
@@ -31,21 +31,23 @@ class GitlabCiGenerator(object):
 
     @staticmethod
     def get_unity_versions_path():
-        base_dirname = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..')
+        base_dirname = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..")
         unity_versions = os.path.join(base_dirname, "unity_versions.yml")
         return unity_versions
 
     def get_versions_with_platforms(self, unity_versions):
         unity_versions_with_platforms = {}
         for version_key, version in unity_versions.items():
-            if version.get('legacy', False):
+            if version.get("legacy", False):
                 unity_versions_with_platforms[version_key] = unity_versions[version_key]
             else:
                 platforms = {
                     **self.get_unity_platforms(),
-                    **unity_versions[version_key].get('platforms', {}),
+                    **unity_versions[version_key].get("platforms", {}),
                 }
-                base_components = unity_versions[version_key].get('base_components', self.get_unity_base_components())
+                base_components = unity_versions[version_key].get(
+                    "base_components", self.get_unity_base_components()
+                )
                 unity_versions_with_platforms[version_key] = {
                     **unity_versions[version_key],
                     "platforms": platforms,
@@ -55,20 +57,23 @@ class GitlabCiGenerator(object):
 
     def set_dockerfile_to_unity_versions(self, unity_versions):
         for version_key, version in unity_versions.items():
-            for platform_key, _ in version.get('platforms', {}).items():
-                unity_versions[version_key]['platforms'][platform_key]['dockerfile_name'] = \
-                    self.get_dockerfile_name_to_use(platform_key, version)
+            for platform_key, _ in version.get("platforms", {}).items():
+                unity_versions[version_key]["platforms"][platform_key][
+                    "dockerfile_name"
+                ] = self.get_dockerfile_name_to_use(platform_key, version)
         return unity_versions
 
     def get_dockerfile_name_to_use(self, platform, version):
         script_dirname = os.path.dirname(os.path.realpath(__file__))
-        dockerfiles_location = os.path.join(script_dirname, '../../docker/')
-        dockerfile_name = version.get('dockerfile_name', self.default_dockerfile_name)
-        base_dockerfile = f'{dockerfile_name}'
+        dockerfiles_location = os.path.join(script_dirname, "../../docker/")
+        dockerfile_name = version.get("dockerfile_name", self.default_dockerfile_name)
+        base_dockerfile = f"{dockerfile_name}"
 
-        platform_dockerfile_name = f'{dockerfile_name}-{platform}'
-        platform_dockerfile = f'{platform_dockerfile_name}.Dockerfile'
-        platform_dockerfile_path = os.path.join(dockerfiles_location, platform_dockerfile)
+        platform_dockerfile_name = f"{dockerfile_name}-{platform}"
+        platform_dockerfile = f"{platform_dockerfile_name}.Dockerfile"
+        platform_dockerfile_path = os.path.join(
+            dockerfiles_location, platform_dockerfile
+        )
 
         if os.path.isfile(platform_dockerfile_path):
             return platform_dockerfile_name
