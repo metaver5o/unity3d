@@ -80,11 +80,16 @@ class CheckNewVersion(object):
         }
 
         parsed_version = version.parse(version_part)
-        # starting from 2018 versions, android images need ANDROID_NDK
-        # 2018 needs android-ndk r16b
-        # 2019 needs android-ndk r19
-        if parsed_version > version.parse("2018.0.0"):
-            if parsed_version < version.parse("2019.0.0"):
+        # https://docs.unity3d.com/Manual/android-sdksetup.html
+        # 2017.4 LTS	r13d
+        # 2018.4 LTS	r16b
+        # 2019.1	r16b
+        # 2019.2	r16b
+        # 2019.3	r19
+        if parsed_version >= version.parse("2017.4.0"):
+            if parsed_version < version.parse("2018.4.0"):
+                ndk_version = "r13d"
+            elif parsed_version < version.parse("2019.3.0"):
                 ndk_version = "r16b"
             else:
                 ndk_version = "r19"

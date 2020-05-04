@@ -6,12 +6,16 @@ This is a python script that will generate the `.gitlab-ci.yml` to make it easie
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [1. Move existing versions from `unity_versions.yml` to unity_versions.old.yml`](#1-move-existing-versions-from-unity_versionsyml-to-unity_versionsoldyml)
+- [Move existing versions from `unity_versions.yml` to unity_versions.old.yml`](#move-existing-versions-from-unity_versionsyml-to-unity_versionsoldyml)
 - [Where to find hashes](#where-to-find-hashes)
 - [How to get the sha1](#how-to-get-the-sha1)
-- [Use a different Dockerfile for the version](#use-a-different-dockerfile-for-the-version)
-- [Android](#android)
-- [Use a different Dockerfile for a component](#use-a-different-dockerfile-for-a-component)
+- [How to specify different Dockerfile](#how-to-specify-different-dockerfile)
+    - [For all images of a given version](#for-all-images-of-a-given-version)
+    - [For specific components](#for-specific-components)
+- [Android SDK, JDK and NDK details for android component](#android-sdk-jdk-and-ndk-details-for-android-component)
+    - [Environment variable usage](#environment-variable-usage)
+    - [Where to find ndk and sdk values](#where-to-find-ndk-and-sdk-values)
+- [Example](#example)
 - [Development](#development)
     - [Testing](#testing)
     - [Failing snapshot tests](#failing-snapshot-tests)
@@ -19,7 +23,7 @@ This is a python script that will generate the `.gitlab-ci.yml` to make it easie
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 1. Move existing versions from `unity_versions.yml` to unity_versions.old.yml`
+## Move existing versions from `unity_versions.yml` to unity_versions.old.yml`
 
 ```bash
 # move existing versions to old versions
@@ -57,7 +61,9 @@ wget https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1 -O uni
 sha1sum unity.deb | awk '{print $1}'
 ```
 
-## Use a different Dockerfile for the version
+## How to specify different Dockerfile
+
+### For all images of a given version
 
 Set something like this in `unity_versions.yml`:
 
@@ -67,9 +73,13 @@ Set something like this in `unity_versions.yml`:
   # ...
 ```
 
-Then generate the `.gitlab-ci.yml` file again.
+### For specific components
 
-## Android
+The generator script will automatically try to use the `Dockerfile` for the component so if you set `dockerfile: unitysetup.Dockerfile`, the `android` component will use `unitysetup-android.Dockerfile` if it exists, otherwise, it will fallback to `unitysetup.Dockerfile`.
+
+## Android SDK, JDK and NDK details for android component
+
+### Environment variable usage
 
 * `property` > `automatically generated env var`
 * `android_jdk_url` > `ANDROID_JDK` (Optional): url to download Android jdk (OpenJDK)  
@@ -79,20 +89,28 @@ Then generate the `.gitlab-ci.yml` file again.
 * `android_sdk_platformtools_url` > `ANDROID_SDK_PLATFORMTOOLS`: url to download plateformtools  
 * `android_sdk_sdktools_url` > `ANDROID_SDK_SDKTOOLS`: url to download sdktools
 
+### Where to find ndk and sdk values
+
+Values are populated by `check_new_version.py`, here are some additional details:
+
 To get the available urls to fill env var, download the [repository file](http://dl.google.com/android/repository/repository-11.xml)  
-The url will alway start with `http://dl.google.com/android/repository/` and end with `sdk:url` value.  
+The url will always start with `http://dl.google.com/android/repository/` and end with `sdk:url` value.  
 For example, if you want use buildtools 28, the value of `ANDROID_SDK_BUILDTOOLS` will be `https://dl.google.com/android/repository/build-tools_r28-linux.zip`.  
 
-Be attentive of the requirement made by Unity for android build. (see [HERE](https://docs.unity3d.com/Manual/android-sdksetup.html))  
+Be attentive of the requirement made by Unity for android build, see [unity android-sdksetup manual](https://docs.unity3d.com/Manual/android-sdksetup.html).
 
-For example, for the version 2018.3.6f1, I used those following versions:  
-* NDK: `android-ndk-r16b-linux-x86_64.zip`  
+## Example
+
+For the version `2019.3.11f1` here are the versions used:
+  
+* NDK: `android-ndk-r19-linux-x86_64.zip`  
 * SDK BUILDTOOLS: `build-tools_r28-linux.zip`  
 * SDK PLATFORM: `platform-28_r06.zip`  
 * SDK PLATFORMTOOLS: `platform-tools_r28.0.3-linux.zip`  
 * SDK SDKTOOLS: `sdk-tools-linux-4333796.zip`  
 
-Example :  
+`unity_versions.yml` looks like this:
+  
 ```yaml
 2019.3.11f1:
   build: f1
@@ -112,16 +130,11 @@ Example :
       ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
 ```
 
-
-## Use a different Dockerfile for a component
-
-The generator script will automatically try to use the `Dockerfile` for the component so if you set a `dockerfile: unitysetup.Dockerfile`, the `android` component will use `unitysetup-android.Dockerfile` if it exists, otherwise, it will fallback to `unitysetup.Dockerfile`.
-
 ## Development
 
 ### Testing
 
-I wrote these tests to make it easier to maintain the generator. It's only a way to get a breakpoint anywhere in the code, don't be scared ;)
+Tests make it easier to maintain the generator. It's only a way to get a breakpoint anywhere in the code, don't be scared ;)
 
 ```bash
 docker-compose run --rm test

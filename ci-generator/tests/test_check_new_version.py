@@ -99,7 +99,46 @@ class TestGitlabCiGenerator(TestCase):
                     "skip": True,
                     "skip_reason": "https://gitlab.com/gableroux/unity3d/issues/40",
                     "underscore": "2017_4_27f1",
+                    "variables": {
+                        "android": {
+                            "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r13d-linux-x86_64.zip",
+                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
+                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
+                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                            "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
+                        }
+                    },
                     "version": "2017.4.27",
+                }
+            }
+            self.do_test_generate_unity_version_block(
+                releases_source, release_key, release_index, expected_release_result
+            )
+
+        release_key = "official"
+        releases_source = "data/releases-linux-2020-02-18.json"
+        release_index = 2
+        with self.subTest(f"{releases_source} {release_key}[{release_index}]"):
+            expected_release_result = {
+                "2019.2.21f1": {
+                    "build": "f1",
+                    "dockerfile_name": "unitysetup",
+                    "download_url": "https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1",
+                    "platforms": {"facebook": {"components": "Facebook-Games"}},
+                    "release_notes": "https://unity3d.com/unity/whats-new/2019.2.21f1",
+                    "release_url": "https://beta.unity3d.com/download/9d528d026557/public_download.html",
+                    "sha1": "e1bf0167dda7897385adf7bb53a14195ffaa98e2",
+                    "underscore": "2019_2_21f1",
+                    "variables": {
+                        "android": {
+                            "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip",
+                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
+                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
+                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                            "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
+                        }
+                    },
+                    "version": "2019.2.21",
                 }
             }
             self.do_test_generate_unity_version_block(
@@ -129,36 +168,6 @@ class TestGitlabCiGenerator(TestCase):
                         }
                     },
                     "version": "2020.1.0",
-                }
-            }
-            self.do_test_generate_unity_version_block(
-                releases_source, release_key, release_index, expected_release_result
-            )
-
-        release_key = "official"
-        releases_source = "data/releases-linux-2020-02-18.json"
-        release_index = 2
-        with self.subTest(f"{releases_source} {release_key}[{release_index}]"):
-            expected_release_result = {
-                "2019.2.21f1": {
-                    "build": "f1",
-                    "dockerfile_name": "unitysetup",
-                    "download_url": "https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1",
-                    "platforms": {"facebook": {"components": "Facebook-Games"}},
-                    "release_notes": "https://unity3d.com/unity/whats-new/2019.2.21f1",
-                    "release_url": "https://beta.unity3d.com/download/9d528d026557/public_download.html",
-                    "sha1": "e1bf0167dda7897385adf7bb53a14195ffaa98e2",
-                    "underscore": "2019_2_21f1",
-                    "variables": {
-                        "android": {
-                            "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip",
-                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
-                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
-                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
-                            "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
-                        }
-                    },
-                    "version": "2019.2.21",
                 }
             }
             self.do_test_generate_unity_version_block(
