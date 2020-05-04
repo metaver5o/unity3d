@@ -2,6 +2,23 @@
 
 This is a python script that will generate the `.gitlab-ci.yml` to make it easier to build desired unity versions. For easier usage, use `docker-compose`.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1. Move existing versions from `unity_versions.yml` to unity_versions.old.yml`](#1-move-existing-versions-from-unity_versionsyml-to-unity_versionsoldyml)
+- [Where to find hashes](#where-to-find-hashes)
+- [How to get the sha1](#how-to-get-the-sha1)
+- [Use a different Dockerfile for the version](#use-a-different-dockerfile-for-the-version)
+- [Android](#android)
+- [Use a different Dockerfile for a component](#use-a-different-dockerfile-for-a-component)
+- [Development](#development)
+    - [Testing](#testing)
+    - [Failing snapshot tests](#failing-snapshot-tests)
+    - [Get code coverage report](#get-code-coverage-report)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 1. Move existing versions from `unity_versions.yml` to unity_versions.old.yml`
 
 ```bash
