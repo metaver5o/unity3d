@@ -2,7 +2,7 @@ import os
 from unittest import TestCase, mock
 
 from src.gitlab_ci_generator import GitlabCiGenerator
-from tests.utils import full_path_from_relative_path, captured_output
+from tests.utils import captured_output, full_path_from_relative_path
 
 
 class TestGitlabCiGenerator(TestCase):

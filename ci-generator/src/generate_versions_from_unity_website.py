@@ -1,7 +1,6 @@
 import sys
 
 import yaml
-
 from src.check_new_version import CheckNewVersion
 from src.get_unity_download_hash import get_unity_download_hash
 

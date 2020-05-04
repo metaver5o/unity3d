@@ -3,8 +3,8 @@ import os
 import re
 
 import yaml
-from requests import get
 from packaging import version
+from requests import get
 
 DEFAULT_RELEASE_KEY = "official"
 

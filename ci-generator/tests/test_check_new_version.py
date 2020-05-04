@@ -3,7 +3,6 @@ import os
 from unittest import TestCase, mock
 
 import requests_mock
-
 from src.check_new_version import CheckNewVersion
 from tests import utils
 
