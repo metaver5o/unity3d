@@ -144,6 +144,7 @@ class TestGitlabCiGenerator(TestCase):
                     "build": "f1",
                     "dockerfile_name": "unitysetup",
                     "download_url": "https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1",
+                    "platforms": {"facebook": {"components": "Facebook-Games"}},
                     "release_notes": "https://unity3d.com/unity/whats-new/2019.2.21f1",
                     "release_url": "https://beta.unity3d.com/download/9d528d026557/public_download.html",
                     "sha1": "e1bf0167dda7897385adf7bb53a14195ffaa98e2",
