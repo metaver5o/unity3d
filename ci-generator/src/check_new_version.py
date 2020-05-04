@@ -4,6 +4,7 @@ import re
 
 import yaml
 from requests import get
+from packaging import version
 
 DEFAULT_RELEASE_KEY = 'official'
 
@@ -43,14 +44,14 @@ class CheckNewVersion(object):
     def get_releases(self):
         return get(self.release_url).json()
 
-    def generate_unity_version_block(self, detailed_missing_version, download_url_hash=None):
+    def generate_unity_version_configuration(self, detailed_missing_version, download_url_hash=None):
         original_download_url = detailed_missing_version.get('downloadUrl')
         version_key = detailed_missing_version.get('version')
         # https://regex101.com/r/2Yzsen/1
         unity_version_regex = re.compile("(\d*\.\d*\.\d*)([a-z]*\d*)")
         match = unity_version_regex.match(version_key)
-        version = match.group(1)
-        build = match.group(2)
+        version_part = match.group(1)
+        build_part = match.group(2)
         underscore = version_key.replace('.', '_')
         if download_url_hash is None:
             download_url_hash = self.get_hash_from_download_url(original_download_url)
@@ -59,18 +60,55 @@ class CheckNewVersion(object):
         release_notes = f'https://unity3d.com/unity/whats-new/{version_key}'
         release_url = f'https://beta.unity3d.com/download/{download_url_hash}/public_download.html'
 
-        return {
+        unity_build_configuration = {
             version_key: {
                 'dockerfile_name': 'unitysetup',
-                'version': version,
+                'version': version_part,
                 'underscore': underscore,
                 'download_url': download_url,
                 'sha1': sha1,
-                'build': build,
+                'build': build_part,
                 'release_notes': release_notes,
                 'release_url': release_url
             }
         }
+
+        parsed_version = version.parse(version_part)
+        # starting from 2018 versions, android images need ANDROID_NDK
+        # 2018 needs android-ndk r16b
+        # 2019 needs android-ndk r19
+        if parsed_version > version.parse('2018.0.0'):
+            if parsed_version < version.parse('2019.0.0'):
+                ndk_version = 'r16b'
+            else:
+                ndk_version = 'r19'
+            unity_build_configuration[version_key]['variables'] = {
+                'android': {
+                    'ANDROID_NDK': f"http://dl.google.com/android/repository/android-ndk-{ndk_version}-linux-x86_64.zip",
+                    'ANDROID_SDK_BUILDTOOLS': "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
+                    'ANDROID_SDK_PLATFORM': "http://dl.google.com/android/repository/platform-28_r06.zip",
+                    'ANDROID_SDK_PLATFORMTOOLS': "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                    'ANDROID_SDK_SDKTOOLS': "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
+                }
+            }
+
+        # versions bellow 2019.3 used to have a component to build on facebook platform
+        if parsed_version < version.parse('2019.3.0'):
+            unity_build_configuration[version_key]['platforms'] = {
+                'facebook': {
+                    'components': 'Facebook-Games'
+                }
+            }
+
+        # It is currently impossible to build docker images for 2017 versions
+        # See related issue for details: https://gitlab.com/gableroux/unity3d/issues/40
+        if version.parse('2017.0.0') <= parsed_version < version.parse('2018.0.0'):
+            unity_build_configuration[version_key]['skip'] = True
+            unity_build_configuration[version_key]['skip_reason'] = 'https://gitlab.com/gableroux/unity3d/issues/40'
+
+        if version.parse('5.0.0') <= parsed_version < version.parse('6.0.0'):
+            unity_build_configuration[version_key]['legacy'] = True
+        return unity_build_configuration
 
     @staticmethod
     def get_hash_from_download_url(original_download_url):
@@ -118,7 +156,7 @@ class CheckNewVersion(object):
 
         unity_version_objects = []
         for detailed_missing_version in missing_versions_details:
-            unity_version_objects.append(self.generate_unity_version_block(detailed_missing_version))
+            unity_version_objects.append(self.generate_unity_version_configuration(detailed_missing_version))
 
         for unity_version_object in unity_version_objects:
             print(yaml.dump(unity_version_object))

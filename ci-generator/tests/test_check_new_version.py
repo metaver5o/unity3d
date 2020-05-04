@@ -61,7 +61,7 @@ class TestGitlabCiGenerator(TestCase):
         expected_response = json.loads(json_text)
         self.assertEqual(expected_response, response)
 
-    def test_generate_unity_version_block(self):
+    def test_generate_unity_version_configuration(self):
         self.maxDiff = None
         release_key = 'official'
         releases_source = 'data/releases-linux-2019-05-30.json'
@@ -72,9 +72,12 @@ class TestGitlabCiGenerator(TestCase):
                     'build': 'f1',
                     'dockerfile_name': 'unitysetup',
                     'download_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/UnitySetup-2017.4.27f1',
+                    'platforms': {'facebook': {'components': 'Facebook-Games'}},
                     'release_notes': 'https://unity3d.com/unity/whats-new/2017.4.27f1',
                     'release_url': 'https://beta.unity3d.com/download/0c4b856e4c6e/public_download.html',
                     'sha1': '8dae4dd18df383a598830c6e2489cdecdcb19273',
+                    'skip': True,
+                    'skip_reason': 'https://gitlab.com/gableroux/unity3d/issues/40',
                     'underscore': '2017_4_27f1',
                     'version': '2017.4.27'
                 }
@@ -95,7 +98,13 @@ class TestGitlabCiGenerator(TestCase):
                     'release_url': 'https://beta.unity3d.com/download/607f55d6e9ce/public_download.html',
                     'sha1': '03376c0669c4e48e13ab3ae9d54a0e0e07294906',
                     'underscore': '2020_1_0a23',
-                    'version': '2020.1.0'
+                    'variables': {'android': {
+                        'ANDROID_NDK': 'http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip',
+                        'ANDROID_SDK_BUILDTOOLS': 'http://dl.google.com/android/repository/build-tools_r28-linux.zip',
+                        'ANDROID_SDK_PLATFORM': 'http://dl.google.com/android/repository/platform-28_r06.zip',
+                        'ANDROID_SDK_PLATFORMTOOLS': 'http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip',
+                        'ANDROID_SDK_SDKTOOLS': 'http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'}},
+                    'version': '2020.1.0',
                 }
             }
             self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
@@ -114,7 +123,13 @@ class TestGitlabCiGenerator(TestCase):
                     'release_url': 'https://beta.unity3d.com/download/9d528d026557/public_download.html',
                     'sha1': 'e1bf0167dda7897385adf7bb53a14195ffaa98e2',
                     'underscore': '2019_2_21f1',
-                    'version': '2019.2.21'
+                    'variables': {'android': {
+                        'ANDROID_NDK': 'http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip',
+                        'ANDROID_SDK_BUILDTOOLS': 'http://dl.google.com/android/repository/build-tools_r28-linux.zip',
+                        'ANDROID_SDK_PLATFORM': 'http://dl.google.com/android/repository/platform-28_r06.zip',
+                        'ANDROID_SDK_PLATFORMTOOLS': 'http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip',
+                        'ANDROID_SDK_SDKTOOLS': 'http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'}},
+                    'version': '2019.2.21',
                 }
             }
             self.do_test_generate_unity_version_block(releases_source, release_key, release_index,
@@ -125,7 +140,7 @@ class TestGitlabCiGenerator(TestCase):
         with open(utils.full_path_from_relative_path(releases_source)) as f:
             json_text = f.read()
         official_release = json.loads(json_text)[release_key][release_index]
-        version_block = check_new_version.generate_unity_version_block(official_release)
+        version_block = check_new_version.generate_unity_version_configuration(official_release)
         self.assertEqual(expected_release, version_block)
 
     @requests_mock.mock()

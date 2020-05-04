@@ -56,7 +56,7 @@ nothing_to_build:
     echo 'All versions are already built, skipping'
 {% else %}
 {% for version_key, version in versions.items() -%}
-{%- if not version.skip_prepare_stage %}
+{%- if not version.skip_prepare_stage and not version.skip %}
 # prepare image {{version_key}}
 prepare_{{version.underscore}}:
   stage: prepare
@@ -82,7 +82,7 @@ prepare_{{version.underscore}}:
 {%- endif %}
 {% if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}
-{%- if not version.build_only_these_platforms or platform_key in version.build_only_these_platforms %}
+{%- if not version.build_only_these_platforms or platform_key in version.build_only_these_platforms and not version.skip %}
 # platform specific for {{version_key}}: {{platform_key}}
 unity_{{version.underscore}}-{{platform_key}}:
   <<: *build

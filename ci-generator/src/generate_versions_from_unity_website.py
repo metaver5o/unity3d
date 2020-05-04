@@ -6,8 +6,8 @@ from src.check_new_version import CheckNewVersion
 from src.get_unity_download_hash import get_unity_download_hash
 
 
-def generate_versions_from_unity_website(versions):
-    for version in versions:
+def generate_versions_from_unity_website(unity_versions):
+    for version in unity_versions:
         try:
             print('# generate_version_from_unity_website', version)
             print(generate_version_from_unity_website(version))
@@ -16,11 +16,11 @@ def generate_versions_from_unity_website(versions):
             pass
 
 
-def generate_version_from_unity_website(version):
-    download_url_hash = get_unity_download_hash(version)
+def generate_version_from_unity_website(unity_version):
+    download_url_hash = get_unity_download_hash(unity_version)
     check = CheckNewVersion()
-    unity_version_object = check.generate_unity_version_block({
-        'version': version
+    unity_version_object = check.generate_unity_version_configuration({
+        'version': unity_version
     }, download_url_hash=download_url_hash)
     return yaml.dump(unity_version_object)
 
