@@ -192,7 +192,7 @@ prepare_2018_4_23f1:
     VERSION: 2018.4.23
     BUILD: f1
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     TAG: 2018.4.23f1
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
@@ -216,7 +216,7 @@ unity_2018_4_23f1-windows:
     TAG: 2018.4.23f1-windows
     COMPONENTS: Windows,Windows-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -234,7 +234,7 @@ unity_2018_4_23f1-mac:
     TAG: 2018.4.23f1-mac
     COMPONENTS: Mac,Mac-Mono
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -252,7 +252,7 @@ unity_2018_4_23f1-ios:
     TAG: 2018.4.23f1-ios
     COMPONENTS: iOS
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -270,7 +270,7 @@ unity_2018_4_23f1-android:
     TAG: 2018.4.23f1-android
     COMPONENTS: Android
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
@@ -293,7 +293,7 @@ unity_2018_4_23f1-webgl:
     TAG: 2018.4.23f1-webgl
     COMPONENTS: WebGL
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
@@ -311,7 +311,7 @@ unity_2018_4_23f1-linux-il2cpp:
     TAG: 2018.4.23f1-linux-il2cpp
     COMPONENTS: Linux-IL2CPP
     DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
-    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    SHA1: eeebc1fd1a17211a4533f32febf6a707
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23f1
     RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
