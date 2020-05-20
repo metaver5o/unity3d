@@ -24,7 +24,7 @@
       components: Facebook-Games
   release_notes: https://unity3d.com/unity/whats-new/2018.4.23f1
   release_url: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
-  sha1: eeebc1fd1a17211a4533f32febf6a707
+  sha1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
   underscore: 2018_4_23f1
   variables:
     android:
