@@ -3229,3 +3229,43 @@
       ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
   version: 2020.1.0
 
+2020.2.0a11:
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
+  build: a11
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d00a9d9791a8/UnitySetup-2020.2.0a11
+  release_notes: https://unity3d.com/unity/whats-new/2020.2.0a11
+  release_url: https://beta.unity3d.com/download/d00a9d9791a8/public_download.html
+  sha1: cec444cb7499b418d9bb05eb821d976a31be46bb
+  underscore: 2020_2_0a11
+  variables:
+    android:
+      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip
+      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
+      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+      ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+  version: 2020.2.0
+
+2017.4.40f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/6e14067f8a9a/UnitySetup-2017.4.40f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2017.4.40f1
+  release_url: https://beta.unity3d.com/download/6e14067f8a9a/public_download.html
+  sha1: 4d8d5e65bd6846b08b66a39db8fb82c42e469cca
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/issues/40
+  underscore: 2017_4_40f1
+  variables:
+    android:
+      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r13d-linux-x86_64.zip
+      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
+      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
+      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+      ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+  version: 2017.4.40
