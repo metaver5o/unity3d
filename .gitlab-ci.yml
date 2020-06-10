@@ -185,25 +185,6 @@ unity_2020_1_0b12-linux-il2cpp:
 
 
 
-# prepare image 2020.2.0a13
-prepare_2020_2_0a13:
-  stage: prepare
-  variables:
-    VERSION: 2020.2.0
-    BUILD: a13
-    DOWNLOAD_URL: https://beta.unity3d.com/download/542ff463470b/UnitySetup-2020.2.0a13
-    SHA1: 519d9e518b404e086ac81cd871cc50e78a22b341
-    TAG: 2020.2.0a13
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-  script:
-    - ci/prepare.sh
-  artifacts:
-    paths:
-      - licence_request.alf
-  retry: 2
 
 
 # platform specific for 2020.2.0a13: windows
