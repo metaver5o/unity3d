@@ -118,7 +118,7 @@ class CheckNewVersion(object):
             ] = "https://gitlab.com/gableroux/unity3d/issues/40"
 
         if '2020.2.0a' in version_key:
-            unity_build_configuration[veci-generator/src/check_new_version.pyrsion_key]["skip"] = True
+            unity_build_configuration[version_key]["skip"] = True
             unity_build_configuration[version_key][
                 "skip_reason"
             ] = "https://gitlab.com/gableroux/unity3d/-/issues/73"
