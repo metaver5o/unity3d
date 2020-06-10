@@ -23,21 +23,15 @@ This is a python script that will generate the `.gitlab-ci.yml` to make it easie
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Move existing versions from `unity_versions.yml` to unity_versions.old.yml`
+## How to update the project
+
+The is a script in the parent directory which should do everything you need to create a new branch, update the repo, fetch new versions from unity and generate the ci-file with the generator. All you need is docker-compose installed and your `git` command line correctly setup. Running the following command should do everything you need. Just read the scripts to see what's going on.
 
 ```bash
-# move existing versions to old versions
-cat unity_versions.yml >> unity_versions.old.yml
-
-# empty unity_versions.yml
-echo '' > unity_versions.yml
-
-# grab latest versions from unity
-docker-compose run --rm update
-
-# generate .gitlab-ci.yml using updated versions
-docker-compose run --rm generate
+./script/update.sh
 ```
+
+You can then submit a merge request and if everything looks fine, it will be merged :+1:
 
 ## Where to find hashes
 

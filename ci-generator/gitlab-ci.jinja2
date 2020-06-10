@@ -82,7 +82,7 @@ prepare_{{version.underscore}}:
 {%- endif %}
 {% if not version.legacy %}
 {% for platform_key, platform in platforms.items() %}
-{%- if not version.build_only_these_platforms or platform_key in version.build_only_these_platforms and not version.skip %}
+{%- if not version.skip and (not version.build_only_these_platforms or platform_key in version.build_only_these_platforms) %}
 # platform specific for {{version_key}}: {{platform_key}}
 unity_{{version.underscore}}-{{platform_key}}:
   <<: *build
