@@ -13,14 +13,14 @@ function update_local_repo() {
 }
 
 function create_new_update_branch() {
-  git checkout -B $branch_name
+  git checkout -b $branch_name || true
   git checkout $branch_name
 }
 
 function generate_ci_file() {
     docker-compose run --rm generate
-    git status
     git add $ci_file
+    git status
     git commit -m "docker-compose run --rm generate"
 }
 
