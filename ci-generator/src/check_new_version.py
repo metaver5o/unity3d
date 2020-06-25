@@ -63,7 +63,7 @@ class CheckNewVersion(object):
             download_url_hash = self.get_hash_from_download_url(original_download_url)
         download_url = f"https://beta.unity3d.com/download/{download_url_hash}/UnitySetup-{version_key}"
         sha1 = self.get_sha1_from_download_url(download_url)
-        release_notes = f"https://unity3d.com/unity/whats-new/{version_key}"
+        release_notes = f"https://unity3d.com/unity/whats-new/{version_part}"
         release_url = f"https://beta.unity3d.com/download/{download_url_hash}/public_download.html"
 
         unity_build_configuration = {
