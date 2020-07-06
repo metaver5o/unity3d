@@ -96,9 +96,9 @@ class CheckNewVersion(object):
             unity_build_configuration[version_key]["variables"] = {
                 "android": {
                     "ANDROID_NDK": f"http://dl.google.com/android/repository/android-ndk-{ndk_version}-linux-x86_64.zip",
-                    "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
-                    "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
-                    "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                    "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip",
+                    "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-29_r04.zip",
+                    "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip",
                     "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
                 }
             }
