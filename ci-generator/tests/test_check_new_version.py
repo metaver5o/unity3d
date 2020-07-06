@@ -102,9 +102,9 @@ class TestGitlabCiGenerator(TestCase):
                     "variables": {
                         "android": {
                             "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r13d-linux-x86_64.zip",
-                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
-                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
-                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip",
+                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-29_r04.zip",
+                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip",
                             "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
                         }
                     },
@@ -132,9 +132,9 @@ class TestGitlabCiGenerator(TestCase):
                     "variables": {
                         "android": {
                             "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip",
-                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
-                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
-                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip",
+                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-29_r04.zip",
+                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip",
                             "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
                         }
                     },
@@ -161,9 +161,9 @@ class TestGitlabCiGenerator(TestCase):
                     "variables": {
                         "android": {
                             "ANDROID_NDK": "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip",
-                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r28-linux.zip",
-                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-28_r06.zip",
-                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip",
+                            "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip",
+                            "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-29_r04.zip",
+                            "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip",
                             "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
                         }
                     },
