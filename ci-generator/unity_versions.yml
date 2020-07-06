@@ -1,53 +1,20 @@
-2020.1.0b14:
-  build: b14
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/69bacbd35688/UnitySetup-2020.1.0b14
-  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
-  release_url: https://beta.unity3d.com/download/69bacbd35688/public_download.html
-  sha1: fc40c02c1fce1d5d1e070a7b45aeeaa40d0edf80
-  underscore: 2020_1_0b14
-  variables:
-    android:
-      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip
-      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-      ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-  version: 2020.1.0
-
-2020.2.0a16:
-  build: a16
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/5a1f66dd0d56/UnitySetup-2020.2.0a16
-  release_notes: https://unity3d.com/unity/whats-new/2020.2.0
-  release_url: https://beta.unity3d.com/download/5a1f66dd0d56/public_download.html
-  sha1: 785a97a4b78a6b9d8ed2ce5b57496fd911f21a7c
-  skip: true
-  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
-  underscore: 2020_2_0a16
-  variables:
-    android:
-      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip
-      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
-      ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-  version: 2020.2.0
-
-2019.4.2f1:
+2018.4.24f1:
   build: f1
   dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/20b4642a3455/UnitySetup-2019.4.2f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.4.2
-  release_url: https://beta.unity3d.com/download/20b4642a3455/public_download.html
-  sha1: 17c3b23441eb3b25d7c163ef52356bdb8dd67ea3
-  underscore: 2019_4_2f1
+  download_url: https://beta.unity3d.com/download/3071911a89e9/UnitySetup-2018.4.24f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.24
+  release_url: https://beta.unity3d.com/download/3071911a89e9/public_download.html
+  sha1: 338c34ddaf0e93c3d3ef91feaaff31d6b5d2b947
+  underscore: 2018_4_24f1
   variables:
     android:
-      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip
-      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r28-linux.zip
-      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-28_r06.zip
-      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip
+      ANDROID_NDK: http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+      ANDROID_SDK_BUILDTOOLS: http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip
+      ANDROID_SDK_PLATFORM: http://dl.google.com/android/repository/platform-29_r04.zip
+      ANDROID_SDK_PLATFORMTOOLS: http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip
       ANDROID_SDK_SDKTOOLS: http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-  version: 2019.4.2
+  version: 2018.4.24
 
