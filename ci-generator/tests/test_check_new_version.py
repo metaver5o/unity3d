@@ -102,9 +102,9 @@ class TestGitlabCiGenerator(TestCase):
                     "variables": {
                         "android": {
                             "ANDROID_NDK_VERSION": "13b",
-                            "ANDROID_CMD_LINE_TOOLS_VERSION": 6609375,
-                            "ANDROID_BUILD_TOOLS_VERSION": 29.0.3,
-                            "ANDROID_PLATFORM_VERSION": 29
+                            "ANDROID_CMD_LINE_TOOLS_VERSION": "6609375",
+                            "ANDROID_BUILD_TOOLS_VERSION": "29.0.3",
+                            "ANDROID_PLATFORM_VERSION": "29"
                         }
                     },
                     "version": "2017.4.27",
@@ -130,10 +130,10 @@ class TestGitlabCiGenerator(TestCase):
                     "underscore": "2019_2_21f1",
                     "variables": {
                         "android": {
-                            "ANDROID_NDK_VERSION": 16.1.4479499,
-                            "ANDROID_CMD_LINE_TOOLS_VERSION": 6609375,
-                            "ANDROID_BUILD_TOOLS_VERSION": 29.0.3,
-                            "ANDROID_PLATFORM_VERSION": 29
+                            "ANDROID_NDK_VERSION": "16.1.4479499",
+                            "ANDROID_CMD_LINE_TOOLS_VERSION": "6609375",
+                            "ANDROID_BUILD_TOOLS_VERSION": "29.0.3",
+                            "ANDROID_PLATFORM_VERSION": "29"
                         }
                     },
                     "version": "2019.2.21",
@@ -158,10 +158,10 @@ class TestGitlabCiGenerator(TestCase):
                     "underscore": "2020_1_0a23",
                     "variables": {
                         "android": {
-                            "ANDROID_NDK_VERSION": 19.2.5345600,
-                            "ANDROID_CMD_LINE_TOOLS_VERSION": 6609375,
-                            "ANDROID_BUILD_TOOLS_VERSION": 29.0.3,
-                            "ANDROID_PLATFORM_VERSION": 29
+                            "ANDROID_NDK_VERSION": "19.2.5345600",
+                            "ANDROID_CMD_LINE_TOOLS_VERSION": "6609375",
+                            "ANDROID_BUILD_TOOLS_VERSION": "29.0.3",
+                            "ANDROID_PLATFORM_VERSION": "29"
                         }
                     },
                     "version": "2020.1.0",
