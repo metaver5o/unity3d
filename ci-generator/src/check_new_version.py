@@ -88,11 +88,11 @@ class CheckNewVersion(object):
         # 2019.3	r19
         if parsed_version >= version.parse("2017.4.0"):
             if parsed_version < version.parse("2018.4.0"):
-                ndk_version = "r13"
+                ndk_version = "13b"
             elif parsed_version < version.parse("2019.3.0"):
-                ndk_version = "16.1.4479499"
+                ndk_version = 16.1.4479499
             else:
-                ndk_version = "19.2.5345600"
+                ndk_version = 19.2.5345600
             unity_build_configuration[version_key]["variables"] = {
                 "android": {
                     "ANDROID_NDK_VERSION": ndk_version,
