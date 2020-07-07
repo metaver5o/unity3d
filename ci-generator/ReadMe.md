@@ -12,7 +12,7 @@ This is a python script that will generate the `.gitlab-ci.yml` to make it easie
 - [How to specify different Dockerfile](#how-to-specify-different-dockerfile)
     - [For all images of a given version](#for-all-images-of-a-given-version)
     - [For specific components](#for-specific-components)
-- [Android SDK, JDK and NDK details for android component](#android-sdk-jdk-and-ndk-details-for-android-component)
+- [Android SDK and NDK details for android component](#android-sdk-and-ndk-details-for-android-component)
     - [Environment variable usage](#environment-variable-usage)
     - [Where to find ndk and sdk values](#where-to-find-ndk-and-sdk-values)
 - [Example](#example)
@@ -71,37 +71,33 @@ Set something like this in `unity_versions.yml`:
 
 The generator script will automatically try to use the `Dockerfile` for the component so if you set `dockerfile: unitysetup.Dockerfile`, the `android` component will use `unitysetup-android.Dockerfile` if it exists, otherwise, it will fallback to `unitysetup.Dockerfile`.
 
-## Android SDK, JDK and NDK details for android component
+## Android SDK and NDK details for android component
 
 ### Environment variable usage
 
-* `property` > `automatically generated env var`
-* `android_jdk_url` > `ANDROID_JDK` (Optional): url to download Android jdk (OpenJDK)  
-* `android_ndk_url` > `ANDROID_NDK`: url to download ndk  
-* `android_sdk_buildtools_url` > `ANDROID_SDK_BUILDTOOLS`: url to download buildtools  
-* `android_sdk_platform_url` > `ANDROID_SDK_PLATFORM`: url to download platform  
-* `android_sdk_platformtools_url` > `ANDROID_SDK_PLATFORMTOOLS`: url to download plateformtools  
-* `android_sdk_sdktools_url` > `ANDROID_SDK_SDKTOOLS`: url to download sdktools
+* `ANDROID_NDK_VERSION`: version of the ndk - if not specified, it will be set automatically based on the unity version (see `check_new_version.py`)
+* `ANDROID_CMD_LINE_TOOLS_VERSION`: Version of command line tools (optional)
+* `ANDROID_BUILD_TOOLS_VERSION`: Build tools version e.g. 29.0.3 (optional)
+* `ANDROID_PLATFORM_VERSION`: Platform version e.g. 29 (optional)
 
 ### Where to find ndk and sdk values
 
 Values are populated by `check_new_version.py`, here are some additional details:
 
-To get the available urls to fill env var, download the [repository file](http://dl.google.com/android/repository/repository-11.xml)  
-The url will always start with `http://dl.google.com/android/repository/` and end with `sdk:url` value.  
-For example, if you want use buildtools 28, the value of `ANDROID_SDK_BUILDTOOLS` will be `https://dl.google.com/android/repository/build-tools_r28-linux.zip`.  
+To get the available urls to fill env var, download the [command line tools](https://developer.android.com/studio#downloads)
+Once downloaded, extract the package and run `sdkmanager --list` to get the list of available SDK tools, platform tools, build tools, NDK etc.  
+Alternatively, you can look these values up if you installed Android Studio. To do so, open the SDKManager from within Android Studio.
 
 Be attentive of the requirement made by Unity for android build, see [unity android-sdksetup manual](https://docs.unity3d.com/Manual/android-sdksetup.html).
 
 ## Example
 
 For the version `2019.3.11f1` here are the versions used:
-  
-* NDK: `android-ndk-r19-linux-x86_64.zip`  
-* SDK BUILDTOOLS: `build-tools_r28-linux.zip`  
-* SDK PLATFORM: `platform-28_r06.zip`  
-* SDK PLATFORMTOOLS: `platform-tools_r28.0.3-linux.zip`  
-* SDK SDKTOOLS: `sdk-tools-linux-4333796.zip`  
+
+* ANDROID_NDK_VERSION: `19.2.5345600`  
+* ANDROID_CMD_LINE_TOOLS_VERSION: `6609375`  
+* ANDROID_BUILD_TOOLS_VERSION: `29.0.3`  
+* ANDROID_PLATFORM_VERSION: `29`  
 
 `unity_versions.yml` looks like this:
   
@@ -117,11 +113,10 @@ For the version `2019.3.11f1` here are the versions used:
   version: 2019.3.11
   variables:
     android:
-      ANDROID_NDK: "http://dl.google.com/android/repository/android-ndk-r19-linux-x86_64.zip"
-      ANDROID_SDK_BUILDTOOLS: "http://dl.google.com/android/repository/build-tools_r28-linux.zip"
-      ANDROID_SDK_PLATFORM: "http://dl.google.com/android/repository/platform-28_r06.zip"
-      ANDROID_SDK_PLATFORMTOOLS: "http://dl.google.com/android/repository/platform-tools_r28.0.3-linux.zip"
-      ANDROID_SDK_SDKTOOLS: "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_CMD_LINE_TOOLS_VERSION: 6609375  
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_PLATFORM_VERSION: 29
 ```
 
 ## Development
