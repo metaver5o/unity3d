@@ -58,6 +58,7 @@ ENV ANDROID_NDK_HOME ${ANDROID_SDK_ROOT}/NDK
 ENV PATH=${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}
 
 # Android SDK versions
+ARG ANDROID_NDK_VERSION
 ARG ANDROID_CMD_LINE_TOOLS_VERSION=6609375
 ARG ANDROID_BUILD_TOOLS_VERSION=29.0.3
 ARG ANDROID_PLATFORM_VERSION=29
@@ -84,7 +85,7 @@ RUN yes | sdkmanager --licenses && yes | sdkmanager --update
 RUN sdkmanager \
     "tools" \
     "platform-tools" \
-    "ndk-bundle" \
+    "ndk-${ANDROID_NDK_VERSION}" \
     > /dev/null
 
 # Install specified build tools

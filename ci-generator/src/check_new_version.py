@@ -88,21 +88,19 @@ class CheckNewVersion(object):
         # 2019.3	r19
         if parsed_version >= version.parse("2017.4.0"):
             if parsed_version < version.parse("2018.4.0"):
-                ndk_version = "r13d"
+                ndk_version = "r13"
             elif parsed_version < version.parse("2019.3.0"):
-                ndk_version = "r16b"
+                ndk_version = "16.1.4479499"
             else:
-                ndk_version = "r19"
+                ndk_version = "19.2.5345600"
             unity_build_configuration[version_key]["variables"] = {
                 "android": {
-                    "ANDROID_NDK": f"http://dl.google.com/android/repository/android-ndk-{ndk_version}-linux-x86_64.zip",
-                    "ANDROID_SDK_BUILDTOOLS": "http://dl.google.com/android/repository/build-tools_r29.0.3-linux.zip",
-                    "ANDROID_SDK_PLATFORM": "http://dl.google.com/android/repository/platform-29_r04.zip",
-                    "ANDROID_SDK_PLATFORMTOOLS": "http://dl.google.com/android/repository/platform-tools_r29.0.6-linux.zip",
-                    "ANDROID_SDK_SDKTOOLS": "http://dl.google.com/android/repository/sdk-tools-linux-4333796.zip",
+                    "ANDROID_NDK_VERSION": ndk_version,
+                    "ANDROID_CMD_LINE_TOOLS_VERSION": 6609375,
+                    "ANDROID_BUILD_TOOLS_VERSION": 29.0.3,
+                    "ANDROID_PLATFORM_VERSION": 29
                 }
             }
-
         # versions bellow 2019.3 used to have a component to build on facebook platform
         if parsed_version < version.parse("2019.3.0"):
             unity_build_configuration[version_key]["platforms"] = {
