@@ -25,10 +25,11 @@ export IMAGE_LABELS=$(echo\
 )
 
 if [ "$COMPONENTS" = "Android" ]; then
-    if [[ -z "${ANDROID_CMD_LINE_TOOLS_VERSION}" ]] \
+    if [[ -z "${ANDROID_NDK_VERSION}" ]] \
+    || [[ -z "${ANDROID_CMD_LINE_TOOLS_VERSION}" ]] \
     || [[ -z "${ANDROID_BUILD_TOOLS_VERSION}" ]] \
     || [[ -z "${ANDROID_PLATFORM_VERSION}" ]]; then
-      echo "ANDROID_CMD_LINE_TOOLS_VERSION, ANDROID_BUILD_TOOLS_VERSION or ANDROID_PLATFORM_VERSION environment variables are not set, please refer to instructions in the readme and add these to your environment variables."
+      echo "ANDROID_NDK_VERSION, ANDROID_CMD_LINE_TOOLS_VERSION, ANDROID_BUILD_TOOLS_VERSION or ANDROID_PLATFORM_VERSION environment variables are not set, please refer to instructions in the readme and add these to your environment variables."
       exit 1
     fi
 
@@ -37,6 +38,7 @@ if [ "$COMPONENTS" = "Android" ]; then
       --build-arg COMPONENTS=$COMPONENTS \
       --build-arg SHA1=$SHA1 \
       --build-arg BASE_IMAGE=$BASE_IMAGE \
+      --build-arg ANDROID_NDK_VERSION=$ANDROID_NDK_VERSION \
       --build-arg ANDROID_CMD_LINE_TOOLS_VERSION=$ANDROID_CMD_LINE_TOOLS_VERSION \
       --build-arg ANDROID_BUILD_TOOLS_VERSION=$ANDROID_BUILD_TOOLS_VERSION \
       --build-arg ANDROID_PLATFORM_VERSION=$ANDROID_PLATFORM_VERSION
