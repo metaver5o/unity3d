@@ -85,7 +85,7 @@ RUN yes | sdkmanager --licenses && yes | sdkmanager --update
 RUN sdkmanager \
     "tools" \
     "platform-tools" \
-    "ndk-${ANDROID_NDK_VERSION}" \
+    "ndk;${ANDROID_NDK_VERSION}" \
     > /dev/null
 
 # Install specified build tools
