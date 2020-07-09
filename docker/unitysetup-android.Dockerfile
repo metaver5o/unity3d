@@ -63,12 +63,6 @@ ARG ANDROID_CMD_LINE_TOOLS_VERSION=6609375
 ARG ANDROID_BUILD_TOOLS_VERSION=29.0.3
 ARG ANDROID_PLATFORM_VERSION=29
 
-# install openJDK 8
-RUN apt-get update -qq \
-    && add-apt-repository ppa:openjdk-r/ppa \
-    && apt-get install -qq -y --no-install-recommends \
-        openjdk-8-jdk
-
 # Download Android SDK commandline tools
 RUN mkdir -p ${ANDROID_SDK_ROOT} \
     && chown -R 755 ${ANDROID_SDK_ROOT} \
@@ -81,9 +75,13 @@ RUN mkdir -p ${ANDROID_SDK_ROOT} \
 # Accept licenses & update existing packages
 RUN yes | sdkmanager --licenses && yes | sdkmanager --update
 
-# Install tools, platform tools and NDK
+# Install tools
 RUN sdkmanager \
     "tools" \
+    && rm -rf /opt/android/sdk/emulator # Remove the emulator, we won't need it and it's ~500mb
+
+#Install platform tools and NDK
+RUN sdkmanager \
     "platform-tools" \
     "ndk;${ANDROID_NDK_VERSION}" \
     > /dev/null
