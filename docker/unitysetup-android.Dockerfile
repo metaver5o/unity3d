@@ -46,8 +46,8 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # remove setup & temp files
     rm UnitySetup && \
     rm -rf /tmp/unity && \
-    rm -rf /root/.local/share/Trash/*
-
+    rm -rf /root/.local/share/Trash/* && \
+    rm -rf /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/OpenJDK # Deleting OpenJDK, we're installing it elsewhere
 
 ###################
 ## ANDROID SETUP ##
@@ -62,6 +62,12 @@ ARG ANDROID_NDK_VERSION
 ARG ANDROID_CMD_LINE_TOOLS_VERSION=6609375
 ARG ANDROID_BUILD_TOOLS_VERSION=29.0.3
 ARG ANDROID_PLATFORM_VERSION=29
+
+# install openJDK 8
+RUN apt-get update -qq \
+    && add-apt-repository ppa:openjdk-r/ppa \
+    && apt-get install -qq -y --no-install-recommends \
+        openjdk-8-jdk
 
 # Download Android SDK commandline tools
 RUN mkdir -p ${ANDROID_SDK_ROOT} \
