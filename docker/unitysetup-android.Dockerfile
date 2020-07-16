@@ -46,8 +46,8 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     # remove setup & temp files
     rm UnitySetup && \
     rm -rf /tmp/unity && \
-    rm -rf /root/.local/share/Trash/*
-
+    rm -rf /root/.local/share/Trash/* && \
+    rm -rf /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/Tools/OpenJDK # Deleting OpenJDK, we're installing it elsewhere
 
 ###################
 ## ANDROID SETUP ##
@@ -81,11 +81,15 @@ RUN mkdir -p ${ANDROID_SDK_ROOT} \
 # Accept licenses & update existing packages
 RUN yes | sdkmanager --licenses && yes | sdkmanager --update
 
-# Install tools, platform tools and NDK
+# Install tools
 RUN sdkmanager \
     "tools" \
+    && rm -rf /opt/android/sdk/emulator # Remove the emulator, we won't need it and it's ~500mb
+
+#Install platform tools and NDK
+RUN sdkmanager \
     "platform-tools" \
-    "ndk-${ANDROID_NDK_VERSION}" \
+    "ndk;${ANDROID_NDK_VERSION}" \
     > /dev/null
 
 # Install specified build tools
