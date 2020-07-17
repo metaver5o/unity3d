@@ -693,37 +693,6 @@ unity_2018_2_7f1-android:
 
 
 
-# platform specific for 2018.2.9f1: android
-unity_2018_2_9f1-android:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2018.2.9
-    BUILD: f1
-    TAG: 2018.2.9f1-android
-    COMPONENTS: Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/2207421190e9/UnitySetup-2018.2.9f1
-    BASE_IMAGE: gableroux/unity3d:2018.2.9f1
-    SHA1: 6a356d2e199f7ca162c77903e688e2eae6272d32
-    RELEASE_URL: https://download.unity3d.com/download_unity/2207421190e9/public_download.html
-    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
-    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
-    ANDROID_NDK_VERSION: 16.1.4479499
-    ANDROID_PLATFORM_VERSION: 29
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-
-
-
-
-
-
-
-
-
-
 # platform specific for 2018.3.11f1: android
 unity_2018_3_11f1-android:
   <<: *build

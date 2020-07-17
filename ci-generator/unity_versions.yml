@@ -240,7 +240,7 @@
       ANDROID_PLATFORM_VERSION: "29"
   version: "2018.2.0"
 
-# TODO: Fix sha1. Unity probably republished 2018_2 versions
+# TODO: sha1sum: WARNING: 1 computed checksum did NOT match
 #2018.2.0f2:
 #  base_image: "gableroux/unity3d:2018.2.0f2"
 #  build: f2
@@ -670,26 +670,27 @@
       ANDROID_PLATFORM_VERSION: "29"
   version: "2018.2.7"
 
-2018.2.9f1:
-  base_image: "gableroux/unity3d:2018.2.9f1"
-  build: f1
-  build_only_these_platforms: android
-  dockerfile_name: unitysetup
-  download_url: "https://beta.unity3d.com/download/2207421190e9/UnitySetup-2018.2.9f1"
-  platforms:
-    facebook:
-      components: Facebook-Games
-  release_url: "https://download.unity3d.com/download_unity/2207421190e9/public_download.html"
-  sha1: 6a356d2e199f7ca162c77903e688e2eae6272d32
-  skip_prepare_stage: true
-  underscore: 2018_2_9f1
-  variables:
-    android:
-      ANDROID_BUILD_TOOLS_VERSION: "29.0.3"
-      ANDROID_CMD_LINE_TOOLS_VERSION: "6609375"
-      ANDROID_NDK_VERSION: "16.1.4479499"
-      ANDROID_PLATFORM_VERSION: "29"
-  version: "2018.2.9"
+# TODO: sha1sum: WARNING: 1 computed checksum did NOT match
+# 2018.2.9f1:
+#   base_image: "gableroux/unity3d:2018.2.9f1"
+#   build: f1
+#   build_only_these_platforms: android
+#   dockerfile_name: unitysetup
+#   download_url: "https://beta.unity3d.com/download/2207421190e9/UnitySetup-2018.2.9f1"
+#   platforms:
+#     facebook:
+#       components: Facebook-Games
+#   release_url: "https://download.unity3d.com/download_unity/2207421190e9/public_download.html"
+#   sha1: 6a356d2e199f7ca162c77903e688e2eae6272d32
+#   skip_prepare_stage: true
+#   underscore: 2018_2_9f1
+#   variables:
+#     android:
+#       ANDROID_BUILD_TOOLS_VERSION: "29.0.3"
+#       ANDROID_CMD_LINE_TOOLS_VERSION: "6609375"
+#       ANDROID_NDK_VERSION: "16.1.4479499"
+#       ANDROID_PLATFORM_VERSION: "29"
+#   version: "2018.2.9"
 
 
 # NO SPACE LEFT ON DEVICE
