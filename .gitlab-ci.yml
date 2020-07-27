@@ -63,10 +63,10 @@ unity_2019_3_12f1-android:
     SHA1: 47464847b934c31942a739b659c33bd5daaedd4e
     RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.12f1
     RELEASE_URL: https://beta.unity3d.com/download/84b23722532d/public_download.html
-    ANDROID_BUILD_TOOLS_VERSION: 28.0.3
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
     ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
     ANDROID_NDK_VERSION: 19.2.5345600
-    ANDROID_PLATFORM_VERSION: 28
+    ANDROID_PLATFORM_VERSION: 29
     # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
     # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
     DOCKER_DRIVER: overlay2
