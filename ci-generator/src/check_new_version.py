@@ -85,12 +85,15 @@ class CheckNewVersion(object):
         # 2018.4 LTS	r16b
         # 2019.1	r16b
         # 2019.2	r16b
-        # 2019.3	r19
+        # 2019.3	r19 - 19.0.5232133 to fix https://forum.unity.com/threads/solved-2019-3-0a4-incompatible-ndk.688108/
+        # 2019.4+   r19c - 19.2.5345600
         if parsed_version >= version.parse("2017.4.0"):
             if parsed_version < version.parse("2018.4.0"):
                 ndk_version = "13b"
             elif parsed_version < version.parse("2019.3.0"):
                 ndk_version = "16.1.4479499"
+            elif version.parse("2019.3.0") <= parsed_version < version.parse("2019.4.0"):
+                ndk_version = "19.0.5232133"
             else:
                 ndk_version = "19.2.5345600"
             unity_build_configuration[version_key]["variables"] = {
@@ -101,7 +104,8 @@ class CheckNewVersion(object):
                     "ANDROID_PLATFORM_VERSION": "29"
                 }
             }
-        # versions bellow 2019.3 used to have a component to build on facebook platform
+
+        # versions below 2019.3 used to have a component to build on facebook platform
         if parsed_version < version.parse("2019.3.0"):
             unity_build_configuration[version_key]["platforms"] = {
                 "facebook": {"components": "Facebook-Games"}
