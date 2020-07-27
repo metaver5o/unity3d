@@ -53,57 +53,60 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
 ## ANDROID SETUP ##
 ###################
 # Setup Android SDK/JDK Environment Variables
-ENV ANDROID_SDK_ROOT /opt/android/sdk
-ENV ANDROID_NDK_HOME ${ANDROID_SDK_ROOT}/NDK
+ENV ANDROID_INSTALL_LOCATION ${UNITY_INSTALL_LOCATION}/Editor/Data/PlaybackEngines/AndroidPlayer
+ENV ANDROID_SDK_ROOT ${ANDROID_INSTALL_LOCATION}/SDK
+ENV ANDROID_HOME ${ANDROID_SDK_ROOT}
+ENV ANDROID_NDK_HOME ${ANDROID_INSTALL_LOCATION}/NDK
 ENV PATH=${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}
 
 # Android SDK versions
 ARG ANDROID_NDK_VERSION
-ARG ANDROID_CMD_LINE_TOOLS_VERSION=6609375
 ARG ANDROID_BUILD_TOOLS_VERSION=29.0.3
 ARG ANDROID_PLATFORM_VERSION=29
 
+#Setup Java
 # install openJDK 8
 RUN apt-get update -qq \
     && add-apt-repository ppa:openjdk-r/ppa \
     && apt-get install -qq -y --no-install-recommends \
         openjdk-8-jdk
 
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV PATH=$JAVA_HOME/bin:${PATH}
+
 # Download Android SDK commandline tools
-RUN mkdir -p ${ANDROID_SDK_ROOT} \
-    && chown -R 755 ${ANDROID_SDK_ROOT} \
-    && wget -q https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_CMD_LINE_TOOLS_VERSION}_latest.zip -O android-sdk.zip \
-    && unzip -q android-sdk.zip -d ${ANDROID_SDK_ROOT}/cmdline-tools \
-    && ln -s ${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin/sdkmanager /usr/local/bin \
+RUN export JAVA_HOME \
+    && mkdir -p ${ANDROID_SDK_ROOT} \
+    && chown -R 777 ${ANDROID_INSTALL_LOCATION} \
+    && wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk.zip \
+    && unzip -q android-sdk.zip -d ${ANDROID_SDK_ROOT} \
     && rm -f android-sdk.zip \
-    && ls -ahl ${ANDROID_SDK_ROOT}
+    && ls -ahl ${ANDROID_SDK_ROOT} \
 
-# Accept licenses & update existing packages
-RUN yes | sdkmanager --licenses && yes | sdkmanager --update
-
-# Install tools
-RUN sdkmanager \
-    "tools" \
-    && rm -rf /opt/android/sdk/emulator # Remove the emulator, we won't need it and it's ~500mb
-
-#Install platform tools and NDK
-RUN sdkmanager \
-    "platform-tools" \
-    "ndk;${ANDROID_NDK_VERSION}" \
-    > /dev/null
+# Install platform tools and NDK
+    && yes | sdkmanager \
+        "platform-tools" \
+        "ndk;${ANDROID_NDK_VERSION}" \
+        > /dev/null \
 
 # Install specified build tools
-RUN sdkmanager \
-    "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
-    > /dev/null
+    && yes | sdkmanager \
+        "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
+        > /dev/null \
 
 # Install specified platform
-RUN sdkmanager \
-    "platforms;android-${ANDROID_PLATFORM_VERSION}" \
-    > /dev/null
+    && yes | sdkmanager \
+        "platforms;android-${ANDROID_PLATFORM_VERSION}" \
+        > /dev/null \
+
+# Accept licenses
+    && yes | sdkmanager --licenses \
+
+# Relocate NDK to match Unity's expected location 
+    && mv ${ANDROID_INSTALL_LOCATION}/SDK/ndk ${ANDROID_INSTALL_LOCATION}/NDK \
 
 # Clean
-RUN apt-get autoremove \
+    && apt-get autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/* \
