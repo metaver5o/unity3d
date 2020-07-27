@@ -52,17 +52,17 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
 ###################
 ## ANDROID SETUP ##
 ###################
-# Setup Android SDK/JDK Environment Variables
-ENV ANDROID_INSTALL_LOCATION ${UNITY_INSTALL_LOCATION}/Editor/Data/PlaybackEngines/AndroidPlayer
-ENV ANDROID_SDK_ROOT ${ANDROID_INSTALL_LOCATION}/SDK
-ENV ANDROID_HOME ${ANDROID_SDK_ROOT}
-ENV ANDROID_NDK_HOME ${ANDROID_INSTALL_LOCATION}/NDK
-ENV PATH=${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}
-
 # Android SDK versions
 ARG ANDROID_NDK_VERSION
 ARG ANDROID_BUILD_TOOLS_VERSION=29.0.3
 ARG ANDROID_PLATFORM_VERSION=29
+
+# Setup Android SDK/JDK Environment Variables
+ENV ANDROID_INSTALL_LOCATION ${UNITY_INSTALL_LOCATION}/Editor/Data/PlaybackEngines/AndroidPlayer
+ENV ANDROID_SDK_ROOT ${ANDROID_INSTALL_LOCATION}/SDK
+ENV ANDROID_HOME ${ANDROID_SDK_ROOT}
+ENV ANDROID_NDK_HOME ${ANDROID_SDK_ROOT}/ndk/${ANDROID_NDK_VERSION}
+ENV PATH=${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}
 
 #Setup Java
 # install openJDK 8
@@ -101,9 +101,6 @@ RUN export JAVA_HOME \
 
 # Accept licenses
     && yes | sdkmanager --licenses \
-
-# Relocate NDK to match Unity's expected location 
-    && mv ${ANDROID_INSTALL_LOCATION}/SDK/ndk ${ANDROID_INSTALL_LOCATION}/NDK \
 
 # Clean
     && apt-get autoremove \
