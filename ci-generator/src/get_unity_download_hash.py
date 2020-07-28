@@ -16,9 +16,14 @@ def get_unity_download_hash(version_key):
 
     response_content = response.content.decode("utf-8")
 
-    hash_from_url_regex = re.compile("(.*/download/)(.{12})/.*")
-    match = hash_from_url_regex.search(response_content)
-    result = match.group(2)
+    try:
+        hash_from_url_regex = re.compile("(.*/download/)(.{12})/.*")
+        match = hash_from_url_regex.search(response_content)
+        result = match.group(2)
+    except AttributeError as e:
+        hash_from_url_regex = re.compile("(.*Changeset:</span>.*\s.*)([a-zA-Z0-9]{12}).*")
+        match = hash_from_url_regex.search(response_content)
+        result = match.group(2)
     return result
 
 

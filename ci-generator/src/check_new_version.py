@@ -81,30 +81,7 @@ class CheckNewVersion(object):
         }
 
         parsed_version = version.parse(version_part)
-        # https://docs.unity3d.com/Manual/android-sdksetup.html
-        # 2017.4 LTS	r13d
-        # 2018.4 LTS	r16b
-        # 2019.1	r16b
-        # 2019.2	r16b
-        # 2019.3	r19 - 19.0.5232133 to fix https://forum.unity.com/threads/solved-2019-3-0a4-incompatible-ndk.688108/
-        # 2019.4+   r19c - 19.2.5345600
-        if parsed_version >= version.parse("2017.4.0"):
-            if parsed_version < version.parse("2018.4.0"):
-                ndk_version = "13b"
-            elif parsed_version < version.parse("2019.3.0"):
-                ndk_version = "16.1.4479499"
-            elif version.parse("2019.3.0") <= parsed_version < version.parse("2019.4.0"):
-                ndk_version = "19.0.5232133"
-            else:
-                ndk_version = "19.2.5345600"
-            unity_build_configuration[version_key]["variables"] = {
-                "android": {
-                    "ANDROID_NDK_VERSION": ndk_version,
-                    "ANDROID_CMD_LINE_TOOLS_VERSION": "6609375",
-                    "ANDROID_BUILD_TOOLS_VERSION": "29.0.3",
-                    "ANDROID_PLATFORM_VERSION": "29"
-                }
-            }
+        unity_build_configuration[version_key]["variables"] = self.get_android_variables(parsed_version)
 
         # versions below 2019.3 used to have a component to build on facebook platform
         if parsed_version < version.parse("2019.3.0"):
@@ -129,6 +106,33 @@ class CheckNewVersion(object):
         if version.parse("5.0.0") <= parsed_version < version.parse("6.0.0"):
             unity_build_configuration[version_key]["legacy"] = True
         return unity_build_configuration
+
+    def get_android_variables(self, parsed_version):
+        # https://docs.unity3d.com/Manual/android-sdksetup.html
+        # 2017.4 LTS	r13d
+        # 2018.4 LTS	r16b
+        # 2019.1	r16b
+        # 2019.2	r16b
+        # 2019.3	r19 - 19.0.5232133 to fix https://forum.unity.com/threads/solved-2019-3-0a4-incompatible-ndk.688108/
+        # 2019.4+   r19c - 19.2.5345600
+        if parsed_version >= version.parse("2017.4.0"):
+            if parsed_version < version.parse("2018.4.0"):
+                ndk_version = "13b"
+            elif parsed_version < version.parse("2019.3.0"):
+                ndk_version = "16.1.4479499"
+            elif version.parse("2019.3.0") <= parsed_version < version.parse("2019.4.0"):
+                ndk_version = "19.0.5232133"
+            else:
+                ndk_version = "19.2.5345600"
+            android_variables = {
+                "android": {
+                    "ANDROID_NDK_VERSION": ndk_version,
+                    "ANDROID_CMD_LINE_TOOLS_VERSION": "6609375",
+                    "ANDROID_BUILD_TOOLS_VERSION": "29.0.3",
+                    "ANDROID_PLATFORM_VERSION": "29"
+                }
+            }
+        return android_variables
 
     @staticmethod
     def get_hash_from_download_url(original_download_url):
