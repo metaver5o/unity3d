@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import re
 import sys
 
@@ -16,7 +16,7 @@ def get_unity_download_hash(version_key):
 
     response_content = response.content.decode("utf-8")
 
-    hash_from_url_regex = re.compile("(.*/download_unity/)(.{12}).*")
+    hash_from_url_regex = re.compile("(.*/download/)(.{12})/.*")
     match = hash_from_url_regex.search(response_content)
     result = match.group(2)
     return result
