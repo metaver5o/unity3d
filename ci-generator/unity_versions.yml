@@ -1,1 +1,2195 @@
+# this was generated using generate_android_versions.py gableroux/unity3d on commit 5633ab0 on 2020-07-29
 
+# generate_android_versions.py 2018.1.0b13
+  # https://unity3d.com/unity/whats-new/2018.1. returned 404 status code
+# generate_android_versions.py 2018.1.0b8
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.1.0f2
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.1.2f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.1.3f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.1.5f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.1.6f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.0b2
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.0b5
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.0b7
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.0f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.1f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.20f1
+2018.2.20f1:
+  base_image: gableroux/2018.2.20f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/cef3e6c0c622/UnitySetup-2018.2.20f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.2.20
+  release_url: https://beta.unity3d.com/download/cef3e6c0c622/public_download.html
+  sha1: 9ffb0ec386b449bfd98868947ebcb4ab39203908
+  skip_prepare_stage: true
+  underscore: 2018_2_20f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.2.20
+
+# generate_android_versions.py 2018.2.21f1
+2018.2.21f1:
+  base_image: gableroux/2018.2.21f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/a122f5dc316d/UnitySetup-2018.2.21f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.2.21
+  release_url: https://beta.unity3d.com/download/a122f5dc316d/public_download.html
+  sha1: 21907d5e21cb0bb6f682ee99032bdce297b67df0
+  skip_prepare_stage: true
+  underscore: 2018_2_21f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.2.21
+
+# generate_android_versions.py 2018.2.2f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.3f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.4f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.5f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.6f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.2.7f1
+  # 'NoneType' object has no attribute 'group'
+# generate_android_versions.py 2018.3.11f1
+2018.3.11f1:
+  base_image: gableroux/2018.3.11f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/5063218e4ab8/UnitySetup-2018.3.11f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.11
+  release_url: https://beta.unity3d.com/download/5063218e4ab8/public_download.html
+  sha1: 533d939ed4e320458dd62967ad300981e18e97dd
+  skip_prepare_stage: true
+  underscore: 2018_3_11f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.11
+
+# generate_android_versions.py 2018.3.12f1
+2018.3.12f1:
+  base_image: gableroux/2018.3.12f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8afd630d1f5b/UnitySetup-2018.3.12f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.12
+  release_url: https://beta.unity3d.com/download/8afd630d1f5b/public_download.html
+  sha1: d93a2d730f5fdbf6b1bc141851dfad1f58b0825f
+  skip_prepare_stage: true
+  underscore: 2018_3_12f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.12
+
+# generate_android_versions.py 2018.3.14f1
+2018.3.14f1:
+  base_image: gableroux/2018.3.14f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d0e9f15437b1/UnitySetup-2018.3.14f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.14
+  release_url: https://beta.unity3d.com/download/d0e9f15437b1/public_download.html
+  sha1: 5aef8e83f958ffb33e1e1734ef6b8d839723daa0
+  skip_prepare_stage: true
+  underscore: 2018_3_14f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.14
+
+# generate_android_versions.py 2018.3.3f1
+2018.3.3f1:
+  base_image: gableroux/2018.3.3f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/393bae82dbb8/UnitySetup-2018.3.3f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.3
+  release_url: https://beta.unity3d.com/download/393bae82dbb8/public_download.html
+  sha1: 3813a7e49029245cf4d92396352eb07d63209870
+  skip_prepare_stage: true
+  underscore: 2018_3_3f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.3
+
+# generate_android_versions.py 2018.3.4f1
+2018.3.4f1:
+  base_image: gableroux/2018.3.4f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/1d952368ca3a/UnitySetup-2018.3.4f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.4
+  release_url: https://beta.unity3d.com/download/1d952368ca3a/public_download.html
+  sha1: b40122eb0408113adde0d63530fd579637f0c23f
+  skip_prepare_stage: true
+  underscore: 2018_3_4f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.4
+
+# generate_android_versions.py 2018.3.7f1
+2018.3.7f1:
+  base_image: gableroux/2018.3.7f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9e14d22a41bb/UnitySetup-2018.3.7f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.3.7
+  release_url: https://beta.unity3d.com/download/9e14d22a41bb/public_download.html
+  sha1: 7137251947f2ddf54c57a8364b77f3e6d9fd6ae8
+  skip_prepare_stage: true
+  underscore: 2018_3_7f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 13b
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.3.7
+
+# generate_android_versions.py 2018.4.0f1
+2018.4.0f1:
+  base_image: gableroux/2018.4.0f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b6ffa8986c8d/UnitySetup-2018.4.0f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.0
+  release_url: https://beta.unity3d.com/download/b6ffa8986c8d/public_download.html
+  sha1: ed912fd8972be4f2a93ce322bcb955a0f06f4dbc
+  skip_prepare_stage: true
+  underscore: 2018_4_0f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.0
+
+# generate_android_versions.py 2018.4.10f1
+2018.4.10f1:
+  base_image: gableroux/2018.4.10f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/a0470569e97b/UnitySetup-2018.4.10f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.10
+  release_url: https://beta.unity3d.com/download/a0470569e97b/public_download.html
+  sha1: 2685934550a319cf98270701613143cbe64f429b
+  skip_prepare_stage: true
+  underscore: 2018_4_10f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.10
+
+# generate_android_versions.py 2018.4.12f1
+2018.4.12f1:
+  base_image: gableroux/2018.4.12f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/59ddc4c59b4f/UnitySetup-2018.4.12f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.12
+  release_url: https://beta.unity3d.com/download/59ddc4c59b4f/public_download.html
+  sha1: 70f9cf2fc0976a2f44688872db3605c5fa4b54d6
+  skip_prepare_stage: true
+  underscore: 2018_4_12f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.12
+
+# generate_android_versions.py 2018.4.13f1
+2018.4.13f1:
+  base_image: gableroux/2018.4.13f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/497f083a43af/UnitySetup-2018.4.13f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.13
+  release_url: https://beta.unity3d.com/download/497f083a43af/public_download.html
+  sha1: 49966ebe7a120bf61d6d1409ea23ffc30f0da094
+  skip_prepare_stage: true
+  underscore: 2018_4_13f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.13
+
+# generate_android_versions.py 2018.4.14f1
+2018.4.14f1:
+  base_image: gableroux/2018.4.14f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/05119b33d0b7/UnitySetup-2018.4.14f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.14
+  release_url: https://beta.unity3d.com/download/05119b33d0b7/public_download.html
+  sha1: c107d695be5e898d35c61ce90dc46a300245736e
+  skip_prepare_stage: true
+  underscore: 2018_4_14f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.14
+
+# generate_android_versions.py 2018.4.15f1
+2018.4.15f1:
+  base_image: gableroux/2018.4.15f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/13f5a1bf9ca1/UnitySetup-2018.4.15f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.15
+  release_url: https://beta.unity3d.com/download/13f5a1bf9ca1/public_download.html
+  sha1: 08bd749d9a9c4f0d5d162b41b5ed6fa8c7335c2a
+  skip_prepare_stage: true
+  underscore: 2018_4_15f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.15
+
+# generate_android_versions.py 2018.4.16f1
+2018.4.16f1:
+  base_image: gableroux/2018.4.16f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.16f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.16
+  release_url: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2018_4_16f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.16
+
+# generate_android_versions.py 2018.4.17f1
+2018.4.17f1:
+  base_image: gableroux/2018.4.17f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.17f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.17
+  release_url: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2018_4_17f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.17
+
+# generate_android_versions.py 2018.4.1f1
+2018.4.1f1:
+  base_image: gableroux/2018.4.1f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.1f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.1
+  release_url: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+  sha1: 08b1f19f8ec698efe4fd2ef69c76c071626f7a2d
+  skip_prepare_stage: true
+  underscore: 2018_4_1f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.1
+
+# generate_android_versions.py 2018.4.20f1
+2018.4.20f1:
+  base_image: gableroux/2018.4.20f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/008688490035/UnitySetup-2018.4.20f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.20
+  release_url: https://beta.unity3d.com/download/008688490035/public_download.html
+  sha1: 2c303d964744bc75c0571da63ae417a8ed7b33a1
+  skip_prepare_stage: true
+  underscore: 2018_4_20f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.20
+
+# generate_android_versions.py 2018.4.21f1
+2018.4.21f1:
+  base_image: gableroux/2018.4.21f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/fd3915227633/UnitySetup-2018.4.21f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.21
+  release_url: https://beta.unity3d.com/download/fd3915227633/public_download.html
+  sha1: 7ba4699e974e23cdd09ba0b334125d14ae459a27
+  skip_prepare_stage: true
+  underscore: 2018_4_21f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.21
+
+# generate_android_versions.py 2018.4.22f1
+2018.4.22f1:
+  base_image: gableroux/2018.4.22f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8a9509a5aff9/UnitySetup-2018.4.22f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.22
+  release_url: https://beta.unity3d.com/download/8a9509a5aff9/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2018_4_22f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.22
+
+# generate_android_versions.py 2018.4.23f1
+2018.4.23f1:
+  base_image: gableroux/2018.4.23f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.23
+  release_url: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
+  sha1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+  skip_prepare_stage: true
+  underscore: 2018_4_23f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.23
+
+# generate_android_versions.py 2018.4.24f1
+2018.4.24f1:
+  base_image: gableroux/2018.4.24f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/3071911a89e9/UnitySetup-2018.4.24f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.24
+  release_url: https://beta.unity3d.com/download/3071911a89e9/public_download.html
+  sha1: 338c34ddaf0e93c3d3ef91feaaff31d6b5d2b947
+  skip_prepare_stage: true
+  underscore: 2018_4_24f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.24
+
+# generate_android_versions.py 2018.4.2f1
+2018.4.2f1:
+  base_image: gableroux/2018.4.2f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8a9509a5aff9/UnitySetup-2018.4.2f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.2
+  release_url: https://beta.unity3d.com/download/8a9509a5aff9/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2018_4_2f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.2
+
+# generate_android_versions.py 2018.4.5f1
+2018.4.5f1:
+  base_image: gableroux/2018.4.5f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7b38f8ac282e/UnitySetup-2018.4.5f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.5
+  release_url: https://beta.unity3d.com/download/7b38f8ac282e/public_download.html
+  sha1: 7efdeeb3c88dcbda107b364b58ad9f0020571bb4
+  skip_prepare_stage: true
+  underscore: 2018_4_5f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.5
+
+# generate_android_versions.py 2018.4.6f1
+2018.4.6f1:
+  base_image: gableroux/2018.4.6f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.6
+  release_url: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+  sha1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
+  skip_prepare_stage: true
+  underscore: 2018_4_6f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.6
+
+# generate_android_versions.py 2018.4.8f1
+2018.4.8f1:
+  base_image: gableroux/2018.4.8f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.8
+  release_url: https://beta.unity3d.com/download/9bc9d983d803/public_download.html
+  sha1: 5c9063e47ea5851a07e541e70b5571141c2dfe97
+  skip_prepare_stage: true
+  underscore: 2018_4_8f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.8
+
+# generate_android_versions.py 2018.4.9f1
+2018.4.9f1:
+  base_image: gableroux/2018.4.9f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ca372476eaba/UnitySetup-2018.4.9f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.9
+  release_url: https://beta.unity3d.com/download/ca372476eaba/public_download.html
+  sha1: 43cb74a3f108ef180a50c39b738599cb0ed64d17
+  skip_prepare_stage: true
+  underscore: 2018_4_9f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.9
+
+# generate_android_versions.py 2019.1.0f2
+2019.1.0f2:
+  base_image: gableroux/2019.1.0f2
+  build: f2
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/292b93d75a2c/UnitySetup-2019.1.0f2
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.0
+  release_url: https://beta.unity3d.com/download/292b93d75a2c/public_download.html
+  sha1: 56711ddafdde2554a7782c846785767e07ebdc5d
+  skip_prepare_stage: true
+  underscore: 2019_1_0f2
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.0
+
+# generate_android_versions.py 2019.1.10f1
+2019.1.10f1:
+  base_image: gableroux/2019.1.10f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f007ed779b7a/UnitySetup-2019.1.10f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.10
+  release_url: https://beta.unity3d.com/download/f007ed779b7a/public_download.html
+  sha1: d3aa2b01637d9a1fbc3d2bda2cf8a2ad78427f81
+  skip_prepare_stage: true
+  underscore: 2019_1_10f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.10
+
+# generate_android_versions.py 2019.1.11f1
+2019.1.11f1:
+  base_image: gableroux/2019.1.11f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9b001d489a54/UnitySetup-2019.1.11f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.11
+  release_url: https://beta.unity3d.com/download/9b001d489a54/public_download.html
+  sha1: 7d883b49a5d515c856aa40af5da765267a00b9a9
+  skip_prepare_stage: true
+  underscore: 2019_1_11f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.11
+
+# generate_android_versions.py 2019.1.12f1
+2019.1.12f1:
+  base_image: gableroux/2019.1.12f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f04f5427219e/UnitySetup-2019.1.12f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.12
+  release_url: https://beta.unity3d.com/download/f04f5427219e/public_download.html
+  sha1: e736ade47aced9d50b5282edee507d37331d1627
+  skip_prepare_stage: true
+  underscore: 2019_1_12f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.12
+
+# generate_android_versions.py 2019.1.13f1
+2019.1.13f1:
+  base_image: gableroux/2019.1.13f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b5956c0a61e7/UnitySetup-2019.1.13f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.13
+  release_url: https://beta.unity3d.com/download/b5956c0a61e7/public_download.html
+  sha1: 7f898798d4c5c38d6ba90eeb8492169da23195be
+  skip_prepare_stage: true
+  underscore: 2019_1_13f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.13
+
+# generate_android_versions.py 2019.1.14f1
+2019.1.14f1:
+  base_image: gableroux/2019.1.14f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.14
+  release_url: https://beta.unity3d.com/download/148b5891095a/public_download.html
+  sha1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
+  skip_prepare_stage: true
+  underscore: 2019_1_14f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.14
+
+# generate_android_versions.py 2019.1.1f1
+2019.1.1f1:
+  base_image: gableroux/2019.1.1f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/fef62e97e63b/UnitySetup-2019.1.1f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.1
+  release_url: https://beta.unity3d.com/download/fef62e97e63b/public_download.html
+  sha1: 0d1082e47ea0e6e127ce31e5685b4fc2f2cae6d3
+  skip_prepare_stage: true
+  underscore: 2019_1_1f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.1
+
+# generate_android_versions.py 2019.1.2f1
+2019.1.2f1:
+  base_image: gableroux/2019.1.2f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/3e18427e571f/UnitySetup-2019.1.2f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.2
+  release_url: https://beta.unity3d.com/download/3e18427e571f/public_download.html
+  sha1: 64809d740e51a72079f270e636bfee77d38d7ea3
+  skip_prepare_stage: true
+  underscore: 2019_1_2f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.2
+
+# generate_android_versions.py 2019.1.3f1
+2019.1.3f1:
+  base_image: gableroux/2019.1.3f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.3
+  release_url: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
+  sha1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
+  skip_prepare_stage: true
+  underscore: 2019_1_3f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.3
+
+# generate_android_versions.py 2019.1.4f1
+2019.1.4f1:
+  base_image: gableroux/2019.1.4f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/UnitySetup-2019.1.4f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.4
+  release_url: https://beta.unity3d.com/download/ffa3a7a2dd7d/public_download.html
+  sha1: e649ab9fc49a2e722b11acbf02729dd942646f2e
+  skip_prepare_stage: true
+  underscore: 2019_1_4f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.4
+
+# generate_android_versions.py 2019.1.5f1
+2019.1.5f1:
+  base_image: gableroux/2019.1.5f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/0ca0f5646614/UnitySetup-2019.1.5f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.5
+  release_url: https://beta.unity3d.com/download/0ca0f5646614/public_download.html
+  sha1: df84be4a4fc7f03115c406bde612da04b9e26cca
+  skip_prepare_stage: true
+  underscore: 2019_1_5f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.5
+
+# generate_android_versions.py 2019.1.6f1
+2019.1.6f1:
+  base_image: gableroux/2019.1.6f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f2970305fe1c/UnitySetup-2019.1.6f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.6
+  release_url: https://beta.unity3d.com/download/f2970305fe1c/public_download.html
+  sha1: 1a8e3c61e3faec6dcf7a6789638b1f78bd97de3e
+  skip_prepare_stage: true
+  underscore: 2019_1_6f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.6
+
+# generate_android_versions.py 2019.1.7f1
+2019.1.7f1:
+  base_image: gableroux/2019.1.7f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f3c4928e5742/UnitySetup-2019.1.7f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.7
+  release_url: https://beta.unity3d.com/download/f3c4928e5742/public_download.html
+  sha1: 97432bf2227a6819ae5893d7ce77334b3b65bc41
+  skip_prepare_stage: true
+  underscore: 2019_1_7f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.7
+
+# generate_android_versions.py 2019.1.8f1
+2019.1.8f1:
+  base_image: gableroux/2019.1.8f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7938dd008a75/UnitySetup-2019.1.8f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.8
+  release_url: https://beta.unity3d.com/download/7938dd008a75/public_download.html
+  sha1: 83ad002cf5b7f1ec83b99c865122a9cf15046f32
+  skip_prepare_stage: true
+  underscore: 2019_1_8f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.8
+
+# generate_android_versions.py 2019.1.9f1
+2019.1.9f1:
+  base_image: gableroux/2019.1.9f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d5f1b37da199/UnitySetup-2019.1.9f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.1.9
+  release_url: https://beta.unity3d.com/download/d5f1b37da199/public_download.html
+  sha1: 72969f5bc24cc0ea7d7f48171a03959df99651d2
+  skip_prepare_stage: true
+  underscore: 2019_1_9f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.1.9
+
+# generate_android_versions.py 2019.2.0f1
+2019.2.0f1:
+  base_image: gableroux/2019.2.0f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/20c1667945cf/UnitySetup-2019.2.0f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.0
+  release_url: https://beta.unity3d.com/download/20c1667945cf/public_download.html
+  sha1: 41a5980bf5a50eee09bad350f7f77fdb738b9ae5
+  skip_prepare_stage: true
+  underscore: 2019_2_0f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.0
+
+# generate_android_versions.py 2019.2.10f1
+2019.2.10f1:
+  base_image: gableroux/2019.2.10f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/923acd2d43aa/UnitySetup-2019.2.10f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.10
+  release_url: https://beta.unity3d.com/download/923acd2d43aa/public_download.html
+  sha1: 962136a268e7048ce527973a5b7ac7feb7c96155
+  skip_prepare_stage: true
+  underscore: 2019_2_10f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.10
+
+# generate_android_versions.py 2019.2.11f1
+2019.2.11f1:
+  base_image: gableroux/2019.2.11f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/5f859a4cfee5/UnitySetup-2019.2.11f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.11
+  release_url: https://beta.unity3d.com/download/5f859a4cfee5/public_download.html
+  sha1: 1f9fa0a8aefbaef0028852d1783615a12e39657c
+  skip_prepare_stage: true
+  underscore: 2019_2_11f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.11
+
+# generate_android_versions.py 2019.2.12f1
+2019.2.12f1:
+  base_image: gableroux/2019.2.12f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/UnitySetup-2019.2.12f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.12
+  release_url: https://beta.unity3d.com/download/b1a7e1fb4fa5/public_download.html
+  sha1: 140d6807f44058b2de4d76a3293a24d38b081523
+  skip_prepare_stage: true
+  underscore: 2019_2_12f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.12
+
+# generate_android_versions.py 2019.2.13f1
+2019.2.13f1:
+  base_image: gableroux/2019.2.13f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/e20f6c7e5017/UnitySetup-2019.2.13f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.13
+  release_url: https://beta.unity3d.com/download/e20f6c7e5017/public_download.html
+  sha1: aa5702564631a7b8680be6b054f84aa49c0f49e6
+  skip_prepare_stage: true
+  underscore: 2019_2_13f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.13
+
+# generate_android_versions.py 2019.2.14f1
+2019.2.14f1:
+  base_image: gableroux/2019.2.14f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/49dd4e9fa428/UnitySetup-2019.2.14f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.14
+  release_url: https://beta.unity3d.com/download/49dd4e9fa428/public_download.html
+  sha1: 63c5d25fd53c8d71f4dc5f201b308dbfb460b389
+  skip_prepare_stage: true
+  underscore: 2019_2_14f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.14
+
+# generate_android_versions.py 2019.2.15f1
+2019.2.15f1:
+  base_image: gableroux/2019.2.15f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/dcb72c2e9334/UnitySetup-2019.2.15f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.15
+  release_url: https://beta.unity3d.com/download/dcb72c2e9334/public_download.html
+  sha1: bdd7058114a1c8f0dd35fdf63789113e30b4c8ec
+  skip_prepare_stage: true
+  underscore: 2019_2_15f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.15
+
+# generate_android_versions.py 2019.2.16f1
+2019.2.16f1:
+  base_image: gableroux/2019.2.16f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/b9898e2d04a4/UnitySetup-2019.2.16f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.16
+  release_url: https://beta.unity3d.com/download/b9898e2d04a4/public_download.html
+  sha1: b736c0b253393c3ac08aa2c35b68f6d7710f84db
+  skip_prepare_stage: true
+  underscore: 2019_2_16f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.16
+
+# generate_android_versions.py 2019.2.17f1
+2019.2.17f1:
+  base_image: gableroux/2019.2.17f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8e603399ca02/UnitySetup-2019.2.17f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.17
+  release_url: https://beta.unity3d.com/download/8e603399ca02/public_download.html
+  sha1: b5f1f26c399a6c0e4762bf52603b220cebd28c20
+  skip_prepare_stage: true
+  underscore: 2019_2_17f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.17
+
+# generate_android_versions.py 2019.2.18f1
+2019.2.18f1:
+  base_image: gableroux/2019.2.18f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/bbf64de26e34/UnitySetup-2019.2.18f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.18
+  release_url: https://beta.unity3d.com/download/bbf64de26e34/public_download.html
+  sha1: 6de71428a1f0d9c42aff1b8e284f338dcea0c0fb
+  skip_prepare_stage: true
+  underscore: 2019_2_18f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.18
+
+# generate_android_versions.py 2019.2.19f1
+2019.2.19f1:
+  base_image: gableroux/2019.2.19f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/929ab4d01772/UnitySetup-2019.2.19f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.19
+  release_url: https://beta.unity3d.com/download/929ab4d01772/public_download.html
+  sha1: 88296eb8137792d8ac248b767f80c6ac6b955024
+  skip_prepare_stage: true
+  underscore: 2019_2_19f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.19
+
+# generate_android_versions.py 2019.2.1f1
+2019.2.1f1:
+  base_image: gableroux/2019.2.1f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ca4d5af0be6f/UnitySetup-2019.2.1f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.1
+  release_url: https://beta.unity3d.com/download/ca4d5af0be6f/public_download.html
+  sha1: 434a6d91c74bd8ae88a689d1005ab5863f5ba1fc
+  skip_prepare_stage: true
+  underscore: 2019_2_1f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.1
+
+# generate_android_versions.py 2019.2.20f1
+2019.2.20f1:
+  base_image: gableroux/2019.2.20f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c67d00285037/UnitySetup-2019.2.20f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.20
+  release_url: https://beta.unity3d.com/download/c67d00285037/public_download.html
+  sha1: 442e07c54e75866ab63f5d75160790b202cc28f9
+  skip_prepare_stage: true
+  underscore: 2019_2_20f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.20
+
+# generate_android_versions.py 2019.2.21f1
+2019.2.21f1:
+  base_image: gableroux/2019.2.21f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.21
+  release_url: https://beta.unity3d.com/download/9d528d026557/public_download.html
+  sha1: e1bf0167dda7897385adf7bb53a14195ffaa98e2
+  skip_prepare_stage: true
+  underscore: 2019_2_21f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.21
+
+# generate_android_versions.py 2019.2.2f1
+2019.2.2f1:
+  base_image: gableroux/2019.2.2f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.2
+  release_url: https://beta.unity3d.com/download/ab112815d860/public_download.html
+  sha1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+  skip_prepare_stage: true
+  underscore: 2019_2_2f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.2
+
+# generate_android_versions.py 2019.2.3f1
+2019.2.3f1:
+  base_image: gableroux/2019.2.3f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/8e55c27a4621/UnitySetup-2019.2.3f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.3
+  release_url: https://beta.unity3d.com/download/8e55c27a4621/public_download.html
+  sha1: bb22f855ea696bd5401cbc0fc1d08df8de52317a
+  skip_prepare_stage: true
+  underscore: 2019_2_3f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.3
+
+# generate_android_versions.py 2019.2.4f1
+2019.2.4f1:
+  base_image: gableroux/2019.2.4f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.4
+  release_url: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+  sha1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+  skip_prepare_stage: true
+  underscore: 2019_2_4f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.4
+
+# generate_android_versions.py 2019.2.5f1
+2019.2.5f1:
+  base_image: gableroux/2019.2.5f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/9dace1eed4cc/UnitySetup-2019.2.5f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.5
+  release_url: https://beta.unity3d.com/download/9dace1eed4cc/public_download.html
+  sha1: 56e22a22e102d325220ee313f68bd4f7ffab70ec
+  skip_prepare_stage: true
+  underscore: 2019_2_5f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.5
+
+# generate_android_versions.py 2019.2.6f1
+2019.2.6f1:
+  base_image: gableroux/2019.2.6f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/fe82a0e88406/UnitySetup-2019.2.6f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.6
+  release_url: https://beta.unity3d.com/download/fe82a0e88406/public_download.html
+  sha1: 1241eb303dd0601d1dd6d5b09a0b0862933d1f1a
+  skip_prepare_stage: true
+  underscore: 2019_2_6f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.6
+
+# generate_android_versions.py 2019.2.7f2
+2019.2.7f2:
+  base_image: gableroux/2019.2.7f2
+  build: f2
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f2
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.7
+  release_url: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
+  sha1: 6af62fa2e55f8ae128ff0993976bc345eb1a2c61
+  skip_prepare_stage: true
+  underscore: 2019_2_7f2
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.7
+
+# generate_android_versions.py 2019.2.8f1
+2019.2.8f1:
+  base_image: gableroux/2019.2.8f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ff5b465c8d13/UnitySetup-2019.2.8f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.8
+  release_url: https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
+  sha1: 46289dd1a50fca79a5272d7440318143f5dd798d
+  skip_prepare_stage: true
+  underscore: 2019_2_8f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.8
+
+# generate_android_versions.py 2019.2.9f1
+2019.2.9f1:
+  base_image: gableroux/2019.2.9f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ebce4d76e6e8/UnitySetup-2019.2.9f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2019.2.9
+  release_url: https://beta.unity3d.com/download/ebce4d76e6e8/public_download.html
+  sha1: b595a65a7977994bdeb162ed6984aed55df7d208
+  skip_prepare_stage: true
+  underscore: 2019_2_9f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.2.9
+
+# generate_android_versions.py 2019.3.0f1
+2019.3.0f1:
+  base_image: gableroux/2019.3.0f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.0
+  release_url: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2019_3_0f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.0
+
+# generate_android_versions.py 2019.3.0f6
+2019.3.0f6:
+  base_image: gableroux/2019.3.0f6
+  build: f6
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.0
+  release_url: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+  sha1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+  skip_prepare_stage: true
+  underscore: 2019_3_0f6
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.0
+
+# generate_android_versions.py 2019.3.11f1
+2019.3.11f1:
+  base_image: gableroux/2019.3.11f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/ceef2d848e70/UnitySetup-2019.3.11f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.11
+  release_url: https://beta.unity3d.com/download/ceef2d848e70/public_download.html
+  sha1: 13c9e693b13a8b05c7f29390f44fd89a412ffcc2
+  skip_prepare_stage: true
+  underscore: 2019_3_11f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.11
+
+# generate_android_versions.py 2019.3.12f1
+2019.3.12f1:
+  base_image: gableroux/2019.3.12f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/84b23722532d/UnitySetup-2019.3.12f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.12
+  release_url: https://beta.unity3d.com/download/84b23722532d/public_download.html
+  sha1: 47464847b934c31942a739b659c33bd5daaedd4e
+  skip_prepare_stage: true
+  underscore: 2019_3_12f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.12
+
+# generate_android_versions.py 2019.3.13f1
+2019.3.13f1:
+  base_image: gableroux/2019.3.13f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d4ddf0d95db9/UnitySetup-2019.3.13f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.13
+  release_url: https://beta.unity3d.com/download/d4ddf0d95db9/public_download.html
+  sha1: 716076cc9c4f1db50a745619e104328d824cc765
+  skip_prepare_stage: true
+  underscore: 2019_3_13f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.13
+
+# generate_android_versions.py 2019.3.14f1
+2019.3.14f1:
+  base_image: gableroux/2019.3.14f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2b330bf6d2d8/UnitySetup-2019.3.14f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.14
+  release_url: https://beta.unity3d.com/download/2b330bf6d2d8/public_download.html
+  sha1: a141d785c6071e0a326aa5201682ba254c7502d6
+  skip_prepare_stage: true
+  underscore: 2019_3_14f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.14
+
+# generate_android_versions.py 2019.3.15f1
+2019.3.15f1:
+  base_image: gableroux/2019.3.15f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/59ff3e03856d/UnitySetup-2019.3.15f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.15
+  release_url: https://beta.unity3d.com/download/59ff3e03856d/public_download.html
+  sha1: 8c32dcfb5378723663fd6a1b09b0b960715347b7
+  skip_prepare_stage: true
+  underscore: 2019_3_15f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.15
+
+# generate_android_versions.py 2019.3.1f1
+2019.3.1f1:
+  base_image: gableroux/2019.3.1f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/89d6087839c2/UnitySetup-2019.3.1f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.1
+  release_url: https://beta.unity3d.com/download/89d6087839c2/public_download.html
+  sha1: e963ddd0efc8833dac8e5fc80038d4f7787aba97
+  skip_prepare_stage: true
+  underscore: 2019_3_1f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.1
+
+# generate_android_versions.py 2019.3.2f1
+2019.3.2f1:
+  base_image: gableroux/2019.3.2f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/c46a3a38511e/UnitySetup-2019.3.2f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.2
+  release_url: https://beta.unity3d.com/download/c46a3a38511e/public_download.html
+  sha1: dc99638b8b4aca3b5b7fc2d1a852b85c11deb11f
+  skip_prepare_stage: true
+  underscore: 2019_3_2f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.2
+
+# generate_android_versions.py 2019.3.3f1
+2019.3.3f1:
+  base_image: gableroux/2019.3.3f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7ceaae5f7503/UnitySetup-2019.3.3f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.3
+  release_url: https://beta.unity3d.com/download/7ceaae5f7503/public_download.html
+  sha1: 68d3c58e977e71cdd00bd0100fcd60c02762ec04
+  skip_prepare_stage: true
+  underscore: 2019_3_3f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.3
+
+# generate_android_versions.py 2019.3.4f1
+2019.3.4f1:
+  base_image: gableroux/2019.3.4f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/4f139db2fdbd/UnitySetup-2019.3.4f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.4
+  release_url: https://beta.unity3d.com/download/4f139db2fdbd/public_download.html
+  sha1: 0c078a50831b5c1582d44d27b34ba0e387fdbdc3
+  skip_prepare_stage: true
+  underscore: 2019_3_4f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.4
+
+# generate_android_versions.py 2019.3.5f1
+2019.3.5f1:
+  base_image: gableroux/2019.3.5f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/d691e07d38ef/UnitySetup-2019.3.5f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.5
+  release_url: https://beta.unity3d.com/download/d691e07d38ef/public_download.html
+  sha1: 8bc329d54a5ec36d1786d3aee78995caafd53f1b
+  skip_prepare_stage: true
+  underscore: 2019_3_5f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.5
+
+# generate_android_versions.py 2019.3.6f1
+2019.3.6f1:
+  base_image: gableroux/2019.3.6f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/5c3fb0a11183/UnitySetup-2019.3.6f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.6
+  release_url: https://beta.unity3d.com/download/5c3fb0a11183/public_download.html
+  sha1: f6bfc5f5f1174b0f937128854aad6759a8524c13
+  skip_prepare_stage: true
+  underscore: 2019_3_6f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.6
+
+# generate_android_versions.py 2019.3.7f1
+2019.3.7f1:
+  base_image: gableroux/2019.3.7f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/6437fd74d35d/UnitySetup-2019.3.7f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.7
+  release_url: https://beta.unity3d.com/download/6437fd74d35d/public_download.html
+  sha1: 4845b7bd6e3d1df813da2be5c1fa580d0c2855ad
+  skip_prepare_stage: true
+  underscore: 2019_3_7f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.7
+
+# generate_android_versions.py 2019.3.8f1
+2019.3.8f1:
+  base_image: gableroux/2019.3.8f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/4ba98e9386ed/UnitySetup-2019.3.8f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.8
+  release_url: https://beta.unity3d.com/download/4ba98e9386ed/public_download.html
+  sha1: 5abfa6f6f138f84ff82a035cc3b3fd63c5eca3e8
+  skip_prepare_stage: true
+  underscore: 2019_3_8f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.8
+
+# generate_android_versions.py 2019.3.9f1
+2019.3.9f1:
+  base_image: gableroux/2019.3.9f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/e6e740a1c473/UnitySetup-2019.3.9f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.3.9
+  release_url: https://beta.unity3d.com/download/e6e740a1c473/public_download.html
+  sha1: 752015b6e6841ebfc28124bc86bfe5ef806ac172
+  skip_prepare_stage: true
+  underscore: 2019_3_9f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.0.5232133
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.3.9
+
+# generate_android_versions.py 2019.4.0f1
+2019.4.0f1:
+  base_image: gableroux/2019.4.0f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/0af376155913/UnitySetup-2019.4.0f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.0
+  release_url: https://beta.unity3d.com/download/0af376155913/public_download.html
+  sha1: eee2b8e41ecc2d0b9387064b422ada604a08c68b
+  skip_prepare_stage: true
+  underscore: 2019_4_0f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.0
+
+# generate_android_versions.py 2019.4.1f1
+2019.4.1f1:
+  base_image: gableroux/2019.4.1f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/e6c045e14e4e/UnitySetup-2019.4.1f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.1
+  release_url: https://beta.unity3d.com/download/e6c045e14e4e/public_download.html
+  sha1: c2872ace3b0d64a6e40f0a418e642a5f964db51e
+  skip_prepare_stage: true
+  underscore: 2019_4_1f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.1
+
+# generate_android_versions.py 2019.4.2f1
+2019.4.2f1:
+  base_image: gableroux/2019.4.2f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/20b4642a3455/UnitySetup-2019.4.2f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.2
+  release_url: https://beta.unity3d.com/download/20b4642a3455/public_download.html
+  sha1: 17c3b23441eb3b25d7c163ef52356bdb8dd67ea3
+  skip_prepare_stage: true
+  underscore: 2019_4_2f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.2
+
+# generate_android_versions.py 2020.1.0b11
+2020.1.0b11:
+  base_image: gableroux/2020.1.0b11
+  build: b11
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b11
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b11
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b12
+2020.1.0b12:
+  base_image: gableroux/2020.1.0b12
+  build: b12
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b12
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b12
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b14
+2020.1.0b14:
+  base_image: gableroux/2020.1.0b14
+  build: b14
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b14
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b14
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b2
+2020.1.0b2:
+  base_image: gableroux/2020.1.0b2
+  build: b2
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b2
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b2
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b3
+2020.1.0b3:
+  base_image: gableroux/2020.1.0b3
+  build: b3
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b3
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b3
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b4
+2020.1.0b4:
+  base_image: gableroux/2020.1.0b4
+  build: b4
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b4
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b4
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b5
+2020.1.0b5:
+  base_image: gableroux/2020.1.0b5
+  build: b5
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b5
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b5
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b6
+2020.1.0b6:
+  base_image: gableroux/2020.1.0b6
+  build: b6
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b6
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b6
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b7
+2020.1.0b7:
+  base_image: gableroux/2020.1.0b7
+  build: b7
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b7
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b7
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b8
+2020.1.0b8:
+  base_image: gableroux/2020.1.0b8
+  build: b8
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b8
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b8
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.1.0b9
+2020.1.0b9:
+  base_image: gableroux/2020.1.0b9
+  build: b9
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b9
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b9
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2020.2.0a13
+  # https://unity3d.com/unity/whats-new/2020.2. returned 404 status code
+# generate_android_versions.py 2020.2.0a15
+  # https://unity3d.com/unity/whats-new/2020.2. returned 404 status code
+# generate_android_versions.py 2020.2.0a16
+  # https://unity3d.com/unity/whats-new/2020.2. returned 404 status code
+# generate_android_versions.py 2020.1.0b15
+2020.1.0b15:
+  base_image: gableroux/2020.1.0b15
+  build: b15
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b15
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b15
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2019.4.3f1
+2019.4.3f1:
+  base_image: gableroux/2019.4.3f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/f880dceab6fe/UnitySetup-2019.4.3f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.3
+  release_url: https://beta.unity3d.com/download/f880dceab6fe/public_download.html
+  sha1: 496f3f1ee9bcc1028d21d66dafb7c03e503b7c40
+  skip_prepare_stage: true
+  underscore: 2019_4_3f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.3
+
+# generate_android_versions.py 2020.1.0b16
+2020.1.0b16:
+  base_image: gableroux/2020.1.0b16
+  build: b16
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b16
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.0
+  release_url: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+  sha1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+  skip_prepare_stage: true
+  underscore: 2020_1_0b16
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.0
+
+# generate_android_versions.py 2019.4.4f1
+2019.4.4f1:
+  base_image: gableroux/2019.4.4f1
+  build: f1
+  build_only_these_platforms: android
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/1f1dac67805b/UnitySetup-2019.4.4f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.4
+  release_url: https://beta.unity3d.com/download/1f1dac67805b/public_download.html
+  sha1: faf7acc6b9d92a1dd92025a30f87306115041afa
+  skip_prepare_stage: true
+  underscore: 2019_4_4f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.4
