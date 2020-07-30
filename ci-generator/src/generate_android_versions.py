@@ -17,9 +17,9 @@ if __name__ == "__main__":
             try:
                 print("# generate_android_versions.py", version)
                 unity_version_object = get_unity_version_object_from_website(version)
-                unity_version_object['base_image'] = f'gableroux/{version}'
-                unity_version_object['skip_prepare_stage'] = True
-                unity_version_object['build_only_these_platforms'] = 'android'
+                unity_version_object[version]['base_image'] = f'gableroux/{version}'
+                unity_version_object[version]['skip_prepare_stage'] = True
+                unity_version_object[version]['build_only_these_platforms'] = 'android'
                 print(yaml.dump(unity_version_object))
             except Exception as e:
                 print("#", e)
