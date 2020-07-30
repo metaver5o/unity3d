@@ -49,8 +49,3140 @@ before_script:
     - ci/build.sh
   retry: 2
 
-nothing_to_build:
-  stage: build
-  script:
-    echo 'All versions are already built, skipping'
+
+
+
+
+
+# platform specific for 2018.2.20f1: android
+unity_2018_2_20f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.2.20
+    BUILD: f1
+    TAG: 2018.2.20f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/cef3e6c0c622/UnitySetup-2018.2.20f1
+    BASE_IMAGE: gableroux/2018.2.20f1
+    SHA1: 9ffb0ec386b449bfd98868947ebcb4ab39203908
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.2.20
+    RELEASE_URL: https://beta.unity3d.com/download/cef3e6c0c622/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.2.21f1: android
+unity_2018_2_21f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.2.21
+    BUILD: f1
+    TAG: 2018.2.21f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/a122f5dc316d/UnitySetup-2018.2.21f1
+    BASE_IMAGE: gableroux/2018.2.21f1
+    SHA1: 21907d5e21cb0bb6f682ee99032bdce297b67df0
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.2.21
+    RELEASE_URL: https://beta.unity3d.com/download/a122f5dc316d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.11f1: android
+unity_2018_3_11f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.11
+    BUILD: f1
+    TAG: 2018.3.11f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/5063218e4ab8/UnitySetup-2018.3.11f1
+    BASE_IMAGE: gableroux/2018.3.11f1
+    SHA1: 533d939ed4e320458dd62967ad300981e18e97dd
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.11
+    RELEASE_URL: https://beta.unity3d.com/download/5063218e4ab8/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.12f1: android
+unity_2018_3_12f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.12
+    BUILD: f1
+    TAG: 2018.3.12f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/8afd630d1f5b/UnitySetup-2018.3.12f1
+    BASE_IMAGE: gableroux/2018.3.12f1
+    SHA1: d93a2d730f5fdbf6b1bc141851dfad1f58b0825f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.12
+    RELEASE_URL: https://beta.unity3d.com/download/8afd630d1f5b/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.14f1: android
+unity_2018_3_14f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.14
+    BUILD: f1
+    TAG: 2018.3.14f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/d0e9f15437b1/UnitySetup-2018.3.14f1
+    BASE_IMAGE: gableroux/2018.3.14f1
+    SHA1: 5aef8e83f958ffb33e1e1734ef6b8d839723daa0
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.14
+    RELEASE_URL: https://beta.unity3d.com/download/d0e9f15437b1/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.3f1: android
+unity_2018_3_3f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.3
+    BUILD: f1
+    TAG: 2018.3.3f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/393bae82dbb8/UnitySetup-2018.3.3f1
+    BASE_IMAGE: gableroux/2018.3.3f1
+    SHA1: 3813a7e49029245cf4d92396352eb07d63209870
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.3
+    RELEASE_URL: https://beta.unity3d.com/download/393bae82dbb8/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.4f1: android
+unity_2018_3_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.4
+    BUILD: f1
+    TAG: 2018.3.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/1d952368ca3a/UnitySetup-2018.3.4f1
+    BASE_IMAGE: gableroux/2018.3.4f1
+    SHA1: b40122eb0408113adde0d63530fd579637f0c23f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.4
+    RELEASE_URL: https://beta.unity3d.com/download/1d952368ca3a/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.3.7f1: android
+unity_2018_3_7f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.3.7
+    BUILD: f1
+    TAG: 2018.3.7f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/9e14d22a41bb/UnitySetup-2018.3.7f1
+    BASE_IMAGE: gableroux/2018.3.7f1
+    SHA1: 7137251947f2ddf54c57a8364b77f3e6d9fd6ae8
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.3.7
+    RELEASE_URL: https://beta.unity3d.com/download/9e14d22a41bb/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 13b
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.0f1: android
+unity_2018_4_0f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.0
+    BUILD: f1
+    TAG: 2018.4.0f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b6ffa8986c8d/UnitySetup-2018.4.0f1
+    BASE_IMAGE: gableroux/2018.4.0f1
+    SHA1: ed912fd8972be4f2a93ce322bcb955a0f06f4dbc
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.0
+    RELEASE_URL: https://beta.unity3d.com/download/b6ffa8986c8d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.10f1: android
+unity_2018_4_10f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.10
+    BUILD: f1
+    TAG: 2018.4.10f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/a0470569e97b/UnitySetup-2018.4.10f1
+    BASE_IMAGE: gableroux/2018.4.10f1
+    SHA1: 2685934550a319cf98270701613143cbe64f429b
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.10
+    RELEASE_URL: https://beta.unity3d.com/download/a0470569e97b/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.12f1: android
+unity_2018_4_12f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.12
+    BUILD: f1
+    TAG: 2018.4.12f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/59ddc4c59b4f/UnitySetup-2018.4.12f1
+    BASE_IMAGE: gableroux/2018.4.12f1
+    SHA1: 70f9cf2fc0976a2f44688872db3605c5fa4b54d6
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.12
+    RELEASE_URL: https://beta.unity3d.com/download/59ddc4c59b4f/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.13f1: android
+unity_2018_4_13f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.13
+    BUILD: f1
+    TAG: 2018.4.13f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/497f083a43af/UnitySetup-2018.4.13f1
+    BASE_IMAGE: gableroux/2018.4.13f1
+    SHA1: 49966ebe7a120bf61d6d1409ea23ffc30f0da094
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.13
+    RELEASE_URL: https://beta.unity3d.com/download/497f083a43af/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.14f1: android
+unity_2018_4_14f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.14
+    BUILD: f1
+    TAG: 2018.4.14f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/05119b33d0b7/UnitySetup-2018.4.14f1
+    BASE_IMAGE: gableroux/2018.4.14f1
+    SHA1: c107d695be5e898d35c61ce90dc46a300245736e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.14
+    RELEASE_URL: https://beta.unity3d.com/download/05119b33d0b7/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.15f1: android
+unity_2018_4_15f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.15
+    BUILD: f1
+    TAG: 2018.4.15f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/13f5a1bf9ca1/UnitySetup-2018.4.15f1
+    BASE_IMAGE: gableroux/2018.4.15f1
+    SHA1: 08bd749d9a9c4f0d5d162b41b5ed6fa8c7335c2a
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.15
+    RELEASE_URL: https://beta.unity3d.com/download/13f5a1bf9ca1/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.16f1: android
+unity_2018_4_16f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.16
+    BUILD: f1
+    TAG: 2018.4.16f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.16f1
+    BASE_IMAGE: gableroux/2018.4.16f1
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.16
+    RELEASE_URL: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.17f1: android
+unity_2018_4_17f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.17
+    BUILD: f1
+    TAG: 2018.4.17f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.17f1
+    BASE_IMAGE: gableroux/2018.4.17f1
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.17
+    RELEASE_URL: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.1f1: android
+unity_2018_4_1f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.1
+    BUILD: f1
+    TAG: 2018.4.1f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b7c424a951c0/UnitySetup-2018.4.1f1
+    BASE_IMAGE: gableroux/2018.4.1f1
+    SHA1: 08b1f19f8ec698efe4fd2ef69c76c071626f7a2d
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.1
+    RELEASE_URL: https://beta.unity3d.com/download/b7c424a951c0/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.20f1: android
+unity_2018_4_20f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.20
+    BUILD: f1
+    TAG: 2018.4.20f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/008688490035/UnitySetup-2018.4.20f1
+    BASE_IMAGE: gableroux/2018.4.20f1
+    SHA1: 2c303d964744bc75c0571da63ae417a8ed7b33a1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.20
+    RELEASE_URL: https://beta.unity3d.com/download/008688490035/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.21f1: android
+unity_2018_4_21f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.21
+    BUILD: f1
+    TAG: 2018.4.21f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/fd3915227633/UnitySetup-2018.4.21f1
+    BASE_IMAGE: gableroux/2018.4.21f1
+    SHA1: 7ba4699e974e23cdd09ba0b334125d14ae459a27
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.21
+    RELEASE_URL: https://beta.unity3d.com/download/fd3915227633/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.22f1: android
+unity_2018_4_22f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.22
+    BUILD: f1
+    TAG: 2018.4.22f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/8a9509a5aff9/UnitySetup-2018.4.22f1
+    BASE_IMAGE: gableroux/2018.4.22f1
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.22
+    RELEASE_URL: https://beta.unity3d.com/download/8a9509a5aff9/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.23f1: android
+unity_2018_4_23f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.23
+    BUILD: f1
+    TAG: 2018.4.23f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c9cf1a90e812/UnitySetup-2018.4.23f1
+    BASE_IMAGE: gableroux/2018.4.23f1
+    SHA1: f80807e4d76758a6c685160ce2e2162e8c75bcf1
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.23
+    RELEASE_URL: https://beta.unity3d.com/download/c9cf1a90e812/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.24f1: android
+unity_2018_4_24f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.24
+    BUILD: f1
+    TAG: 2018.4.24f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/3071911a89e9/UnitySetup-2018.4.24f1
+    BASE_IMAGE: gableroux/2018.4.24f1
+    SHA1: 338c34ddaf0e93c3d3ef91feaaff31d6b5d2b947
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.24
+    RELEASE_URL: https://beta.unity3d.com/download/3071911a89e9/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.2f1: android
+unity_2018_4_2f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.2
+    BUILD: f1
+    TAG: 2018.4.2f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/8a9509a5aff9/UnitySetup-2018.4.2f1
+    BASE_IMAGE: gableroux/2018.4.2f1
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.2
+    RELEASE_URL: https://beta.unity3d.com/download/8a9509a5aff9/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.5f1: android
+unity_2018_4_5f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.5
+    BUILD: f1
+    TAG: 2018.4.5f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/7b38f8ac282e/UnitySetup-2018.4.5f1
+    BASE_IMAGE: gableroux/2018.4.5f1
+    SHA1: 7efdeeb3c88dcbda107b364b58ad9f0020571bb4
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.5
+    RELEASE_URL: https://beta.unity3d.com/download/7b38f8ac282e/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.6f1: android
+unity_2018_4_6f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.6
+    BUILD: f1
+    TAG: 2018.4.6f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/UnitySetup-2018.4.6f1
+    BASE_IMAGE: gableroux/2018.4.6f1
+    SHA1: 5b1203f0439d5f26e18b5d67b9236fa3ed31c56e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.6
+    RELEASE_URL: https://beta.unity3d.com/download/cde1bbcc9f0d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.8f1: android
+unity_2018_4_8f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.8
+    BUILD: f1
+    TAG: 2018.4.8f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/9bc9d983d803/UnitySetup-2018.4.8f1
+    BASE_IMAGE: gableroux/2018.4.8f1
+    SHA1: 5c9063e47ea5851a07e541e70b5571141c2dfe97
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.8
+    RELEASE_URL: https://beta.unity3d.com/download/9bc9d983d803/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2018.4.9f1: android
+unity_2018_4_9f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2018.4.9
+    BUILD: f1
+    TAG: 2018.4.9f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ca372476eaba/UnitySetup-2018.4.9f1
+    BASE_IMAGE: gableroux/2018.4.9f1
+    SHA1: 43cb74a3f108ef180a50c39b738599cb0ed64d17
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2018.4.9
+    RELEASE_URL: https://beta.unity3d.com/download/ca372476eaba/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.0f2: android
+unity_2019_1_0f2-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.0
+    BUILD: f2
+    TAG: 2019.1.0f2-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/292b93d75a2c/UnitySetup-2019.1.0f2
+    BASE_IMAGE: gableroux/2019.1.0f2
+    SHA1: 56711ddafdde2554a7782c846785767e07ebdc5d
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/292b93d75a2c/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.10f1: android
+unity_2019_1_10f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.10
+    BUILD: f1
+    TAG: 2019.1.10f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/f007ed779b7a/UnitySetup-2019.1.10f1
+    BASE_IMAGE: gableroux/2019.1.10f1
+    SHA1: d3aa2b01637d9a1fbc3d2bda2cf8a2ad78427f81
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.10
+    RELEASE_URL: https://beta.unity3d.com/download/f007ed779b7a/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.11f1: android
+unity_2019_1_11f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.11
+    BUILD: f1
+    TAG: 2019.1.11f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/9b001d489a54/UnitySetup-2019.1.11f1
+    BASE_IMAGE: gableroux/2019.1.11f1
+    SHA1: 7d883b49a5d515c856aa40af5da765267a00b9a9
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.11
+    RELEASE_URL: https://beta.unity3d.com/download/9b001d489a54/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.12f1: android
+unity_2019_1_12f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.12
+    BUILD: f1
+    TAG: 2019.1.12f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/f04f5427219e/UnitySetup-2019.1.12f1
+    BASE_IMAGE: gableroux/2019.1.12f1
+    SHA1: e736ade47aced9d50b5282edee507d37331d1627
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.12
+    RELEASE_URL: https://beta.unity3d.com/download/f04f5427219e/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.13f1: android
+unity_2019_1_13f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.13
+    BUILD: f1
+    TAG: 2019.1.13f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b5956c0a61e7/UnitySetup-2019.1.13f1
+    BASE_IMAGE: gableroux/2019.1.13f1
+    SHA1: 7f898798d4c5c38d6ba90eeb8492169da23195be
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.13
+    RELEASE_URL: https://beta.unity3d.com/download/b5956c0a61e7/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.14f1: android
+unity_2019_1_14f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.14
+    BUILD: f1
+    TAG: 2019.1.14f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/148b5891095a/UnitySetup-2019.1.14f1
+    BASE_IMAGE: gableroux/2019.1.14f1
+    SHA1: 499a71a26c3d16d4f67015bc88301e8ebe2e8e46
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.14
+    RELEASE_URL: https://beta.unity3d.com/download/148b5891095a/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.1f1: android
+unity_2019_1_1f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.1
+    BUILD: f1
+    TAG: 2019.1.1f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/fef62e97e63b/UnitySetup-2019.1.1f1
+    BASE_IMAGE: gableroux/2019.1.1f1
+    SHA1: 0d1082e47ea0e6e127ce31e5685b4fc2f2cae6d3
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.1
+    RELEASE_URL: https://beta.unity3d.com/download/fef62e97e63b/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.2f1: android
+unity_2019_1_2f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.2
+    BUILD: f1
+    TAG: 2019.1.2f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/3e18427e571f/UnitySetup-2019.1.2f1
+    BASE_IMAGE: gableroux/2019.1.2f1
+    SHA1: 64809d740e51a72079f270e636bfee77d38d7ea3
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.2
+    RELEASE_URL: https://beta.unity3d.com/download/3e18427e571f/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.3f1: android
+unity_2019_1_3f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.3
+    BUILD: f1
+    TAG: 2019.1.3f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/dc414eb9ed43/UnitySetup-2019.1.3f1
+    BASE_IMAGE: gableroux/2019.1.3f1
+    SHA1: ea97ef4c42180bd833e5b31b56f083b727a99cc8
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.3
+    RELEASE_URL: https://beta.unity3d.com/download/dc414eb9ed43/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.4f1: android
+unity_2019_1_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.4
+    BUILD: f1
+    TAG: 2019.1.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ffa3a7a2dd7d/UnitySetup-2019.1.4f1
+    BASE_IMAGE: gableroux/2019.1.4f1
+    SHA1: e649ab9fc49a2e722b11acbf02729dd942646f2e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.4
+    RELEASE_URL: https://beta.unity3d.com/download/ffa3a7a2dd7d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.5f1: android
+unity_2019_1_5f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.5
+    BUILD: f1
+    TAG: 2019.1.5f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/0ca0f5646614/UnitySetup-2019.1.5f1
+    BASE_IMAGE: gableroux/2019.1.5f1
+    SHA1: df84be4a4fc7f03115c406bde612da04b9e26cca
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.5
+    RELEASE_URL: https://beta.unity3d.com/download/0ca0f5646614/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.6f1: android
+unity_2019_1_6f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.6
+    BUILD: f1
+    TAG: 2019.1.6f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/f2970305fe1c/UnitySetup-2019.1.6f1
+    BASE_IMAGE: gableroux/2019.1.6f1
+    SHA1: 1a8e3c61e3faec6dcf7a6789638b1f78bd97de3e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.6
+    RELEASE_URL: https://beta.unity3d.com/download/f2970305fe1c/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.7f1: android
+unity_2019_1_7f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.7
+    BUILD: f1
+    TAG: 2019.1.7f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/f3c4928e5742/UnitySetup-2019.1.7f1
+    BASE_IMAGE: gableroux/2019.1.7f1
+    SHA1: 97432bf2227a6819ae5893d7ce77334b3b65bc41
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.7
+    RELEASE_URL: https://beta.unity3d.com/download/f3c4928e5742/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.8f1: android
+unity_2019_1_8f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.8
+    BUILD: f1
+    TAG: 2019.1.8f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/7938dd008a75/UnitySetup-2019.1.8f1
+    BASE_IMAGE: gableroux/2019.1.8f1
+    SHA1: 83ad002cf5b7f1ec83b99c865122a9cf15046f32
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.8
+    RELEASE_URL: https://beta.unity3d.com/download/7938dd008a75/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.1.9f1: android
+unity_2019_1_9f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.1.9
+    BUILD: f1
+    TAG: 2019.1.9f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/d5f1b37da199/UnitySetup-2019.1.9f1
+    BASE_IMAGE: gableroux/2019.1.9f1
+    SHA1: 72969f5bc24cc0ea7d7f48171a03959df99651d2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.1.9
+    RELEASE_URL: https://beta.unity3d.com/download/d5f1b37da199/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.0f1: android
+unity_2019_2_0f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.0
+    BUILD: f1
+    TAG: 2019.2.0f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/20c1667945cf/UnitySetup-2019.2.0f1
+    BASE_IMAGE: gableroux/2019.2.0f1
+    SHA1: 41a5980bf5a50eee09bad350f7f77fdb738b9ae5
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.0
+    RELEASE_URL: https://beta.unity3d.com/download/20c1667945cf/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.10f1: android
+unity_2019_2_10f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.10
+    BUILD: f1
+    TAG: 2019.2.10f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/923acd2d43aa/UnitySetup-2019.2.10f1
+    BASE_IMAGE: gableroux/2019.2.10f1
+    SHA1: 962136a268e7048ce527973a5b7ac7feb7c96155
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.10
+    RELEASE_URL: https://beta.unity3d.com/download/923acd2d43aa/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.11f1: android
+unity_2019_2_11f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.11
+    BUILD: f1
+    TAG: 2019.2.11f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/5f859a4cfee5/UnitySetup-2019.2.11f1
+    BASE_IMAGE: gableroux/2019.2.11f1
+    SHA1: 1f9fa0a8aefbaef0028852d1783615a12e39657c
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.11
+    RELEASE_URL: https://beta.unity3d.com/download/5f859a4cfee5/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.12f1: android
+unity_2019_2_12f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.12
+    BUILD: f1
+    TAG: 2019.2.12f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b1a7e1fb4fa5/UnitySetup-2019.2.12f1
+    BASE_IMAGE: gableroux/2019.2.12f1
+    SHA1: 140d6807f44058b2de4d76a3293a24d38b081523
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.12
+    RELEASE_URL: https://beta.unity3d.com/download/b1a7e1fb4fa5/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.13f1: android
+unity_2019_2_13f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.13
+    BUILD: f1
+    TAG: 2019.2.13f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/e20f6c7e5017/UnitySetup-2019.2.13f1
+    BASE_IMAGE: gableroux/2019.2.13f1
+    SHA1: aa5702564631a7b8680be6b054f84aa49c0f49e6
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.13
+    RELEASE_URL: https://beta.unity3d.com/download/e20f6c7e5017/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.14f1: android
+unity_2019_2_14f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.14
+    BUILD: f1
+    TAG: 2019.2.14f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/49dd4e9fa428/UnitySetup-2019.2.14f1
+    BASE_IMAGE: gableroux/2019.2.14f1
+    SHA1: 63c5d25fd53c8d71f4dc5f201b308dbfb460b389
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.14
+    RELEASE_URL: https://beta.unity3d.com/download/49dd4e9fa428/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.15f1: android
+unity_2019_2_15f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.15
+    BUILD: f1
+    TAG: 2019.2.15f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/dcb72c2e9334/UnitySetup-2019.2.15f1
+    BASE_IMAGE: gableroux/2019.2.15f1
+    SHA1: bdd7058114a1c8f0dd35fdf63789113e30b4c8ec
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.15
+    RELEASE_URL: https://beta.unity3d.com/download/dcb72c2e9334/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.16f1: android
+unity_2019_2_16f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.16
+    BUILD: f1
+    TAG: 2019.2.16f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/b9898e2d04a4/UnitySetup-2019.2.16f1
+    BASE_IMAGE: gableroux/2019.2.16f1
+    SHA1: b736c0b253393c3ac08aa2c35b68f6d7710f84db
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.16
+    RELEASE_URL: https://beta.unity3d.com/download/b9898e2d04a4/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.17f1: android
+unity_2019_2_17f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.17
+    BUILD: f1
+    TAG: 2019.2.17f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/8e603399ca02/UnitySetup-2019.2.17f1
+    BASE_IMAGE: gableroux/2019.2.17f1
+    SHA1: b5f1f26c399a6c0e4762bf52603b220cebd28c20
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.17
+    RELEASE_URL: https://beta.unity3d.com/download/8e603399ca02/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.18f1: android
+unity_2019_2_18f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.18
+    BUILD: f1
+    TAG: 2019.2.18f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/bbf64de26e34/UnitySetup-2019.2.18f1
+    BASE_IMAGE: gableroux/2019.2.18f1
+    SHA1: 6de71428a1f0d9c42aff1b8e284f338dcea0c0fb
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.18
+    RELEASE_URL: https://beta.unity3d.com/download/bbf64de26e34/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.19f1: android
+unity_2019_2_19f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.19
+    BUILD: f1
+    TAG: 2019.2.19f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/929ab4d01772/UnitySetup-2019.2.19f1
+    BASE_IMAGE: gableroux/2019.2.19f1
+    SHA1: 88296eb8137792d8ac248b767f80c6ac6b955024
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.19
+    RELEASE_URL: https://beta.unity3d.com/download/929ab4d01772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.1f1: android
+unity_2019_2_1f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.1
+    BUILD: f1
+    TAG: 2019.2.1f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ca4d5af0be6f/UnitySetup-2019.2.1f1
+    BASE_IMAGE: gableroux/2019.2.1f1
+    SHA1: 434a6d91c74bd8ae88a689d1005ab5863f5ba1fc
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.1
+    RELEASE_URL: https://beta.unity3d.com/download/ca4d5af0be6f/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.20f1: android
+unity_2019_2_20f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.20
+    BUILD: f1
+    TAG: 2019.2.20f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c67d00285037/UnitySetup-2019.2.20f1
+    BASE_IMAGE: gableroux/2019.2.20f1
+    SHA1: 442e07c54e75866ab63f5d75160790b202cc28f9
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.20
+    RELEASE_URL: https://beta.unity3d.com/download/c67d00285037/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.21f1: android
+unity_2019_2_21f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.21
+    BUILD: f1
+    TAG: 2019.2.21f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/9d528d026557/UnitySetup-2019.2.21f1
+    BASE_IMAGE: gableroux/2019.2.21f1
+    SHA1: e1bf0167dda7897385adf7bb53a14195ffaa98e2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.21
+    RELEASE_URL: https://beta.unity3d.com/download/9d528d026557/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.2f1: android
+unity_2019_2_2f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.2
+    BUILD: f1
+    TAG: 2019.2.2f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ab112815d860/UnitySetup-2019.2.2f1
+    BASE_IMAGE: gableroux/2019.2.2f1
+    SHA1: da73ae2c4eb6d6ae5bbd7cac648629f3ee13500f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.2
+    RELEASE_URL: https://beta.unity3d.com/download/ab112815d860/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.3f1: android
+unity_2019_2_3f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.3
+    BUILD: f1
+    TAG: 2019.2.3f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/8e55c27a4621/UnitySetup-2019.2.3f1
+    BASE_IMAGE: gableroux/2019.2.3f1
+    SHA1: bb22f855ea696bd5401cbc0fc1d08df8de52317a
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.3
+    RELEASE_URL: https://beta.unity3d.com/download/8e55c27a4621/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.4f1: android
+unity_2019_2_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.4
+    BUILD: f1
+    TAG: 2019.2.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c63b2af89a85/UnitySetup-2019.2.4f1
+    BASE_IMAGE: gableroux/2019.2.4f1
+    SHA1: e96a65cdf30ac66f2b0d7a5b2834fdc43f13f323
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.4
+    RELEASE_URL: https://beta.unity3d.com/download/c63b2af89a85/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.5f1: android
+unity_2019_2_5f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.5
+    BUILD: f1
+    TAG: 2019.2.5f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/9dace1eed4cc/UnitySetup-2019.2.5f1
+    BASE_IMAGE: gableroux/2019.2.5f1
+    SHA1: 56e22a22e102d325220ee313f68bd4f7ffab70ec
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.5
+    RELEASE_URL: https://beta.unity3d.com/download/9dace1eed4cc/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.6f1: android
+unity_2019_2_6f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.6
+    BUILD: f1
+    TAG: 2019.2.6f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/fe82a0e88406/UnitySetup-2019.2.6f1
+    BASE_IMAGE: gableroux/2019.2.6f1
+    SHA1: 1241eb303dd0601d1dd6d5b09a0b0862933d1f1a
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.6
+    RELEASE_URL: https://beta.unity3d.com/download/fe82a0e88406/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.7f2: android
+unity_2019_2_7f2-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.7
+    BUILD: f2
+    TAG: 2019.2.7f2-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c96f78eb5904/UnitySetup-2019.2.7f2
+    BASE_IMAGE: gableroux/2019.2.7f2
+    SHA1: 6af62fa2e55f8ae128ff0993976bc345eb1a2c61
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.7
+    RELEASE_URL: https://beta.unity3d.com/download/c96f78eb5904/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.8f1: android
+unity_2019_2_8f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.8
+    BUILD: f1
+    TAG: 2019.2.8f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ff5b465c8d13/UnitySetup-2019.2.8f1
+    BASE_IMAGE: gableroux/2019.2.8f1
+    SHA1: 46289dd1a50fca79a5272d7440318143f5dd798d
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.8
+    RELEASE_URL: https://beta.unity3d.com/download/ff5b465c8d13/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.2.9f1: android
+unity_2019_2_9f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.2.9
+    BUILD: f1
+    TAG: 2019.2.9f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ebce4d76e6e8/UnitySetup-2019.2.9f1
+    BASE_IMAGE: gableroux/2019.2.9f1
+    SHA1: b595a65a7977994bdeb162ed6984aed55df7d208
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.2.9
+    RELEASE_URL: https://beta.unity3d.com/download/ebce4d76e6e8/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 16.1.4479499
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.0f1: android
+unity_2019_3_0f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.0
+    BUILD: f1
+    TAG: 2019.3.0f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f1
+    BASE_IMAGE: gableroux/2019.3.0f1
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.0f6: android
+unity_2019_3_0f6-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.0
+    BUILD: f6
+    TAG: 2019.3.0f6-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/27ab2135bccf/UnitySetup-2019.3.0f6
+    BASE_IMAGE: gableroux/2019.3.0f6
+    SHA1: 9872ec78b9d0ec29366af52a01587cee1d03377f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.0
+    RELEASE_URL: https://beta.unity3d.com/download/27ab2135bccf/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.11f1: android
+unity_2019_3_11f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.11
+    BUILD: f1
+    TAG: 2019.3.11f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/ceef2d848e70/UnitySetup-2019.3.11f1
+    BASE_IMAGE: gableroux/2019.3.11f1
+    SHA1: 13c9e693b13a8b05c7f29390f44fd89a412ffcc2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.11
+    RELEASE_URL: https://beta.unity3d.com/download/ceef2d848e70/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.12f1: android
+unity_2019_3_12f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.12
+    BUILD: f1
+    TAG: 2019.3.12f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/84b23722532d/UnitySetup-2019.3.12f1
+    BASE_IMAGE: gableroux/2019.3.12f1
+    SHA1: 47464847b934c31942a739b659c33bd5daaedd4e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.12
+    RELEASE_URL: https://beta.unity3d.com/download/84b23722532d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.13f1: android
+unity_2019_3_13f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.13
+    BUILD: f1
+    TAG: 2019.3.13f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/d4ddf0d95db9/UnitySetup-2019.3.13f1
+    BASE_IMAGE: gableroux/2019.3.13f1
+    SHA1: 716076cc9c4f1db50a745619e104328d824cc765
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.13
+    RELEASE_URL: https://beta.unity3d.com/download/d4ddf0d95db9/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.14f1: android
+unity_2019_3_14f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.14
+    BUILD: f1
+    TAG: 2019.3.14f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2b330bf6d2d8/UnitySetup-2019.3.14f1
+    BASE_IMAGE: gableroux/2019.3.14f1
+    SHA1: a141d785c6071e0a326aa5201682ba254c7502d6
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.14
+    RELEASE_URL: https://beta.unity3d.com/download/2b330bf6d2d8/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.15f1: android
+unity_2019_3_15f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.15
+    BUILD: f1
+    TAG: 2019.3.15f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/59ff3e03856d/UnitySetup-2019.3.15f1
+    BASE_IMAGE: gableroux/2019.3.15f1
+    SHA1: 8c32dcfb5378723663fd6a1b09b0b960715347b7
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.15
+    RELEASE_URL: https://beta.unity3d.com/download/59ff3e03856d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.1f1: android
+unity_2019_3_1f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.1
+    BUILD: f1
+    TAG: 2019.3.1f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/89d6087839c2/UnitySetup-2019.3.1f1
+    BASE_IMAGE: gableroux/2019.3.1f1
+    SHA1: e963ddd0efc8833dac8e5fc80038d4f7787aba97
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.1
+    RELEASE_URL: https://beta.unity3d.com/download/89d6087839c2/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.2f1: android
+unity_2019_3_2f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.2
+    BUILD: f1
+    TAG: 2019.3.2f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/c46a3a38511e/UnitySetup-2019.3.2f1
+    BASE_IMAGE: gableroux/2019.3.2f1
+    SHA1: dc99638b8b4aca3b5b7fc2d1a852b85c11deb11f
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.2
+    RELEASE_URL: https://beta.unity3d.com/download/c46a3a38511e/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.3f1: android
+unity_2019_3_3f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.3
+    BUILD: f1
+    TAG: 2019.3.3f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/7ceaae5f7503/UnitySetup-2019.3.3f1
+    BASE_IMAGE: gableroux/2019.3.3f1
+    SHA1: 68d3c58e977e71cdd00bd0100fcd60c02762ec04
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.3
+    RELEASE_URL: https://beta.unity3d.com/download/7ceaae5f7503/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.4f1: android
+unity_2019_3_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.4
+    BUILD: f1
+    TAG: 2019.3.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4f139db2fdbd/UnitySetup-2019.3.4f1
+    BASE_IMAGE: gableroux/2019.3.4f1
+    SHA1: 0c078a50831b5c1582d44d27b34ba0e387fdbdc3
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.4
+    RELEASE_URL: https://beta.unity3d.com/download/4f139db2fdbd/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.5f1: android
+unity_2019_3_5f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.5
+    BUILD: f1
+    TAG: 2019.3.5f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/d691e07d38ef/UnitySetup-2019.3.5f1
+    BASE_IMAGE: gableroux/2019.3.5f1
+    SHA1: 8bc329d54a5ec36d1786d3aee78995caafd53f1b
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.5
+    RELEASE_URL: https://beta.unity3d.com/download/d691e07d38ef/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.6f1: android
+unity_2019_3_6f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.6
+    BUILD: f1
+    TAG: 2019.3.6f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/5c3fb0a11183/UnitySetup-2019.3.6f1
+    BASE_IMAGE: gableroux/2019.3.6f1
+    SHA1: f6bfc5f5f1174b0f937128854aad6759a8524c13
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.6
+    RELEASE_URL: https://beta.unity3d.com/download/5c3fb0a11183/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.7f1: android
+unity_2019_3_7f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.7
+    BUILD: f1
+    TAG: 2019.3.7f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/6437fd74d35d/UnitySetup-2019.3.7f1
+    BASE_IMAGE: gableroux/2019.3.7f1
+    SHA1: 4845b7bd6e3d1df813da2be5c1fa580d0c2855ad
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.7
+    RELEASE_URL: https://beta.unity3d.com/download/6437fd74d35d/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.8f1: android
+unity_2019_3_8f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.8
+    BUILD: f1
+    TAG: 2019.3.8f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/4ba98e9386ed/UnitySetup-2019.3.8f1
+    BASE_IMAGE: gableroux/2019.3.8f1
+    SHA1: 5abfa6f6f138f84ff82a035cc3b3fd63c5eca3e8
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.8
+    RELEASE_URL: https://beta.unity3d.com/download/4ba98e9386ed/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.3.9f1: android
+unity_2019_3_9f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.3.9
+    BUILD: f1
+    TAG: 2019.3.9f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/e6e740a1c473/UnitySetup-2019.3.9f1
+    BASE_IMAGE: gableroux/2019.3.9f1
+    SHA1: 752015b6e6841ebfc28124bc86bfe5ef806ac172
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.9
+    RELEASE_URL: https://beta.unity3d.com/download/e6e740a1c473/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.0.5232133
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.4.0f1: android
+unity_2019_4_0f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.4.0
+    BUILD: f1
+    TAG: 2019.4.0f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/0af376155913/UnitySetup-2019.4.0f1
+    BASE_IMAGE: gableroux/2019.4.0f1
+    SHA1: eee2b8e41ecc2d0b9387064b422ada604a08c68b
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.4.0
+    RELEASE_URL: https://beta.unity3d.com/download/0af376155913/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.4.1f1: android
+unity_2019_4_1f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.4.1
+    BUILD: f1
+    TAG: 2019.4.1f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/e6c045e14e4e/UnitySetup-2019.4.1f1
+    BASE_IMAGE: gableroux/2019.4.1f1
+    SHA1: c2872ace3b0d64a6e40f0a418e642a5f964db51e
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.4.1
+    RELEASE_URL: https://beta.unity3d.com/download/e6c045e14e4e/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.4.2f1: android
+unity_2019_4_2f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.4.2
+    BUILD: f1
+    TAG: 2019.4.2f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/20b4642a3455/UnitySetup-2019.4.2f1
+    BASE_IMAGE: gableroux/2019.4.2f1
+    SHA1: 17c3b23441eb3b25d7c163ef52356bdb8dd67ea3
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.4.2
+    RELEASE_URL: https://beta.unity3d.com/download/20b4642a3455/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b11: android
+unity_2020_1_0b11-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b11
+    TAG: 2020.1.0b11-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b11
+    BASE_IMAGE: gableroux/2020.1.0b11
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b12: android
+unity_2020_1_0b12-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b12
+    TAG: 2020.1.0b12-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b12
+    BASE_IMAGE: gableroux/2020.1.0b12
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b14: android
+unity_2020_1_0b14-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b14
+    TAG: 2020.1.0b14-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b14
+    BASE_IMAGE: gableroux/2020.1.0b14
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b2: android
+unity_2020_1_0b2-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b2
+    TAG: 2020.1.0b2-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b2
+    BASE_IMAGE: gableroux/2020.1.0b2
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b3: android
+unity_2020_1_0b3-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b3
+    TAG: 2020.1.0b3-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b3
+    BASE_IMAGE: gableroux/2020.1.0b3
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b4: android
+unity_2020_1_0b4-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b4
+    TAG: 2020.1.0b4-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b4
+    BASE_IMAGE: gableroux/2020.1.0b4
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b5: android
+unity_2020_1_0b5-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b5
+    TAG: 2020.1.0b5-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b5
+    BASE_IMAGE: gableroux/2020.1.0b5
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b6: android
+unity_2020_1_0b6-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b6
+    TAG: 2020.1.0b6-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b6
+    BASE_IMAGE: gableroux/2020.1.0b6
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b7: android
+unity_2020_1_0b7-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b7
+    TAG: 2020.1.0b7-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b7
+    BASE_IMAGE: gableroux/2020.1.0b7
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b8: android
+unity_2020_1_0b8-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b8
+    TAG: 2020.1.0b8-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b8
+    BASE_IMAGE: gableroux/2020.1.0b8
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b9: android
+unity_2020_1_0b9-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b9
+    TAG: 2020.1.0b9-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b9
+    BASE_IMAGE: gableroux/2020.1.0b9
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b15: android
+unity_2020_1_0b15-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b15
+    TAG: 2020.1.0b15-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b15
+    BASE_IMAGE: gableroux/2020.1.0b15
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.4.3f1: android
+unity_2019_4_3f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.4.3
+    BUILD: f1
+    TAG: 2019.4.3f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/f880dceab6fe/UnitySetup-2019.4.3f1
+    BASE_IMAGE: gableroux/2019.4.3f1
+    SHA1: 496f3f1ee9bcc1028d21d66dafb7c03e503b7c40
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.4.3
+    RELEASE_URL: https://beta.unity3d.com/download/f880dceab6fe/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2020.1.0b16: android
+unity_2020_1_0b16-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2020.1.0
+    BUILD: b16
+    TAG: 2020.1.0b16-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/2ab9c4179772/UnitySetup-2020.1.0b16
+    BASE_IMAGE: gableroux/2020.1.0b16
+    SHA1: 10e7c48a109ffbe60fa7ab3585c4bd711942cbd2
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2020.1.0
+    RELEASE_URL: https://beta.unity3d.com/download/2ab9c4179772/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
+
+
+
+
+
+# platform specific for 2019.4.4f1: android
+unity_2019_4_4f1-android:
+  <<: *build
+  variables:
+    DOCKERFILE_NAME: unitysetup-android
+    VERSION: 2019.4.4
+    BUILD: f1
+    TAG: 2019.4.4f1-android
+    COMPONENTS: Android
+    DOWNLOAD_URL: https://beta.unity3d.com/download/1f1dac67805b/UnitySetup-2019.4.4f1
+    BASE_IMAGE: gableroux/2019.4.4f1
+    SHA1: faf7acc6b9d92a1dd92025a30f87306115041afa
+    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.4.4
+    RELEASE_URL: https://beta.unity3d.com/download/1f1dac67805b/public_download.html
+    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
+    ANDROID_NDK_VERSION: 19.2.5345600
+    ANDROID_PLATFORM_VERSION: 29
+    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
+    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: "/certs"
+
+
+
+
+
 
