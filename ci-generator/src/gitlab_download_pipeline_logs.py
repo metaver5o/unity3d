@@ -25,7 +25,7 @@ class GitlabDownloadPipelineLogs(object):
         self.PROJECT_ID = os.environ.get("PROJECT_ID", default="gableroux/unity3d")
         self.ENCODED_PROJECT_ID = urllib.parse.quote(self.PROJECT_ID, safe='')
 
-        self.SKIP_API_CALLS = os.environ.get("SKIP_API_CALLS", default=False)
+        self.SKIP_API_CALLS = os.environ.get("SKIP_API_CALLS", default=0) == 1
 
         self.GITLAB_API_MAX_PER_PAGE = 200
         self._GITLAB_API_MAX_PAGES_RANGE = range(1000)
