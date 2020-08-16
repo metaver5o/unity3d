@@ -23,7 +23,7 @@ class GitlabDownloadPipelineLogs(object):
             "GITLAB_BASE_URL", default="https://gitlab.com/"
         )
         self.PROJECT_ID = os.environ.get("PROJECT_ID", default="gableroux/unity3d")
-        self.ENCODED_PROJECT_ID = urllib.parse.quote(self.PROJECT_ID)
+        self.ENCODED_PROJECT_ID = urllib.parse.quote(self.PROJECT_ID, safe='')
 
         self.SKIP_API_CALLS = os.environ.get("SKIP_API_CALLS", default=False)
 
@@ -86,6 +86,7 @@ class GitlabDownloadPipelineLogs(object):
         print("Write to csv")
         output_csv_file = "output/android-versions.csv"
         self.write_csv(android_jobs[0].keys(), android_jobs, output_csv_file)
+        print('Done')
 
     def inject_latest_digest_in_android_jobs(self, android_jobs):
         manifests_responses = []
