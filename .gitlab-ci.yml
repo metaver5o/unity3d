@@ -49,25 +49,8 @@ before_script:
     - ci/build.sh
   retry: 2
 
-# platform specific for 2019.3.12f1: android
-unity_2019_3_12f1-android:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2019.3.12
-    BUILD: f1
-    TAG: 2019.3.12f1-android
-    COMPONENTS: Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/84b23722532d/UnitySetup-2019.3.12f1
-    BASE_IMAGE: gableroux/unity3d:2019.3.12f1
-    SHA1: 47464847b934c31942a739b659c33bd5daaedd4e
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2019.3.12f1
-    RELEASE_URL: https://beta.unity3d.com/download/84b23722532d/public_download.html
-    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
-    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
-    ANDROID_NDK_VERSION: 19.2.5345600
-    ANDROID_PLATFORM_VERSION: 29
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
+nothing_to_build:
+  stage: build
+  script:
+    echo 'All versions are already built, skipping'
+
