@@ -25,7 +25,7 @@ class GitlabDownloadPipelineLogs(object):
         self.PROJECT_ID = os.environ.get("PROJECT_ID", default="gableroux/unity3d")
         self.ENCODED_PROJECT_ID = urllib.parse.quote(self.PROJECT_ID)
 
-        self.SKIP_API_CALLS = os.environ.get("SKIP_API_CALLS", default=True)
+        self.SKIP_API_CALLS = os.environ.get("SKIP_API_CALLS", default=False)
 
         self.GITLAB_API_MAX_PER_PAGE = 200
         self._GITLAB_API_MAX_PAGES_RANGE = range(1000)
@@ -70,13 +70,13 @@ class GitlabDownloadPipelineLogs(object):
             job["docker_image"] = "gableroux/unity3d:" + version
             job["version"] = version
 
-        # if self.SKIP_API_CALLS:
-        #     android_jobs = pickle.load(open("output/android_jobs_with_digest_and_latest_digests.p", "rb"))
-        #     manifests_responses = pickle.load(open("output/manifests_responses.p", "rb"))
-        # else:
-        manifests_responses = self.inject_latest_digest_in_android_jobs(android_jobs)
-        pickle.dump(manifests_responses, open("output/manifests_responses.p", "wb"))
-        pickle.dump(android_jobs, open("output/android_jobs_with_digest_and_latest_digests.p", "wb"))
+        if self.SKIP_API_CALLS:
+            android_jobs = pickle.load(open("output/android_jobs_with_digest_and_latest_digests.p", "rb"))
+            manifests_responses = pickle.load(open("output/manifests_responses.p", "rb"))
+        else:
+            manifests_responses = self.inject_latest_digest_in_android_jobs(android_jobs)
+            pickle.dump(manifests_responses, open("output/manifests_responses.p", "wb"))
+            pickle.dump(android_jobs, open("output/android_jobs_with_digest_and_latest_digests.p", "wb"))
 
         for job in android_jobs:
             job["digest_different_from_latest"] = job["digest"] == job["latest_digest"]
