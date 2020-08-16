@@ -49,9 +49,11 @@ class GitlabDownloadPipelineLogs(object):
         traces = []
         if self.SKIP_API_CALLS:
             android_jobs = pickle.load(open("output/android_jobs_with_digest.p", "rb"))
-            for (dirpath, dirnames, filenames) in os.walk("output/traces"):
+            for (dirpath, dirnames, filenames) in os.walk("output/traces/*.p"):
                 for f in filenames:
-                    traces.append(pickle.load(open(os.path.join(dirpath, f), "rb")))
+                    target = os.path.join(dirpath, f)
+                    if os.path.getsize(target) > 0:
+                        traces.append(pickle.load(open(target, "rb")))
         else:
             print("Fetch job logs and inject sha256 digest")
             traces = self.inject_digest_in_android_jobs(android_jobs)
@@ -68,13 +70,13 @@ class GitlabDownloadPipelineLogs(object):
             job["docker_image"] = "gableroux/unity3d:" + version
             job["version"] = version
 
-        if self.SKIP_API_CALLS:
-            android_jobs = pickle.load(open("output/android_jobs_with_digest_and_latest_digests.p", "rb"))
-            manifests_responses = pickle.load(open("output/manifests_responses.p", "rb"))
-        else:
-            manifests_responses = self.inject_latest_digest_in_android_jobs(android_jobs)
-            pickle.dump(manifests_responses, open("output/manifests_responses.p", "wb"))
-            pickle.dump(android_jobs, open("output/android_jobs_with_digest_and_latest_digests.p", "wb"))
+        # if self.SKIP_API_CALLS:
+        #     android_jobs = pickle.load(open("output/android_jobs_with_digest_and_latest_digests.p", "rb"))
+        #     manifests_responses = pickle.load(open("output/manifests_responses.p", "rb"))
+        # else:
+        manifests_responses = self.inject_latest_digest_in_android_jobs(android_jobs)
+        pickle.dump(manifests_responses, open("output/manifests_responses.p", "wb"))
+        pickle.dump(android_jobs, open("output/android_jobs_with_digest_and_latest_digests.p", "wb"))
 
         for job in android_jobs:
             job["digest_different_from_latest"] = job["digest"] == job["latest_digest"]
