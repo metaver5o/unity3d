@@ -69,9 +69,12 @@ class GitlabDownloadPipelineLogs(object):
             job["version"] = version
 
         if self.SKIP_API_CALLS:
-            pass
+            android_jobs = pickle.load(open("output/android_jobs_with_digest_and_latest_digests.p", "rb"))
+            manifests_responses = pickle.load(open("output/manifests_responses.p", "rb"))
         else:
-            self.get_latest_digest(android_jobs)
+            manifests_responses = self.inject_latest_digest_in_android_jobs(android_jobs)
+            pickle.dump(manifests_responses, open("output/manifests_responses.p", "wb"))
+            pickle.dump(android_jobs, open("output/android_jobs_with_digest_and_latest_digests.p", "wb"))
 
         for job in android_jobs:
             job["digest_different_from_latest"] = job["digest"] == job["latest_digest"]
@@ -80,7 +83,8 @@ class GitlabDownloadPipelineLogs(object):
         output_csv_file = "output/android-versions.csv"
         self.write_csv(android_jobs[0].keys(), android_jobs, output_csv_file)
 
-    def get_latest_digest(self, android_jobs):
+    def inject_latest_digest_in_android_jobs(self, android_jobs):
+        manifests_responses = []
         for i, job in enumerate(android_jobs):
             # https://docs.gitlab.com/ee/api/jobs.html#get-a-log-file
             try:
@@ -104,8 +108,10 @@ class GitlabDownloadPipelineLogs(object):
                 )
                 print(i, "latest_digest:", latest_digest)
                 job["latest_digest"] = latest_digest
+                manifests_responses.append(response)
             except Exception as e:
                 print(e)
+        return manifests_responses
 
     def write_csv(self, csv_columns, dict_data, output_csv_file):
         import csv
