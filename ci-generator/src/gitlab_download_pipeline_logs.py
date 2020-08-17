@@ -99,6 +99,12 @@ class GitlabDownloadPipelineLogs(object):
                 print(e)
         return manifests_responses
 
+    # TODO: Fix this, retrieved sha256 is not the same as the image tag
+    # proof:
+    # >>> get_latest_digest("2017.4.0f1-android")
+    # 7365245d5043daeceefa1d5896affe867ec0da60a380fc7c90d90497ffbc518a
+    # $ docker pull gableroux/unity3d@sha256:7365245d5043daeceefa1d5896affe867ec0da60a380fc7c90d90497ffbc518a
+    # Error response from daemon: manifest for gableroux/unity3d@sha256:7365245d5043daeceefa1d5896affe867ec0da60a380fc7c90d90497ffbc518a not found: manifest unknown: manifest unknown
     def get_latest_digest(self, version, i=0):
         auth_url = f"https://auth.docker.io/token?service=registry.docker.io&scope=repository:{self.PROJECT_ID}:pull,push"
         print(i, auth_url)
