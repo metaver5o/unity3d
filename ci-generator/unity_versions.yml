@@ -1,16 +1,1 @@
-2019.4.10f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/5311b3af6f69/UnitySetup-2019.4.10f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.4.10
-  release_url: https://beta.unity3d.com/download/5311b3af6f69/public_download.html
-  sha1: 9ef9901b17b6ec79c8d4105faee3c34a375a6e12
-  underscore: 2019_4_10f1
-  variables:
-    android:
-      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
-      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
-      ANDROID_NDK_VERSION: 19.2.5345600
-      ANDROID_PLATFORM_VERSION: '29'
-  version: 2019.4.10
 
