@@ -6722,3 +6722,20 @@
       ANDROID_PLATFORM_VERSION: '29'
   version: 2020.1.6
 
+
+2019.4.11f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/2d9804dddde7/UnitySetup-2019.4.11f1
+  release_notes: https://unity3d.com/unity/whats-new/2019.4.11
+  release_url: https://beta.unity3d.com/download/2d9804dddde7/public_download.html
+  sha1: 78c4beb612c4e8b5f78446b8bafa84a6b843d20c
+  underscore: 2019_4_11f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2019.4.11
+
