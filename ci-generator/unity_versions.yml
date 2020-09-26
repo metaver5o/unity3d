@@ -1,16 +1,18 @@
-2019.4.11f1:
+2018.4.27f1:
   build: f1
   dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/2d9804dddde7/UnitySetup-2019.4.11f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.4.11
-  release_url: https://beta.unity3d.com/download/2d9804dddde7/public_download.html
-  sha1: 78c4beb612c4e8b5f78446b8bafa84a6b843d20c
-  underscore: 2019_4_11f1
+  download_url: https://beta.unity3d.com/download/4e283b7d3f88/UnitySetup-2018.4.27f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.27
+  release_url: https://beta.unity3d.com/download/4e283b7d3f88/public_download.html
+  sha1: b3647f0a52ffb2db5ed66903594b3a65ee004feb
+  underscore: 2018_4_27f1
   variables:
     android:
       ANDROID_BUILD_TOOLS_VERSION: 29.0.3
       ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
-      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_NDK_VERSION: 16.1.4479499
       ANDROID_PLATFORM_VERSION: '29'
-  version: 2019.4.11
-
+  version: 2018.4.27
