@@ -6739,3 +6739,40 @@
       ANDROID_PLATFORM_VERSION: '29'
   version: 2019.4.11
 
+
+2018.4.27f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/4e283b7d3f88/UnitySetup-2018.4.27f1
+  platforms:
+    facebook:
+      components: Facebook-Games
+  release_notes: https://unity3d.com/unity/whats-new/2018.4.27
+  release_url: https://beta.unity3d.com/download/4e283b7d3f88/public_download.html
+  sha1: b3647f0a52ffb2db5ed66903594b3a65ee004feb
+  underscore: 2018_4_27f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 16.1.4479499
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2018.4.27
+
+2020.2.0b4:
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
+  build: b4
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/7b778e331e0b/UnitySetup-2020.2.0b4
+  release_notes: https://unity3d.com/unity/whats-new/2020.2.0
+  release_url: https://beta.unity3d.com/download/7b778e331e0b/public_download.html
+  sha1: 52714254c4b812c8a98fdf8aac40046a9ba29f5d
+  underscore: 2020_2_0b4
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.2.0
