@@ -119,7 +119,7 @@ class CheckNewVersion(object):
                 "skip_reason"
             ] = "https://gitlab.com/gableroux/unity3d/issues/40"
 
-        if '2020.2.0a' in version_key:
+        if '2020.2.0a' in version_key or '2020.2.0b':
             unity_build_configuration[version_key]["skip"] = True
             unity_build_configuration[version_key][
                 "skip_reason"
