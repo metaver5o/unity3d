@@ -1,35 +1,34 @@
-2018.4.28f1:
-  build: f1
+2020.2.0b7:
+  build: b7
   dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/a2d4f71491a4/UnitySetup-2018.4.28f1
-  platforms:
-    facebook:
-      components: Facebook-Games
-  release_notes: https://unity3d.com/unity/whats-new/2018.4.28
-  release_url: https://beta.unity3d.com/download/a2d4f71491a4/public_download.html
-  sha1: ecd9b15fbb62b48e4571c231acf376a8e18ef604
-  underscore: 2018_4_28f1
-  variables:
-    android:
-      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
-      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
-      ANDROID_NDK_VERSION: 16.1.4479499
-      ANDROID_PLATFORM_VERSION: '29'
-  version: 2018.4.28
-
-2019.4.12f1:
-  build: f1
-  dockerfile_name: unitysetup
-  download_url: https://beta.unity3d.com/download/225e826a680e/UnitySetup-2019.4.12f1
-  release_notes: https://unity3d.com/unity/whats-new/2019.4.12
-  release_url: https://beta.unity3d.com/download/225e826a680e/public_download.html
-  sha1: 307e2f9bb51567e4c777ddf8d641799f0d6e1856
-  underscore: 2019_4_12f1
+  download_url: https://beta.unity3d.com/download/1b1252580c64/UnitySetup-2020.2.0b7
+  release_notes: https://unity3d.com/unity/whats-new/2020.2.0
+  release_url: https://beta.unity3d.com/download/1b1252580c64/public_download.html
+  sha1: 5d9b81aa5d0b793b66c1eecc210e559fe44c3711
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
+  underscore: 2020_2_0b7
   variables:
     android:
       ANDROID_BUILD_TOOLS_VERSION: 29.0.3
       ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
       ANDROID_NDK_VERSION: 19.2.5345600
       ANDROID_PLATFORM_VERSION: '29'
-  version: 2019.4.12
+  version: 2020.2.0
+
+2020.1.9f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/145f5172610f/UnitySetup-2020.1.9f1
+  release_notes: https://unity3d.com/unity/whats-new/2020.1.9
+  release_url: https://beta.unity3d.com/download/145f5172610f/public_download.html
+  sha1: ed3cc3cf1f8b558a21e9b9c029d72c3db185dc83
+  underscore: 2020_1_9f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.1.9
 
