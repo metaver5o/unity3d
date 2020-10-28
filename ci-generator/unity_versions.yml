@@ -23,6 +23,8 @@
   release_notes: https://unity3d.com/unity/whats-new/2021.1.0
   release_url: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
   sha1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
   underscore: 2021_1_0a2
   variables:
     android:
