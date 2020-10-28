@@ -59,138 +59,13 @@ before_script:
 
 
 
-# prepare image 2021.1.0a2
-prepare_2021_1_0a2:
-  stage: prepare
-  variables:
-    VERSION: 2021.1.0
-    BUILD: a2
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    TAG: 2021.1.0a2
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
-  script:
-    - ci/prepare.sh
-  artifacts:
-    paths:
-      - licence_request.alf
-  retry: 2
 
 
-# platform specific for 2021.1.0a2: windows
-unity_2021_1_0a2-windows:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-windows
-    COMPONENTS: Windows,Windows-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2021.1.0a2: mac
-unity_2021_1_0a2-mac:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-mac
-    COMPONENTS: Mac,Mac-Mono
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2021.1.0a2: ios
-unity_2021_1_0a2-ios:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-ios
-    COMPONENTS: iOS
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2021.1.0a2: android
-unity_2021_1_0a2-android:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup-android
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-android
-    COMPONENTS: Android
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    ANDROID_BUILD_TOOLS_VERSION: 29.0.3
-    ANDROID_CMD_LINE_TOOLS_VERSION: 6609375
-    ANDROID_NDK_VERSION: 19.2.5345600
-    ANDROID_PLATFORM_VERSION: 29
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2021.1.0a2: webgl
-unity_2021_1_0a2-webgl:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-webgl
-    COMPONENTS: WebGL
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
-# platform specific for 2021.1.0a2: linux-il2cpp
-unity_2021_1_0a2-linux-il2cpp:
-  <<: *build
-  variables:
-    DOCKERFILE_NAME: unitysetup-linux-il2cpp
-    VERSION: 2021.1.0
-    BUILD: a2
-    TAG: 2021.1.0a2-linux-il2cpp
-    COMPONENTS: Linux-IL2CPP
-    DOWNLOAD_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/UnitySetup-2021.1.0a2
-    SHA1: c348daee6a9513395242c1bfc7c35ff7fb7e5aa7
-    RELEASE_NOTES: https://unity3d.com/unity/whats-new/2021.1.0
-    RELEASE_URL: https://beta.unity3d.com/download/37c5ec4c3cb1/public_download.html
-    # https://about.gitlab.com/2019/07/31/docker-in-docker-with-docker-19-dot-03/
-    # https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: "/certs"
 
 
 
