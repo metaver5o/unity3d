@@ -97,11 +97,12 @@ class CheckNewVersion(object):
                 "skip_reason"
             ] = "https://gitlab.com/gableroux/unity3d/issues/40"
 
-        if '2020.2.0a' in version_key or '2020.2.0b' in version_key or '2021.1.0a' in version_key or '2021.1.0b' in version_key:
-            unity_build_configuration[version_key]["skip"] = True
-            unity_build_configuration[version_key][
-                "skip_reason"
-            ] = "https://gitlab.com/gableroux/unity3d/-/issues/73"
+        for skipped_version in ['2020.2.0a', '2020.2.0b', '2021.1.0a', '2021.1.0b']:
+            if skipped_version in version_key:
+                unity_build_configuration[version_key]["skip"] = True
+                unity_build_configuration[version_key][
+                    "skip_reason"
+                ] = "https://gitlab.com/gableroux/unity3d/-/issues/73"
 
         if version.parse("5.0.0") <= parsed_version < version.parse("6.0.0"):
             unity_build_configuration[version_key]["legacy"] = True
