@@ -235,6 +235,10 @@ I made this for free as a gift to the video game community. If this tool helped 
 
 Join us on our discord channel at [totema.studio/discord](https://totema.studio/discord), there's a technical channel in there mostly dedicated to this tool. :+1:
 
+## Disclaimer
+
+This project is not affiliated with Unity Technologies. 
+
 ## License
 
 [MIT](LICENSE.md) © [Gabriel Le Breton](https://gableroux.com)
