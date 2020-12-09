@@ -59,6 +59,8 @@
   download_url: https://beta.unity3d.com/download/e05b6e02d63e/UnitySetup-2019.4.16f1
   release_notes: https://unity3d.com/unity/whats-new/2019.4.16
   release_url: https://beta.unity3d.com/download/e05b6e02d63e/public_download.html
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
   sha1: b172babd8a93dc17f8dae137e910a979fb98a5f2
   underscore: 2019_4_16f1
   variables:
@@ -75,6 +77,8 @@
   download_url: https://beta.unity3d.com/download/9957aee8edc2/UnitySetup-2020.1.17f1
   release_notes: https://unity3d.com/unity/whats-new/2020.1.17
   release_url: https://beta.unity3d.com/download/9957aee8edc2/public_download.html
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
   sha1: 83ff6f31287629dbfe7d285e6a8177d0fef7f010
   underscore: 2020_1_17f1
   variables:
