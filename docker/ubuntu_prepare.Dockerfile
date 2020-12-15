@@ -23,6 +23,7 @@ RUN echo "America/New_York" > /etc/timezone && \
         libcairo2 \
         libcap2 \
         libcups2 \
+        libcurl3 \
         libdbus-1-3 \
         libexpat1 \
         libfontconfig1 \
