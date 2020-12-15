@@ -1,1 +1,34 @@
+2021.1.0a9:
+  build: a9
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/18321e85013a/UnitySetup-2021.1.0a9
+  release_notes: https://unity3d.com/unity/whats-new/2021.1.0
+  release_url: https://beta.unity3d.com/download/18321e85013a/public_download.html
+  sha1: 51e7f11e756ef639c870d032a274679c4f9650af
+  skip: true
+  skip_reason: https://gitlab.com/gableroux/unity3d/-/issues/73
+  underscore: 2021_1_0a9
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2021.1.0
+
+2020.2.0f1:
+  build: f1
+  dockerfile_name: unitysetup
+  download_url: https://beta.unity3d.com/download/3721df5a8b28/UnitySetup-2020.2.0f1
+  release_notes: https://unity3d.com/unity/whats-new/2020.2.0
+  release_url: https://beta.unity3d.com/download/3721df5a8b28/public_download.html
+  sha1: e93ce2c8f1d1932bb5453f849684805db8cd012f
+  underscore: 2020_2_0f1
+  variables:
+    android:
+      ANDROID_BUILD_TOOLS_VERSION: 29.0.3
+      ANDROID_CMD_LINE_TOOLS_VERSION: '6609375'
+      ANDROID_NDK_VERSION: 19.2.5345600
+      ANDROID_PLATFORM_VERSION: '29'
+  version: 2020.2.0
 
